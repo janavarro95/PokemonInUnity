@@ -3,8 +3,11 @@
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
-[Aa]ssets/StreamingAssets/JSON/PokemonDatabase
+**/PokemonDatabase
+**/PokemonDatabase*
 Assets/AssetStoreTools*
+**/PokemonDatabase/
+**/PokemonDatabase/*
 
 # Visual Studio cache directory
 .vs/
