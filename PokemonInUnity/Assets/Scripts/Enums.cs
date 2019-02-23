@@ -82,6 +82,35 @@ namespace Assets.Scripts
             Invisible
         }
 
+
+        public enum DamageClass
+        {
+            Physical,
+            Special
+        }
+
+        public enum Type
+        {
+            Normal,
+            Fighting,
+            Flying,
+            Poison,
+            Ground,
+            Rock,
+            Bug,
+            Ghost,
+            Steel,
+            Fire,
+            Water,
+            Grass,
+            Electric,
+            Psychic,
+            Ice,
+            Dragon,
+            Dark,
+            Fairy
+        }
+
         /// <summary>
         /// Gets all of the values stored in an enum.
         /// </summary>

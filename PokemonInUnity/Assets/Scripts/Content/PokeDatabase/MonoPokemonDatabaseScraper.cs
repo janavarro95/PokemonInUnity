@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,11 +12,16 @@ namespace Assets.Scripts.Content.PokeDatabase
     public class MonoPokemonDatabaseScraper:MonoBehaviour
     {
         [SerializeField]
-        Text text;
+        Text pokemonSpeciesLoadedText;
+        [SerializeField]
+        Text pokemonLoadedText;
 
         public void Awake()
         {
-            PokemonDatabase.ScrapePokemonSpecies();
+            StartCoroutine(PokemonDatabase.InitializeDataBase());
+
+            //PokemonDatabase.ScrapePokemonSpecies();
+            /*
             PokemonDatabase.ScrapePokemon();
             try
             {
@@ -25,6 +31,33 @@ namespace Assets.Scripts.Content.PokeDatabase
             {
 
             }
+            */
+        }
+
+        public void StartPage()
+        {
+            print("in StartPage()");
+            StartCoroutine(FinishFirst(5.0f, DoLast));
+        }
+
+        IEnumerator FinishFirst(float waitTime, Action doLast)
+        {
+            print("in FinishFirst");
+            yield return new WaitForSeconds(waitTime);
+            print("leave FinishFirst");
+            doLast();
+        }
+
+        void DoLast()
+        {
+            print("do after everything is finished");
+            print("done");
+        }
+
+        public void Update()
+        {
+            this.pokemonSpeciesLoadedText.text = "Pokemon Species Loaded: " + PokemonDatabase.PokemonSpeciesByDex.Count + "/" + PokemonDatabase.NumberOfPokemon;
+            this.pokemonLoadedText.text = "Pokemon Loaded: " + PokemonDatabase.PokemonByDex.Count + "/" + PokemonDatabase.NumberOfPokemon;
         }
 
     }
