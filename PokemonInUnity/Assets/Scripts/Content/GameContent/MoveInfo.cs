@@ -35,14 +35,24 @@ namespace Assets.Scripts.Content.GameContent
         /// <summary>
         /// Look into this more:https://pokeapi.co/api/v2/move-target/10/
         /// </summary>
-        string target;
+        public string target;
 
-        Enums.Type moveType;
+        public Enums.Type moveType;
 
-        string moveDescription;
+        public string moveDescription;
 
-        string moveName;
+        public string moveName;
 
-        int id;
+        public int id;
+
+        public MoveInfo()
+        {
+
+        }
+
+        public MoveInfo(PokeAPI.Move Move)
+        {
+            throw new NotImplementedException("DO STUFF HERE");
+        }
     }
 }
