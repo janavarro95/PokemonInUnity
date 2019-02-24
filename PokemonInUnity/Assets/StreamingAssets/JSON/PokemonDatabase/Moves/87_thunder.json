@@ -1,0 +1,28 @@
+{
+  "accuracy": 70.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 110,
+  "effects": {
+    "effect": "Inflicts regular damage.  Has a $effect_chance% chance to paralyze the target.\n\nDuring rain dance, this move has 100% accuracy.  It also has a (100 - accuracy)% chance to break through the protection of protect and detect.\n\nDuring sunny day, this move has 50% accuracy.",
+    "shortEffect": "Has a $effect_chance% chance to paralyze the target."
+  },
+  "ailment": "paralysis",
+  "category": "damage+ailment",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 30.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "electric",
+  "moveDescription": "A wicked thunderbolt is dropped on the target to\ninflict damage. This may also leave the target\nwith paralysis.",
+  "moveName": "thunder",
+  "id": 87
+}

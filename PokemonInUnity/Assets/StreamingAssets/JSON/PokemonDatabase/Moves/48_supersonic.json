@@ -1,0 +1,28 @@
+{
+  "accuracy": 55.0,
+  "pp": 20,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Confuses the target.",
+    "shortEffect": "Confuses the target."
+  },
+  "ailment": "confusion",
+  "category": "ailment",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 2,
+  "maxTurns": 5,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "normal",
+  "moveDescription": "The user generates odd sound waves from its body\nthat confuse the target.",
+  "moveName": "supersonic",
+  "id": 48
+}

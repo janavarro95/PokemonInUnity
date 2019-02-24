@@ -8,7 +8,18 @@ namespace Assets.Scripts.Content.GameContent
 {
     public class StatChangeInfo
     {
-        StatInfo stat;
-        int amountToChange;
+        public string statName;
+        public int amountToChange;
+
+        public StatChangeInfo()
+        {
+
+        }
+
+        public StatChangeInfo(string StatName,int Change)
+        {
+            this.statName = StatName;
+            this.amountToChange = Change;
+        }
     }
 }

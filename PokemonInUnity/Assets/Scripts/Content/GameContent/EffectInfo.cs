@@ -8,9 +8,18 @@ namespace Assets.Scripts.Content.GameContent
 {
     public class EffectInfo
     {
-        string effect;
-        string shortEffect;
+        public string effect;
+        public string shortEffect;
 
+        public EffectInfo()
+        {
 
+        }
+
+        public EffectInfo(string Effect, string ShortEffect)
+        {
+            this.effect = Effect;
+            this.shortEffect = ShortEffect;
+        }
     }
 }

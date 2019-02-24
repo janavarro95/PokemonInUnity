@@ -3,11 +3,11 @@
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
-**/PokemonDatabase
-**/PokemonDatabase*
+**/PokemonDatabaseScrape
+**/PokemonDatabaseScrape*
 Assets/AssetStoreTools*
-**/PokemonDatabase/
-**/PokemonDatabase/*
+**/PokemonDatabaseScrape/
+**/PokemonDatabaseScrape/*
 
 # Visual Studio cache directory
 .vs/

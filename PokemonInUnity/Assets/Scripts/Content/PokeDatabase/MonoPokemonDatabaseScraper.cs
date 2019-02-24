@@ -12,13 +12,11 @@ namespace Assets.Scripts.Content.PokeDatabase
     public class MonoPokemonDatabaseScraper:MonoBehaviour
     {
         [SerializeField]
-        Text pokemonSpeciesLoadedText;
-        [SerializeField]
-        Text pokemonLoadedText;
+        Text loadingText;
 
         public void Awake()
         {
-            StartCoroutine(PokemonDatabase.InitializeDataBase());
+            StartCoroutine(PokemonDatabaseScraper.InitializeDataBase());
 
             //PokemonDatabase.ScrapePokemonSpecies();
             /*
@@ -56,8 +54,10 @@ namespace Assets.Scripts.Content.PokeDatabase
 
         public void Update()
         {
-            this.pokemonSpeciesLoadedText.text = "Pokemon Species Loaded: " + PokemonDatabase.PokemonSpeciesByDex.Count + "/" + PokemonDatabase.NumberOfPokemon;
-            this.pokemonLoadedText.text = "Pokemon Loaded: " + PokemonDatabase.PokemonByDex.Count + "/" + PokemonDatabase.NumberOfPokemon;
+            this.loadingText.text = "Pokemon Species Loaded: " + PokemonDatabaseScraper.PokemonSpeciesByDex.Count + "/" + PokemonDatabaseScraper.NumberOfPokemon +
+            Environment.NewLine + "Pokemon Loaded: " + PokemonDatabaseScraper.PokemonByDex.Count + "/" + PokemonDatabaseScraper.NumberOfPokemon +
+            Environment.NewLine + "Moves Loaded:" + PokemonDatabase.MovesByIndex.Count + "/" + PokemonDatabaseScraper.NumberOfMoves;
+            
         }
 
     }

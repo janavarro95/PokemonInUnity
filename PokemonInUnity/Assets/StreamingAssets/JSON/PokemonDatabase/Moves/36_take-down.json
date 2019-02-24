@@ -1,0 +1,28 @@
+{
+  "accuracy": 85.0,
+  "pp": 20,
+  "priority": 0,
+  "power": 90,
+  "effects": {
+    "effect": "Inflicts regular damage.  User takes 1/4 the damage it inflicts in recoil.",
+    "shortEffect": "User receives 1/4 the damage it inflicts in recoil."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": -25,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "normal",
+  "moveDescription": "A reckless, full-body charge attack for slamming into\nthe target. This also damages the user a little.",
+  "moveName": "take-down",
+  "id": 36
+}

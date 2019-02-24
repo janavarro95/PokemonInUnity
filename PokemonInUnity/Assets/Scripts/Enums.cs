@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 
@@ -111,6 +112,82 @@ namespace Assets.Scripts
             Fairy
         }
 
+        public enum TargetType
+        {
+            /// <summary>
+            /// "One specific move.  How this move is chosen depends upon on the move being used."
+            /// </summary>
+            [Description("One specific move.  How this move is chosen depends upon on the move being used.")]
+            moveSpecific,
+            /// <summary>
+            /// "One other Pokémon on the field, selected by the trainer.  Stolen moves reuse the same target."
+            /// </summary>
+            [Description("One other Pokémon on the field, selected by the trainer.  Stolen moves reuse the same target.")]
+            meFirst,
+            /// <summary>
+            /// "The user's ally (if any)."
+            /// </summary>
+            [Description("The user's ally (if any).")]
+            ally,
+            /// <summary>
+            /// "The user's side of the field.  Affects the user and its ally (if any)."
+            /// </summary>
+            [Description("The user's side of the field.  Affects the user and its ally (if any).")]
+            usersField,
+            /// <summary>
+            /// "Either the user or its ally, selected by the trainer."
+            /// </summary>
+            [Description("Either the user or its ally, selected by the trainer.")]
+            userOrAlly,
+            /// <summary>
+            /// The opposing side of the field.  Affects opposing Pokémon."
+            /// </summary>
+            [Description("The opposing side of the field.  Affects opposing Pokémon.")]
+            opponentsField,
+            /// <summary>
+            /// "The user."
+            /// </summary>
+            [Description("The user.")]
+            user,
+            /// <summary>
+            /// "One opposing Pokémon, selected at random."
+            /// </summary>
+            [Description("One opposing Pokémon, selected at random.")]
+            randomOpponent,
+            /// <summary>
+            /// "Every other Pokémon on the field."
+            /// </summary>
+            [Description("Every other Pokémon on the field.")]
+            allOtherPokemon,
+            /// <summary>
+            /// "One other Pokémon on the field, selected by the trainer."
+            /// </summary>
+            [Description("One other Pokémon on the field, selected by the trainer.")]
+            selectedPokemon,
+            /// <summary>
+            /// "All opposing Pokémon."
+            /// </summary>
+            [Description("All opposing Pokémon.")]
+            allOpponents,
+            /// <summary>
+            /// "The entire field.  Affects all Pokémon."
+            /// </summary>
+            [Description("The entire field.  Affects all Pokémon.")]
+            entireField,
+            /// <summary>
+            /// "The user and its allies."
+            /// </summary>
+            [Description("The user and its allies.")]
+            userAndAllies,
+            /// <summary>
+            /// "Every Pokémon on the field."
+            /// </summary>
+            [Description("Every Pokémon on the field.")]
+            allPokemon
+
+
+        }
+
         /// <summary>
         /// Gets all of the values stored in an enum.
         /// </summary>
@@ -119,6 +196,21 @@ namespace Assets.Scripts
         public static T[] GetValues<T>()
         {
             return (T[])Enum.GetValues(typeof(T));
+        }
+
+        public static Type TypeNameToEnum(string TypeName)
+        {
+            return (Type)Enum.Parse(typeof(Type), TypeName, true);
+        }
+
+        public static TargetType TargetTypeNameToEnum(int TargetID)
+        {
+            return (TargetType)(TargetID - 1);
+        }
+
+        public static T ParseEnum<T>(string EnumValue)
+        {
+            return (T)Enum.Parse(typeof(T), EnumValue, true);
         }
 
     }
