@@ -1,0 +1,33 @@
+{
+  "accuracy": 0.0,
+  "pp": 20,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Raises the user's Defense by two stages.",
+    "shortEffect": "Raises the user's Defense by two stages."
+  },
+  "ailment": "none",
+  "category": "net-good-stats",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {
+    "defense": {
+      "statName": "defense",
+      "amountToChange": 2
+    }
+  },
+  "targets": "user",
+  "moveType": "poison",
+  "moveDescription": "The user alters its cellular structure to liquefy itself,\nsharply raising its Defense stat.",
+  "moveName": "acid-armor",
+  "id": 151
+}

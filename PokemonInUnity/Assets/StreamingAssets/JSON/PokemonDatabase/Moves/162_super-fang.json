@@ -1,0 +1,28 @@
+{
+  "accuracy": 90.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Inflicts typeless damage equal to half the target's remaining HP.",
+    "shortEffect": "Inflicts damage equal to half the target's HP."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "normal",
+  "moveDescription": "The user chomps hard on the target with its sharp\nfront fangs. This cuts the target’s HP in half.",
+  "moveName": "super-fang",
+  "id": 162
+}
