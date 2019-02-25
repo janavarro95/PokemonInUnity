@@ -1,4 +1,5 @@
-﻿using PokeAPI;
+﻿using Assets.Scripts.Content.PokeDatabase;
+using PokeAPI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -75,43 +76,28 @@ namespace Assets.Scripts.Content.GameContent
         public bool hasMultipleForms;
 
         public Enums.ExperienceGrowthRate growthRate;
+
         public int pokedexNumber;
+        public string pokedexDescription;
 
         public List<Enums.EggGroup> eggGroups;
 
         public string evolvesFrom;
+
+        public EvolutionInfo evolutionInfo;
+
+        
+
 
         public PokemonInfo()
         {
             
         }
 
-        public PokemonInfo(PokeAPI.Pokemon pokeInfo, PokemonSpecies speciesInfo,int dexNumber)
+        public PokemonInfo(PokeAPI.Pokemon pokeInfo,int dexNumber)
         {
-            this.genderRateRaw = speciesInfo.FemaleToMaleRate.Value;
-            this.captureRateRaw = speciesInfo.CaptureRate;
-            this.baseHappiness = speciesInfo.BaseHappiness;
-            this.hatchCounter = speciesInfo.HatchCounter;
-            this.hasMultipleForms = speciesInfo.FormsAreSwitchable;
 
-            this.growthRate = Enums.ParseEnum<Enums.ExperienceGrowthRate>(PokeDatabase.PokemonDatabase.SanitizeStringNoSpaces(speciesInfo.GrowthRate.Name));
-            this.pokedexNumber = dexNumber;
-
-            this.eggGroups = new List<Enums.EggGroup>();
-            foreach(var group in speciesInfo.EggGroups)
-            {
-               eggGroups.Add( Enums.ParseEnum<Enums.EggGroup>(PokeDatabase.PokemonDatabase.SanitizeStringNoSpaces(group.Name)));
-            }
-
-            this.evolvesFrom =PokeDatabase.PokemonDatabase.SanitizeString(speciesInfo.EvolvesFromSpecies.Name);
-
-            //throw new Exception("Need to implement pokemon color for pokedex search?");
-
-
-            throw new Exception("Need to implement evolution chain!");
-            throw new Exception("Need to implement dex description!");
-
-            this.pokemonName =PokeDatabase.PokemonDatabase.SanitizeString(pokeInfo.Name);
+            this.pokemonName = PokeDatabase.PokemonDatabase.SanitizeString(pokeInfo.Name);
 
             foreach (var v in pokeInfo.Stats)
             {
@@ -144,15 +130,39 @@ namespace Assets.Scripts.Content.GameContent
             this.baseExperience = pokeInfo.BaseExperience;
 
             learnableMoves = new List<string>();
-            foreach(var v in pokeInfo.Moves)
+            foreach (var v in pokeInfo.Moves)
             {
                 learnableMoves.Add(PokeDatabase.PokemonDatabase.SanitizeString(v.Move.Name));
             }
-            foreach(var type in pokeInfo.Types)
+            foreach (var type in pokeInfo.Types)
             {
                 types.Add(Enums.ParseEnum<Enums.Type>(type.Type.Name));
             }
-             
+
+
+            PokemonSpecies speciesInfo = PokemonDatabaseScraper.PokemonSpeciesByName[PokemonDatabase.SanitizeString(pokeInfo.Species.Name)];
+
+            this.genderRateRaw = speciesInfo.FemaleToMaleRate.Value;
+            this.captureRateRaw = speciesInfo.CaptureRate;
+            this.baseHappiness = speciesInfo.BaseHappiness;
+            this.hatchCounter = speciesInfo.HatchCounter;
+            this.hasMultipleForms = speciesInfo.FormsAreSwitchable;
+
+            this.growthRate = Enums.ParseEnum<Enums.ExperienceGrowthRate>(PokeDatabase.PokemonDatabase.SanitizeStringNoSpaces(speciesInfo.GrowthRate.Name));
+            this.pokedexNumber = dexNumber;
+
+            this.pokedexDescription = PokeDatabase.PokemonDatabase.GetProperFlavorText(speciesInfo.FlavorTexts);
+
+            this.eggGroups = new List<Enums.EggGroup>();
+            foreach(var group in speciesInfo.EggGroups)
+            {
+               eggGroups.Add( Enums.ParseEnum<Enums.EggGroup>(PokeDatabase.PokemonDatabase.SanitizeStringNoSpaces(group.Name)));
+            }
+
+            this.evolvesFrom =PokeDatabase.PokemonDatabase.SanitizeString(speciesInfo.EvolvesFromSpecies.Name);
+
+            //throw new Exception("Need to implement pokemon color for pokedex search?");
+            this.evolutionInfo = PokeDatabase.PokemonDatabase.EvolutionByPokemon[this.pokemonName];
         }
 
         public bool canLearnMove(MoveInfo move)

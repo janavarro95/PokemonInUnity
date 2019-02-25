@@ -228,6 +228,14 @@ namespace Assets.Scripts
 
         }
 
+        public enum PokemonGender
+        {
+            NULL,
+            Female,
+            Male,
+            Genderless
+        }
+
         /// <summary>
         /// Gets all of the values stored in an enum.
         /// </summary>
