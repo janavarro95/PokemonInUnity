@@ -79,6 +79,8 @@ namespace Assets.Scripts.Content.GameContent
 
         public List<Enums.EggGroup> eggGroups;
 
+        public string evolvesFrom;
+
         public PokemonInfo()
         {
             
@@ -101,10 +103,11 @@ namespace Assets.Scripts.Content.GameContent
                eggGroups.Add( Enums.ParseEnum<Enums.EggGroup>(PokeDatabase.PokemonDatabase.SanitizeStringNoSpaces(group.Name)));
             }
 
+            this.evolvesFrom =PokeDatabase.PokemonDatabase.SanitizeString(speciesInfo.EvolvesFromSpecies.Name);
 
             //throw new Exception("Need to implement pokemon color for pokedex search?");
 
-            throw new Exception("Need to implement evolves from pokemon.");
+
             throw new Exception("Need to implement evolution chain!");
             throw new Exception("Need to implement dex description!");
 
