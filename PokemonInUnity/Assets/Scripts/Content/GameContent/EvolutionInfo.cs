@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace Assets.Scripts.Content.GameContent
 {
@@ -10,43 +11,45 @@ namespace Assets.Scripts.Content.GameContent
     {
 
         public string speciesName;
-        public List<string> evolvesTo;
+        public Dictionary<string,EvolutionTriggers> evolvesTo;
+        /// <summary>
+        /// If true this pokemon can't breed.
+        /// </summary>
         public bool isBaby;
         public EvolutionTriggers triggers;
+        public int id;
 
         public EvolutionInfo()
         {
 
         }
 
-        public EvolutionInfo(string SpeciesName, List<string> evolvesTo,bool IsBaby,EvolutionTriggers Triggers)
-        {
-            this.speciesName = SpeciesName;
-            this.evolvesTo = evolvesTo;
-            this.isBaby = IsBaby;
-            this.triggers = Triggers;
-        }
 
-        public EvolutionInfo(PokeAPI.ChainLink Link)
+        public EvolutionInfo(PokeAPI.ChainLink Link, int chainIndex)
         {
             this.speciesName =PokeDatabase.PokemonDatabase.SanitizeString(Link.Species.Name);
-            this.evolvesTo = new List<string>();
+            this.evolvesTo = new Dictionary<string, EvolutionTriggers>();
+            this.id = chainIndex;
 
-            processEvolutionChains(Link);
+            processEvolutionChains(Link,this.id);
 
             this.isBaby = Link.IsBaby;
-            this.triggers = new EvolutionTriggers(Link.Details[0]); //Probably would be fine....
+
+            this.triggers = Link.Details.Length >= 1 ? new EvolutionTriggers(Link.Details[0]) : new EvolutionTriggers(false); //Probably would be fine....
+            PokeDatabase.PokemonDatabaseScraper.SerializeEvolutionInfo(this);
+
         }
 
-        private void processEvolutionChains(PokeAPI.ChainLink Link)
+        private void processEvolutionChains(PokeAPI.ChainLink Link,int chainIndex)
         {
             string currentSpeciesName = Link.Species.Name;
             PokeDatabase.PokemonDatabase.AddEvolutionInfoPokemon(this);
             foreach (var v in Link.EvolvesTo)
             {
-                new EvolutionInfo(v); //Seems bad but it calls a recursion level down this tree....
-                PokeDatabase.PokemonDatabase.EvolutionByPokemon[PokeDatabase.PokemonDatabase.SanitizeString(currentSpeciesName)].evolvesTo.Add(PokeDatabase.PokemonDatabase.SanitizeString(v.Species.Name));
+                EvolutionInfo info= new EvolutionInfo(v,chainIndex); //Seems bad but it calls a recursion level down this tree....
+                PokeDatabase.PokemonDatabase.EvolutionByPokemon[PokeDatabase.PokemonDatabase.SanitizeString(currentSpeciesName)].evolvesTo.Add(PokeDatabase.PokemonDatabase.SanitizeString(v.Species.Name), Link.Details.Length >= 1 ? new EvolutionTriggers(Link.Details[0]) : new EvolutionTriggers(false));
             }
+            
 
         }
 

@@ -56,7 +56,8 @@ namespace Assets.Scripts.Content.PokeDatabase
         {
             this.loadingText.text = "Pokemon Species Loaded: " + PokemonDatabaseScraper.PokemonSpeciesByDex.Count + "/" + PokemonDatabaseScraper.NumberOfPokemon +
             Environment.NewLine + "Pokemon Loaded: " + PokemonDatabaseScraper.PokemonByDex.Count + "/" + PokemonDatabaseScraper.NumberOfPokemon +
-            Environment.NewLine + "Moves Loaded:" + PokemonDatabase.MovesByIndex.Count + "/" + PokemonDatabaseScraper.NumberOfMoves;
+            Environment.NewLine + "Moves Loaded:" + PokemonDatabase.MovesByIndex.Count + "/" + PokemonDatabaseScraper.NumberOfMoves +
+            Environment.NewLine + "Evolution Chains Loaded" + (PokemonDatabase.EvolutionByIndex.Count + 1) + "/" + PokemonDatabaseScraper.NumberOfEvolutionChains;
             
         }
 

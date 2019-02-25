@@ -12,7 +12,7 @@ namespace Assets.Scripts.Content.PokeDatabase
         public static Dictionary<string, MoveInfo> MovesByName = new Dictionary<string, MoveInfo>();
         public static Dictionary<int, MoveInfo> MovesByIndex = new Dictionary<int, MoveInfo>();
 
-        public static Dictionary<int, EvolutionInfo> EvolutionInfoByIndex = new Dictionary<int, EvolutionInfo>();
+        public static Dictionary<int, EvolutionInfo> EvolutionByIndex = new Dictionary<int, EvolutionInfo>();
         public static Dictionary<string, EvolutionInfo> EvolutionByPokemon = new Dictionary<string, EvolutionInfo>();
         
 
@@ -33,7 +33,10 @@ namespace Assets.Scripts.Content.PokeDatabase
             if (!EvolutionByPokemon.ContainsKey(Info.speciesName))
             {
                 EvolutionByPokemon.Add(Info.speciesName,Info);
-
+            }
+            if (!EvolutionByIndex.ContainsKey(Info.id))
+            {
+                EvolutionByIndex.Add(Info.id, Info);
             }
         }
 
