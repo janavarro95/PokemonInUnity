@@ -208,6 +208,26 @@ namespace Assets.Scripts
             Fluctuating
         }
 
+        public enum EggGroup
+        {
+            Monster,
+            Water1,
+            Bug,
+            Flying,
+            Ground,
+            Fairy,
+            Plant,
+            Humanshape,
+            Water3,
+            Mineral,
+            Indeterminate,
+            Water2,
+            Ditto,
+            Dragon,
+            NoEggs
+
+        }
+
         /// <summary>
         /// Gets all of the values stored in an enum.
         /// </summary>

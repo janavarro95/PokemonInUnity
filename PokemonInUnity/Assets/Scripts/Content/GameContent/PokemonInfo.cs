@@ -77,6 +77,8 @@ namespace Assets.Scripts.Content.GameContent
         public Enums.ExperienceGrowthRate growthRate;
         public int pokedexNumber;
 
+        public List<Enums.EggGroup> eggGroups;
+
         public PokemonInfo()
         {
             
@@ -92,14 +94,19 @@ namespace Assets.Scripts.Content.GameContent
 
             this.growthRate = Enums.ParseEnum<Enums.ExperienceGrowthRate>(PokeDatabase.PokemonDatabase.SanitizeStringNoSpaces(speciesInfo.GrowthRate.Name));
             this.pokedexNumber = dexNumber;
-            
-            
 
-            throw new Exception("Need to implement Egg groups");
-            throw new Exception("Need to implement pokemon color for pokedex search?");
+            this.eggGroups = new List<Enums.EggGroup>();
+            foreach(var group in speciesInfo.EggGroups)
+            {
+               eggGroups.Add( Enums.ParseEnum<Enums.EggGroup>(PokeDatabase.PokemonDatabase.SanitizeStringNoSpaces(group.Name)));
+            }
+
+
+            //throw new Exception("Need to implement pokemon color for pokedex search?");
+
             throw new Exception("Need to implement evolves from pokemon.");
             throw new Exception("Need to implement evolution chain!");
-            throw new Exception("Need to implement evolution chain!");
+            throw new Exception("Need to implement dex description!");
 
             this.pokemonName =PokeDatabase.PokemonDatabase.SanitizeString(pokeInfo.Name);
 
