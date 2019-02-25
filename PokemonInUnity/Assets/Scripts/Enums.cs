@@ -83,6 +83,15 @@ namespace Assets.Scripts
             Invisible
         }
 
+        public enum ItemType
+        {
+            Item,
+            Pokeball,
+            Medicine,
+            TMHM,
+            Berry,
+            KeyItem
+        }
 
         public enum DamageClass
         {
@@ -92,6 +101,7 @@ namespace Assets.Scripts
 
         public enum Type
         {
+            NULL,
             Normal,
             Fighting,
             Flying,
@@ -186,6 +196,16 @@ namespace Assets.Scripts
             allPokemon
 
 
+        }
+
+        public enum ExperienceGrowthRate
+        {
+            Erratic,
+            Fast,
+            MediumFast,
+            MediumSlow,
+            Slow,
+            Fluctuating
         }
 
         /// <summary>

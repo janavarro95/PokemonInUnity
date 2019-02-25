@@ -131,7 +131,7 @@ namespace Assets.Scripts.Content.GameContent
                 }
             }
 
-            this.moveName = Move.Name;
+            this.moveName = PokeDatabase.PokemonDatabase.SanitizeString(Move.Name);
             this.id = Move.ID;
         }
     }
