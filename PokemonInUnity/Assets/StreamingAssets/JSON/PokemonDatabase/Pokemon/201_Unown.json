@@ -1,0 +1,58 @@
+{
+  "pokemonName": "Unown",
+  "pokedexNumber": 201,
+  "pokedexDescription": "This Pokémon is shaped like ancient writing. It is a mystery as\nto which came first, the ancient writings or the various Unown.\nResearch into this topic is ongoing but nothing is known.",
+  "baseHP": 48,
+  "baseAttack": 72,
+  "baseDefense": 48,
+  "baseSpecialAttack": 72,
+  "baseSpecialDefense": 48,
+  "baseSpeed": 48,
+  "types": [
+    "psychic"
+  ],
+  "evolvesFrom": null,
+  "evolutionInfo": {
+    "speciesName": "Unown",
+    "evolvesTo": {},
+    "isBaby": false,
+    "triggers": {
+      "itemUsed": null,
+      "gender": "null",
+      "heldItemName": null,
+      "knownMoveName": null,
+      "knownMoveType": "null",
+      "minLevel": 0,
+      "minHappiness": 0,
+      "minBeauty": 0,
+      "minAffection": 0,
+      "mustBeRaining": false,
+      "partyPokemonRequired": null,
+      "partyPokemonWithTypeRequired": "null",
+      "relativePhysicalStats": 0,
+      "timeOfDay": null,
+      "mustBeTraded": false,
+      "evolves": false
+    },
+    "id": 99
+  },
+  "baseExperience": 118,
+  "genderRateRaw": -1.0,
+  "captureRateRaw": 225.0,
+  "baseHappiness": 70,
+  "hatchCounter": 40,
+  "hasMultipleForms": false,
+  "growthRate": "medium",
+  "eggGroups": [
+    "noEggs"
+  ],
+  "learnableMoves": {
+    "LevelUp": {},
+    "Egg": {},
+    "Tutor": {},
+    "Machine": {
+      "Hidden Power": 0
+    },
+    "LightBallEgg": {}
+  }
+}

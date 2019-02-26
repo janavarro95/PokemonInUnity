@@ -1,0 +1,81 @@
+{
+  "pokemonName": "Cascoon",
+  "pokedexNumber": 268,
+  "pokedexDescription": "Cascoon makes its protective cocoon by wrapping its body\nentirely with a fine silk from its mouth. Once the silk goes\naround its body, it hardens. This Pokémon prepares for its\nevolution inside the cocoon.",
+  "baseHP": 50,
+  "baseAttack": 35,
+  "baseDefense": 55,
+  "baseSpecialAttack": 25,
+  "baseSpecialDefense": 25,
+  "baseSpeed": 15,
+  "types": [
+    "bug"
+  ],
+  "evolvesFrom": null,
+  "evolutionInfo": {
+    "speciesName": "Cascoon",
+    "evolvesTo": {
+      "Dustox": {
+        "itemUsed": "",
+        "gender": "genderless",
+        "heldItemName": "",
+        "knownMoveName": "",
+        "knownMoveType": "null",
+        "minLevel": 10,
+        "minHappiness": 0,
+        "minBeauty": 0,
+        "minAffection": 0,
+        "mustBeRaining": false,
+        "partyPokemonRequired": "",
+        "partyPokemonWithTypeRequired": "null",
+        "relativePhysicalStats": 999,
+        "timeOfDay": null,
+        "mustBeTraded": false,
+        "evolves": false
+      }
+    },
+    "isBaby": false,
+    "triggers": {
+      "itemUsed": "",
+      "gender": "genderless",
+      "heldItemName": "",
+      "knownMoveName": "",
+      "knownMoveType": "null",
+      "minLevel": 7,
+      "minHappiness": 0,
+      "minBeauty": 0,
+      "minAffection": 0,
+      "mustBeRaining": false,
+      "partyPokemonRequired": "",
+      "partyPokemonWithTypeRequired": "null",
+      "relativePhysicalStats": 999,
+      "timeOfDay": null,
+      "mustBeTraded": false,
+      "evolves": false
+    },
+    "id": 135
+  },
+  "baseExperience": 72,
+  "genderRateRaw": 0.512,
+  "captureRateRaw": 120.0,
+  "baseHappiness": 70,
+  "hatchCounter": 15,
+  "hasMultipleForms": false,
+  "growthRate": "medium",
+  "eggGroups": [
+    "bug"
+  ],
+  "learnableMoves": {
+    "LevelUp": {
+      "String Shot": 0,
+      "Harden": 1,
+      "Iron Defense": 0,
+      "Bug Bite": 0,
+      "Electroweb": 0
+    },
+    "Egg": {},
+    "Tutor": {},
+    "Machine": {},
+    "LightBallEgg": {}
+  }
+}

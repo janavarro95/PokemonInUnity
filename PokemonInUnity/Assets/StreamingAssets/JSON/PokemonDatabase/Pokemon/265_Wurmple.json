@@ -1,0 +1,82 @@
+{
+  "pokemonName": "Wurmple",
+  "pokedexNumber": 265,
+  "pokedexDescription": "Using the spikes on its rear end, Wurmple peels the bark off\ntrees and feeds on the sap that oozes out. This Pokémon’s\nfeet are tipped with suction pads that allow it to cling to glass\nwithout slipping.",
+  "baseHP": 45,
+  "baseAttack": 45,
+  "baseDefense": 35,
+  "baseSpecialAttack": 20,
+  "baseSpecialDefense": 30,
+  "baseSpeed": 20,
+  "types": [
+    "bug"
+  ],
+  "evolvesFrom": null,
+  "evolutionInfo": {
+    "speciesName": "Wurmple",
+    "evolvesTo": {
+      "Silcoon": {
+        "itemUsed": "",
+        "gender": "genderless",
+        "heldItemName": "",
+        "knownMoveName": "",
+        "knownMoveType": "null",
+        "minLevel": 7,
+        "minHappiness": 0,
+        "minBeauty": 0,
+        "minAffection": 0,
+        "mustBeRaining": false,
+        "partyPokemonRequired": "",
+        "partyPokemonWithTypeRequired": "null",
+        "relativePhysicalStats": 999,
+        "timeOfDay": null,
+        "mustBeTraded": false,
+        "evolves": false
+      }
+    },
+    "isBaby": false,
+    "triggers": {
+      "itemUsed": null,
+      "gender": "null",
+      "heldItemName": null,
+      "knownMoveName": null,
+      "knownMoveType": "null",
+      "minLevel": 0,
+      "minHappiness": 0,
+      "minBeauty": 0,
+      "minAffection": 0,
+      "mustBeRaining": false,
+      "partyPokemonRequired": null,
+      "partyPokemonWithTypeRequired": "null",
+      "relativePhysicalStats": 0,
+      "timeOfDay": null,
+      "mustBeTraded": false,
+      "evolves": false
+    },
+    "id": 135
+  },
+  "baseExperience": 56,
+  "genderRateRaw": 0.512,
+  "captureRateRaw": 255.0,
+  "baseHappiness": 70,
+  "hatchCounter": 15,
+  "hasMultipleForms": false,
+  "growthRate": "medium",
+  "eggGroups": [
+    "bug"
+  ],
+  "learnableMoves": {
+    "LevelUp": {
+      "Tackle": 1,
+      "Poison Sting": 5,
+      "String Shot": 1,
+      "Snore": 0,
+      "Bug Bite": 15,
+      "Electroweb": 0
+    },
+    "Egg": {},
+    "Tutor": {},
+    "Machine": {},
+    "LightBallEgg": {}
+  }
+}

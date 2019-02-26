@@ -1,0 +1,80 @@
+{
+  "pokemonName": "Caterpie",
+  "pokedexNumber": 10,
+  "pokedexDescription": "Caterpie has a voracious appetite. It can devour leaves bigger\nthan its body right before your eyes. From its antenna, this\nPokémon releases a terrifically strong odor.",
+  "baseHP": 45,
+  "baseAttack": 30,
+  "baseDefense": 35,
+  "baseSpecialAttack": 20,
+  "baseSpecialDefense": 20,
+  "baseSpeed": 45,
+  "types": [
+    "bug"
+  ],
+  "evolvesFrom": null,
+  "evolutionInfo": {
+    "speciesName": "Caterpie",
+    "evolvesTo": {
+      "Metapod": {
+        "itemUsed": "",
+        "gender": "genderless",
+        "heldItemName": "",
+        "knownMoveName": "",
+        "knownMoveType": "null",
+        "minLevel": 7,
+        "minHappiness": 0,
+        "minBeauty": 0,
+        "minAffection": 0,
+        "mustBeRaining": false,
+        "partyPokemonRequired": "",
+        "partyPokemonWithTypeRequired": "null",
+        "relativePhysicalStats": 999,
+        "timeOfDay": null,
+        "mustBeTraded": false,
+        "evolves": false
+      }
+    },
+    "isBaby": false,
+    "triggers": {
+      "itemUsed": null,
+      "gender": "null",
+      "heldItemName": null,
+      "knownMoveName": null,
+      "knownMoveType": "null",
+      "minLevel": 0,
+      "minHappiness": 0,
+      "minBeauty": 0,
+      "minAffection": 0,
+      "mustBeRaining": false,
+      "partyPokemonRequired": null,
+      "partyPokemonWithTypeRequired": "null",
+      "relativePhysicalStats": 0,
+      "timeOfDay": null,
+      "mustBeTraded": false,
+      "evolves": false
+    },
+    "id": 4
+  },
+  "baseExperience": 39,
+  "genderRateRaw": 0.512,
+  "captureRateRaw": 255.0,
+  "baseHappiness": 70,
+  "hatchCounter": 15,
+  "hasMultipleForms": false,
+  "growthRate": "medium",
+  "eggGroups": [
+    "bug"
+  ],
+  "learnableMoves": {
+    "LevelUp": {
+      "Tackle": 1,
+      "String Shot": 1,
+      "Snore": 0,
+      "Bug Bite": 9,
+      "Electroweb": 0
+    },
+    "Egg": {},
+    "Tutor": {},
+    "Machine": {}
+  }
+}

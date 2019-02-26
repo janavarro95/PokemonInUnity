@@ -1,0 +1,82 @@
+{
+  "pokemonName": "Beldum",
+  "pokedexNumber": 374,
+  "pokedexDescription": "Instead of blood, a powerful magnetic force courses\nthroughout Beldum’s body. This Pokémon communicates\nwith others by sending controlled pulses of magnetism.",
+  "baseHP": 40,
+  "baseAttack": 55,
+  "baseDefense": 80,
+  "baseSpecialAttack": 35,
+  "baseSpecialDefense": 60,
+  "baseSpeed": 30,
+  "types": [
+    "psychic",
+    "steel"
+  ],
+  "evolvesFrom": null,
+  "evolutionInfo": {
+    "speciesName": "Beldum",
+    "evolvesTo": {
+      "Metang": {
+        "itemUsed": "",
+        "gender": "genderless",
+        "heldItemName": "",
+        "knownMoveName": "",
+        "knownMoveType": "null",
+        "minLevel": 20,
+        "minHappiness": 0,
+        "minBeauty": 0,
+        "minAffection": 0,
+        "mustBeRaining": false,
+        "partyPokemonRequired": "",
+        "partyPokemonWithTypeRequired": "null",
+        "relativePhysicalStats": 999,
+        "timeOfDay": null,
+        "mustBeTraded": false,
+        "evolves": false
+      }
+    },
+    "isBaby": false,
+    "triggers": {
+      "itemUsed": null,
+      "gender": "null",
+      "heldItemName": null,
+      "knownMoveName": null,
+      "knownMoveType": "null",
+      "minLevel": 0,
+      "minHappiness": 0,
+      "minBeauty": 0,
+      "minAffection": 0,
+      "mustBeRaining": false,
+      "partyPokemonRequired": null,
+      "partyPokemonWithTypeRequired": "null",
+      "relativePhysicalStats": 0,
+      "timeOfDay": null,
+      "mustBeTraded": false,
+      "evolves": false
+    },
+    "id": 192
+  },
+  "baseExperience": 60,
+  "genderRateRaw": -1.0,
+  "captureRateRaw": 3.0,
+  "baseHappiness": 35,
+  "hatchCounter": 40,
+  "hasMultipleForms": false,
+  "growthRate": "slow",
+  "eggGroups": [
+    "mineral"
+  ],
+  "learnableMoves": {
+    "LevelUp": {
+      "Headbutt": 0,
+      "Take Down": 1,
+      "Iron Defense": 0,
+      "Zen Headbutt": 0,
+      "Iron Head": 0
+    },
+    "Egg": {},
+    "Tutor": {},
+    "Machine": {},
+    "LightBallEgg": {}
+  }
+}

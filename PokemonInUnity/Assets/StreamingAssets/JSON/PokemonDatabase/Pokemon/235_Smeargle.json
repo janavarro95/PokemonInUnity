@@ -1,0 +1,58 @@
+{
+  "pokemonName": "Smeargle",
+  "pokedexNumber": 235,
+  "pokedexDescription": "Smeargle marks the boundaries of its territory using a body\nfluid that leaks out from the tip of its tail. Over 5,000 different\nmarks left by this Pokémon have been found.",
+  "baseHP": 55,
+  "baseAttack": 20,
+  "baseDefense": 35,
+  "baseSpecialAttack": 20,
+  "baseSpecialDefense": 45,
+  "baseSpeed": 75,
+  "types": [
+    "normal"
+  ],
+  "evolvesFrom": null,
+  "evolutionInfo": {
+    "speciesName": "Smeargle",
+    "evolvesTo": {},
+    "isBaby": false,
+    "triggers": {
+      "itemUsed": null,
+      "gender": "null",
+      "heldItemName": null,
+      "knownMoveName": null,
+      "knownMoveType": "null",
+      "minLevel": 0,
+      "minHappiness": 0,
+      "minBeauty": 0,
+      "minAffection": 0,
+      "mustBeRaining": false,
+      "partyPokemonRequired": null,
+      "partyPokemonWithTypeRequired": "null",
+      "relativePhysicalStats": 0,
+      "timeOfDay": null,
+      "mustBeTraded": false,
+      "evolves": false
+    },
+    "id": 121
+  },
+  "baseExperience": 88,
+  "genderRateRaw": 0.512,
+  "captureRateRaw": 45.0,
+  "baseHappiness": 70,
+  "hatchCounter": 20,
+  "hasMultipleForms": false,
+  "growthRate": "fast",
+  "eggGroups": [
+    "ground"
+  ],
+  "learnableMoves": {
+    "LevelUp": {
+      "Sketch": 91
+    },
+    "Egg": {},
+    "Tutor": {},
+    "Machine": {},
+    "LightBallEgg": {}
+  }
+}

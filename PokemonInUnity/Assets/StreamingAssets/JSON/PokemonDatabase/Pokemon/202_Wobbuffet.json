@@ -1,0 +1,62 @@
+{
+  "pokemonName": "Wobbuffet",
+  "pokedexNumber": 202,
+  "pokedexDescription": "If two or more Wobbuffet meet, they will turn competitive\nand try to outdo each other’s endurance. However, they may\ntry to see which one can endure the longest without food.\nTrainers need to beware of this habit.",
+  "baseHP": 190,
+  "baseAttack": 33,
+  "baseDefense": 58,
+  "baseSpecialAttack": 33,
+  "baseSpecialDefense": 58,
+  "baseSpeed": 33,
+  "types": [
+    "psychic"
+  ],
+  "evolvesFrom": null,
+  "evolutionInfo": {
+    "speciesName": "Wobbuffet",
+    "evolvesTo": {},
+    "isBaby": false,
+    "triggers": {
+      "itemUsed": "",
+      "gender": "genderless",
+      "heldItemName": "",
+      "knownMoveName": "",
+      "knownMoveType": "null",
+      "minLevel": 15,
+      "minHappiness": 0,
+      "minBeauty": 0,
+      "minAffection": 0,
+      "mustBeRaining": false,
+      "partyPokemonRequired": "",
+      "partyPokemonWithTypeRequired": "null",
+      "relativePhysicalStats": 999,
+      "timeOfDay": null,
+      "mustBeTraded": false,
+      "evolves": false
+    },
+    "id": 100
+  },
+  "baseExperience": 142,
+  "genderRateRaw": 0.512,
+  "captureRateRaw": 45.0,
+  "baseHappiness": 70,
+  "hatchCounter": 20,
+  "hasMultipleForms": false,
+  "growthRate": "medium",
+  "eggGroups": [
+    "indeterminate"
+  ],
+  "learnableMoves": {
+    "LevelUp": {
+      "Counter": 1,
+      "Destiny Bond": 1,
+      "Mirror Coat": 1
+    },
+    "Egg": {},
+    "Tutor": {},
+    "Machine": {
+      "Safeguard": 0
+    },
+    "LightBallEgg": {}
+  }
+}

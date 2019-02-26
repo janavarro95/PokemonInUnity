@@ -1,0 +1,57 @@
+{
+  "pokemonName": "Ditto",
+  "pokedexNumber": 132,
+  "pokedexDescription": "Ditto rearranges its cell structure to transform itself into other\nshapes. However, if it tries to transform itself into something\nby relying on its memory, this Pokémon manages to get\ndetails wrong.",
+  "baseHP": 48,
+  "baseAttack": 48,
+  "baseDefense": 48,
+  "baseSpecialAttack": 48,
+  "baseSpecialDefense": 48,
+  "baseSpeed": 48,
+  "types": [
+    "normal"
+  ],
+  "evolvesFrom": null,
+  "evolutionInfo": {
+    "speciesName": "Ditto",
+    "evolvesTo": {},
+    "isBaby": false,
+    "triggers": {
+      "itemUsed": null,
+      "gender": "null",
+      "heldItemName": null,
+      "knownMoveName": null,
+      "knownMoveType": "null",
+      "minLevel": 0,
+      "minHappiness": 0,
+      "minBeauty": 0,
+      "minAffection": 0,
+      "mustBeRaining": false,
+      "partyPokemonRequired": null,
+      "partyPokemonWithTypeRequired": "null",
+      "relativePhysicalStats": 0,
+      "timeOfDay": null,
+      "mustBeTraded": false,
+      "evolves": false
+    },
+    "id": 66
+  },
+  "baseExperience": 101,
+  "genderRateRaw": -1.0,
+  "captureRateRaw": 35.0,
+  "baseHappiness": 70,
+  "hatchCounter": 20,
+  "hasMultipleForms": false,
+  "growthRate": "medium",
+  "eggGroups": [
+    "ditto"
+  ],
+  "learnableMoves": {
+    "LevelUp": {
+      "Transform": 1
+    },
+    "Egg": {},
+    "Tutor": {},
+    "Machine": {}
+  }
+}

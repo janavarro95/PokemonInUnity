@@ -1,0 +1,80 @@
+{
+  "pokemonName": "Metapod",
+  "pokedexNumber": 11,
+  "pokedexDescription": "The shell covering this Pokémon’s body is as hard as an\niron slab. Metapod does not move very much. It stays still\nbecause it is preparing its soft innards for evolution inside\nthe hard shell.",
+  "baseHP": 50,
+  "baseAttack": 20,
+  "baseDefense": 55,
+  "baseSpecialAttack": 25,
+  "baseSpecialDefense": 25,
+  "baseSpeed": 30,
+  "types": [
+    "bug"
+  ],
+  "evolvesFrom": null,
+  "evolutionInfo": {
+    "speciesName": "Metapod",
+    "evolvesTo": {
+      "Butterfree": {
+        "itemUsed": "",
+        "gender": "genderless",
+        "heldItemName": "",
+        "knownMoveName": "",
+        "knownMoveType": "null",
+        "minLevel": 10,
+        "minHappiness": 0,
+        "minBeauty": 0,
+        "minAffection": 0,
+        "mustBeRaining": false,
+        "partyPokemonRequired": "",
+        "partyPokemonWithTypeRequired": "null",
+        "relativePhysicalStats": 999,
+        "timeOfDay": null,
+        "mustBeTraded": false,
+        "evolves": false
+      }
+    },
+    "isBaby": false,
+    "triggers": {
+      "itemUsed": "",
+      "gender": "genderless",
+      "heldItemName": "",
+      "knownMoveName": "",
+      "knownMoveType": "null",
+      "minLevel": 7,
+      "minHappiness": 0,
+      "minBeauty": 0,
+      "minAffection": 0,
+      "mustBeRaining": false,
+      "partyPokemonRequired": "",
+      "partyPokemonWithTypeRequired": "null",
+      "relativePhysicalStats": 999,
+      "timeOfDay": null,
+      "mustBeTraded": false,
+      "evolves": false
+    },
+    "id": 4
+  },
+  "baseExperience": 72,
+  "genderRateRaw": 0.512,
+  "captureRateRaw": 120.0,
+  "baseHappiness": 70,
+  "hatchCounter": 15,
+  "hasMultipleForms": false,
+  "growthRate": "medium",
+  "eggGroups": [
+    "bug"
+  ],
+  "learnableMoves": {
+    "LevelUp": {
+      "String Shot": 0,
+      "Harden": 1,
+      "Iron Defense": 0,
+      "Bug Bite": 0,
+      "Electroweb": 0
+    },
+    "Egg": {},
+    "Tutor": {},
+    "Machine": {}
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "pokemonName": "Weedle",
+  "pokedexNumber": 13,
+  "pokedexDescription": "Weedle has an extremely acute sense of smell. It is capable of\ndistinguishing its favorite kinds of leaves from those it dislikes\njust by sniffing with its big red proboscis (nose).",
+  "baseHP": 40,
+  "baseAttack": 35,
+  "baseDefense": 30,
+  "baseSpecialAttack": 20,
+  "baseSpecialDefense": 20,
+  "baseSpeed": 50,
+  "types": [
+    "poison",
+    "bug"
+  ],
+  "evolvesFrom": null,
+  "evolutionInfo": {
+    "speciesName": "Weedle",
+    "evolvesTo": {
+      "Kakuna": {
+        "itemUsed": "",
+        "gender": "genderless",
+        "heldItemName": "",
+        "knownMoveName": "",
+        "knownMoveType": "null",
+        "minLevel": 7,
+        "minHappiness": 0,
+        "minBeauty": 0,
+        "minAffection": 0,
+        "mustBeRaining": false,
+        "partyPokemonRequired": "",
+        "partyPokemonWithTypeRequired": "null",
+        "relativePhysicalStats": 999,
+        "timeOfDay": null,
+        "mustBeTraded": false,
+        "evolves": false
+      }
+    },
+    "isBaby": false,
+    "triggers": {
+      "itemUsed": null,
+      "gender": "null",
+      "heldItemName": null,
+      "knownMoveName": null,
+      "knownMoveType": "null",
+      "minLevel": 0,
+      "minHappiness": 0,
+      "minBeauty": 0,
+      "minAffection": 0,
+      "mustBeRaining": false,
+      "partyPokemonRequired": null,
+      "partyPokemonWithTypeRequired": "null",
+      "relativePhysicalStats": 0,
+      "timeOfDay": null,
+      "mustBeTraded": false,
+      "evolves": false
+    },
+    "id": 5
+  },
+  "baseExperience": 39,
+  "genderRateRaw": 0.512,
+  "captureRateRaw": 255.0,
+  "baseHappiness": 70,
+  "hatchCounter": 15,
+  "hasMultipleForms": false,
+  "growthRate": "medium",
+  "eggGroups": [
+    "bug"
+  ],
+  "learnableMoves": {
+    "LevelUp": {
+      "Poison Sting": 1,
+      "String Shot": 1,
+      "Bug Bite": 9,
+      "Electroweb": 0
+    },
+    "Egg": {},
+    "Tutor": {},
+    "Machine": {}
+  }
+}

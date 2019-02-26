@@ -133,7 +133,11 @@ namespace Assets.Scripts
             /// <summary>
             /// Also known as TM/HM
             /// </summary>
-            Machine
+            Machine,
+            /// <summary>
+            /// Pichu's father must hold this when breeding.
+            /// </summary>
+            LightBallEgg
         }
 
         public enum TargetType
@@ -217,9 +221,12 @@ namespace Assets.Scripts
             Erratic,
             Fast,
             MediumFast,
+            Medium,
             MediumSlow,
             Slow,
-            Fluctuating
+            Fluctuating,
+            FastThenVerySlow,
+            SlowThenVeryFast
         }
 
         public enum EggGroup

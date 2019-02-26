@@ -1,0 +1,80 @@
+{
+  "pokemonName": "Magikarp",
+  "pokedexNumber": 129,
+  "pokedexDescription": "Magikarp is a pathetic excuse for a Pokémon that is only\ncapable of flopping and splashing. This behavior prompted\nscientists to undertake research into it.",
+  "baseHP": 20,
+  "baseAttack": 10,
+  "baseDefense": 55,
+  "baseSpecialAttack": 15,
+  "baseSpecialDefense": 20,
+  "baseSpeed": 80,
+  "types": [
+    "water"
+  ],
+  "evolvesFrom": null,
+  "evolutionInfo": {
+    "speciesName": "Magikarp",
+    "evolvesTo": {
+      "Gyarados": {
+        "itemUsed": "",
+        "gender": "genderless",
+        "heldItemName": "",
+        "knownMoveName": "",
+        "knownMoveType": "null",
+        "minLevel": 20,
+        "minHappiness": 0,
+        "minBeauty": 0,
+        "minAffection": 0,
+        "mustBeRaining": false,
+        "partyPokemonRequired": "",
+        "partyPokemonWithTypeRequired": "null",
+        "relativePhysicalStats": 999,
+        "timeOfDay": null,
+        "mustBeTraded": false,
+        "evolves": false
+      }
+    },
+    "isBaby": false,
+    "triggers": {
+      "itemUsed": null,
+      "gender": "null",
+      "heldItemName": null,
+      "knownMoveName": null,
+      "knownMoveType": "null",
+      "minLevel": 0,
+      "minHappiness": 0,
+      "minBeauty": 0,
+      "minAffection": 0,
+      "mustBeRaining": false,
+      "partyPokemonRequired": null,
+      "partyPokemonWithTypeRequired": "null",
+      "relativePhysicalStats": 0,
+      "timeOfDay": null,
+      "mustBeTraded": false,
+      "evolves": false
+    },
+    "id": 64
+  },
+  "baseExperience": 40,
+  "genderRateRaw": 0.512,
+  "captureRateRaw": 255.0,
+  "baseHappiness": 70,
+  "hatchCounter": 5,
+  "hasMultipleForms": false,
+  "growthRate": "slow",
+  "eggGroups": [
+    "dragon",
+    "water2"
+  ],
+  "learnableMoves": {
+    "LevelUp": {
+      "Tackle": 15,
+      "Splash": 1,
+      "Flail": 30,
+      "Bounce": 0
+    },
+    "Egg": {},
+    "Tutor": {},
+    "Machine": {}
+  }
+}

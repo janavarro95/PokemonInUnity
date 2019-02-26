@@ -11,7 +11,7 @@ namespace Assets.Scripts.Content.GameContent
 
         public static int ExperienceToNextLevel(int NextLevel, Enums.ExperienceGrowthRate GrowthRate)
         {
-            if (GrowthRate == Enums.ExperienceGrowthRate.Erratic)
+            if (GrowthRate == Enums.ExperienceGrowthRate.Erratic || GrowthRate== Enums.ExperienceGrowthRate.SlowThenVeryFast)
             {
                 if (NextLevel <= 50)
                 {
@@ -38,6 +38,10 @@ namespace Assets.Scripts.Content.GameContent
             {
                 return (int)Math.Pow(NextLevel, 3);
             }
+            else if(GrowthRate == Enums.ExperienceGrowthRate.Medium)
+            {
+                return (int)Math.Pow(NextLevel, 3);
+            }
             else if(GrowthRate== Enums.ExperienceGrowthRate.MediumSlow)
             {
                 return (int)((6.0f/5.0f)* (int)Math.Pow(NextLevel, 3)- (15 * (int)Math.Pow(NextLevel,2))+ (100*NextLevel)-140);
@@ -46,7 +50,7 @@ namespace Assets.Scripts.Content.GameContent
             {
                 return (5 * (int)Math.Pow(NextLevel, 3)) / 4;
             }
-            else if (GrowthRate== Enums.ExperienceGrowthRate.Fluctuating)
+            else if (GrowthRate== Enums.ExperienceGrowthRate.Fluctuating || GrowthRate== Enums.ExperienceGrowthRate.FastThenVerySlow)
             {
                 if (NextLevel <= 15)
                 {
