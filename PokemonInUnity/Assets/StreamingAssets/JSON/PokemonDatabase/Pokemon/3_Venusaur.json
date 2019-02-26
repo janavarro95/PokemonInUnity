@@ -1,7 +1,7 @@
 {
   "pokemonName": "Venusaur",
   "pokedexNumber": 3,
-  "pokedexDescription": "",
+  "pokedexDescription": "There is a large flower on Venusaur’s back. The flower is said\nto take on vivid colors if it gets plenty of nutrition and sunlight.\nThe flower’s aroma soothes the emotions of people.",
   "baseHP": 80,
   "baseAttack": 82,
   "baseDefense": 83,

@@ -2,12 +2,12 @@
   "speciesName": "Nuzleaf",
   "evolvesTo": {
     "Shiftry": {
-      "itemUsed": "",
+      "itemUsed": "Leaf Stone",
       "gender": "genderless",
       "heldItemName": "",
       "knownMoveName": "",
       "knownMoveType": "null",
-      "minLevel": 14,
+      "minLevel": 0,
       "minHappiness": 0,
       "minBeauty": 0,
       "minAffection": 0,

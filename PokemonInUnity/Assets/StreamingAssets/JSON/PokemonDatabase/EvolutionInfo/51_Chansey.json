@@ -4,11 +4,11 @@
     "Blissey": {
       "itemUsed": "",
       "gender": "genderless",
-      "heldItemName": "Oval Stone",
+      "heldItemName": "",
       "knownMoveName": "",
       "knownMoveType": "null",
       "minLevel": 0,
-      "minHappiness": 0,
+      "minHappiness": 220,
       "minBeauty": 0,
       "minAffection": 0,
       "mustBeRaining": false,

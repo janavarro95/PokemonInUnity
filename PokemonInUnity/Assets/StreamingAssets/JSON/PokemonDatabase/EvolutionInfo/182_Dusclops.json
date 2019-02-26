@@ -4,10 +4,10 @@
     "Dusknoir": {
       "itemUsed": "",
       "gender": "genderless",
-      "heldItemName": "",
+      "heldItemName": "Reaper Cloth",
       "knownMoveName": "",
       "knownMoveType": "null",
-      "minLevel": 37,
+      "minLevel": 0,
       "minHappiness": 0,
       "minBeauty": 0,
       "minAffection": 0,

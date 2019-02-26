@@ -2,12 +2,12 @@
   "speciesName": "Nidorina",
   "evolvesTo": {
     "Nidoqueen": {
-      "itemUsed": "",
+      "itemUsed": "Moon Stone",
       "gender": "genderless",
       "heldItemName": "",
       "knownMoveName": "",
       "knownMoveType": "null",
-      "minLevel": 16,
+      "minLevel": 0,
       "minHappiness": 0,
       "minBeauty": 0,
       "minAffection": 0,

@@ -2,12 +2,12 @@
   "speciesName": "Lampent",
   "evolvesTo": {
     "Chandelure": {
-      "itemUsed": "",
+      "itemUsed": "Dusk Stone",
       "gender": "genderless",
       "heldItemName": "",
       "knownMoveName": "",
       "knownMoveType": "null",
-      "minLevel": 41,
+      "minLevel": 0,
       "minHappiness": 0,
       "minBeauty": 0,
       "minAffection": 0,

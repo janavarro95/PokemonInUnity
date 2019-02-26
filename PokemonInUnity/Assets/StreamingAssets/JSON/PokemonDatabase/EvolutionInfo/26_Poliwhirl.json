@@ -2,12 +2,12 @@
   "speciesName": "Poliwhirl",
   "evolvesTo": {
     "Poliwrath": {
-      "itemUsed": "",
+      "itemUsed": "Water Stone",
       "gender": "genderless",
       "heldItemName": "",
       "knownMoveName": "",
       "knownMoveType": "null",
-      "minLevel": 25,
+      "minLevel": 0,
       "minHappiness": 0,
       "minBeauty": 0,
       "minAffection": 0,
@@ -22,10 +22,10 @@
     "Politoed": {
       "itemUsed": "",
       "gender": "genderless",
-      "heldItemName": "",
+      "heldItemName": "Kings Rock",
       "knownMoveName": "",
       "knownMoveType": "null",
-      "minLevel": 25,
+      "minLevel": 0,
       "minHappiness": 0,
       "minBeauty": 0,
       "minAffection": 0,

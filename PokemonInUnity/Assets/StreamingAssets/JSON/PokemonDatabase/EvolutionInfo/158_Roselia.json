@@ -2,13 +2,13 @@
   "speciesName": "Roselia",
   "evolvesTo": {
     "Roserade": {
-      "itemUsed": "",
+      "itemUsed": "Shiny Stone",
       "gender": "genderless",
       "heldItemName": "",
       "knownMoveName": "",
       "knownMoveType": "null",
       "minLevel": 0,
-      "minHappiness": 220,
+      "minHappiness": 0,
       "minBeauty": 0,
       "minAffection": 0,
       "mustBeRaining": false,

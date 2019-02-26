@@ -130,7 +130,7 @@ namespace Assets.Scripts.Content.PokeDatabase
         {
             foreach (PokeAPI.PokemonSpeciesFlavorText flavorInfo in Texts)
             {
-                if (flavorInfo.Language.Name == "en" && flavorInfo.Version.Name == "ultra-sun-ultra-moon")
+                if (flavorInfo.Language.Name == "en" && flavorInfo.Version.Name == "omega-ruby")
                 {
                     return flavorInfo.FlavorText;
                 }

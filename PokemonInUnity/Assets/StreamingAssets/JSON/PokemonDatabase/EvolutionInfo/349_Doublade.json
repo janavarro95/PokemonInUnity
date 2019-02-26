@@ -2,12 +2,12 @@
   "speciesName": "Doublade",
   "evolvesTo": {
     "Aegislash": {
-      "itemUsed": "",
+      "itemUsed": "Dusk Stone",
       "gender": "genderless",
       "heldItemName": "",
       "knownMoveName": "",
       "knownMoveType": "null",
-      "minLevel": 35,
+      "minLevel": 0,
       "minHappiness": 0,
       "minBeauty": 0,
       "minAffection": 0,

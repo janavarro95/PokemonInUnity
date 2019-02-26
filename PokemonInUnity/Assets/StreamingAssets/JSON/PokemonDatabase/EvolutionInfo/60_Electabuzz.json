@@ -4,10 +4,10 @@
     "Electivire": {
       "itemUsed": "",
       "gender": "genderless",
-      "heldItemName": "",
+      "heldItemName": "Electirizer",
       "knownMoveName": "",
       "knownMoveType": "null",
-      "minLevel": 30,
+      "minLevel": 0,
       "minHappiness": 0,
       "minBeauty": 0,
       "minAffection": 0,

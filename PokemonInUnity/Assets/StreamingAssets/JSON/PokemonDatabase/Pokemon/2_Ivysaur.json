@@ -1,7 +1,7 @@
 {
   "pokemonName": "Ivysaur",
   "pokedexNumber": 2,
-  "pokedexDescription": "",
+  "pokedexDescription": "There is a bud on this Pokémon’s back. To support its weight,\nIvysaur’s legs and trunk grow thick and strong.\nIf it starts spending more time lying in the sunlight,\nit’s a sign that the bud will bloom into a large flower soon.",
   "baseHP": 60,
   "baseAttack": 62,
   "baseDefense": 63,
@@ -22,7 +22,7 @@
         "heldItemName": "",
         "knownMoveName": "",
         "knownMoveType": "null",
-        "minLevel": 16,
+        "minLevel": 32,
         "minHappiness": 0,
         "minBeauty": 0,
         "minAffection": 0,

@@ -2,12 +2,12 @@
   "speciesName": "Weepinbell",
   "evolvesTo": {
     "Victreebel": {
-      "itemUsed": "",
+      "itemUsed": "Leaf Stone",
       "gender": "genderless",
       "heldItemName": "",
       "knownMoveName": "",
       "knownMoveType": "null",
-      "minLevel": 21,
+      "minLevel": 0,
       "minHappiness": 0,
       "minBeauty": 0,
       "minAffection": 0,
