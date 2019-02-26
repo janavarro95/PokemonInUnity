@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Prevents all Pokémon from fleeing or switching out during the next turn.",
+    "shortEffect": "Prevents all Pokémon from fleeing or switching out during the next turn."
+  },
+  "ailment": "none",
+  "category": "whole-field-effect",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "entireField",
+  "moveType": "fairy",
+  "moveDescription": "By locking down the battlefield, the user keeps all\nPokémon from fleeing during the next turn.",
+  "moveName": "Fairy Lock",
+  "id": 587
+}

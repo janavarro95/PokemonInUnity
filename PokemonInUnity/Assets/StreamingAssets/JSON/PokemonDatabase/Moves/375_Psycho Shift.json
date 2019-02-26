@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "If the user has a major status effect and the target does not, the user's status is transferred to the target.",
+    "shortEffect": "Transfers the user's major status effect to the target."
+  },
+  "ailment": "none",
+  "category": "unique",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "psychic",
+  "moveDescription": "Using its psychic power of suggestion, the user\ntransfers its status conditions to the target.",
+  "moveName": "Psycho Shift",
+  "id": 375
+}

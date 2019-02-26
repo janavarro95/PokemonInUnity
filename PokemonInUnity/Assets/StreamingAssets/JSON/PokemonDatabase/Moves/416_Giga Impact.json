@@ -1,0 +1,28 @@
+{
+  "accuracy": 90.0,
+  "pp": 5,
+  "priority": 0,
+  "power": 150,
+  "effects": {
+    "effect": "Inflicts regular damage.  User loses its next turn to \"recharge\", and cannot attack or switch out during that turn.",
+    "shortEffect": "User foregoes its next turn to recharge."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "normal",
+  "moveDescription": "The user charges at the target using every bit of its\npower. The user can’t move on the next turn.",
+  "moveName": "Giga Impact",
+  "id": 416
+}

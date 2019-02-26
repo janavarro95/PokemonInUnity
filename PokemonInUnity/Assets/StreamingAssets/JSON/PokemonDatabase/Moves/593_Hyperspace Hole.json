@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 5,
+  "priority": 0,
+  "power": 80,
+  "effects": {
+    "effect": "Inflicts regular damage.  Bypasses and removes any protection effect on the target.",
+    "shortEffect": "Ignores and destroys protection effects."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "psychic",
+  "moveDescription": "Using a hyperspace hole, the user appears right\nnext to the target and strikes. This also hits a target\nusing a move such as Protect or Detect.",
+  "moveName": "Hyperspace Hole",
+  "id": 593
+}

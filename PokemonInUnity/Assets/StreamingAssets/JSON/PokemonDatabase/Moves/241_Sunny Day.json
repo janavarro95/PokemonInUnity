@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 5,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Changes the weather to sunshine for five turns, during which fire moves inflict 50% extra damage, and water moves inflict half damage.\n\nIf the user is holding heat rock, this effect lasts for eight turns.\n\nPokémon cannot become frozen.\n\nthunder has 50% accuracy.\n\nsolar beam skips its charge turn.\n\nmoonlight, morning sun, and synthesis heal 2/3 of the user's max HP.\n\nPokémon with chlorophyll have doubled original Speed.\n\nPokémon with forecast become fire.\n\nPokémon with leaf guard are not affected by major status effects.\n\nPokémon with flower gift change form; every Pokémon on their side of the field have their original Attack and Special Attack increased by 50%.\n\nPokémon with dry skin lose 1/8 max HP at the end of each turn.\n\nPokémon with solar power have their original Special Attack raised by 50% but lose 1/8 their max HP at the end of each turn.",
+    "shortEffect": "Changes the weather to sunny for five turns."
+  },
+  "ailment": "none",
+  "category": "whole-field-effect",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "entireField",
+  "moveType": "fire",
+  "moveDescription": "The user intensifies the sun for five turns, powering\nup Fire-type moves. It lowers the power of\nWater-type moves.",
+  "moveName": "Sunny Day",
+  "id": 241
+}

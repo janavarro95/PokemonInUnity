@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Heals the user for half its max HP.  If the user is flying, its flying type is ignored until the end of this turn.",
+    "shortEffect": "Heals the user by half its max HP."
+  },
+  "ailment": "none",
+  "category": "heal",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 50,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "user",
+  "moveType": "flying",
+  "moveDescription": "The user lands and rests its body. It restores the\nuser’s HP by up to half of its max HP.",
+  "moveName": "Roost",
+  "id": 355
+}

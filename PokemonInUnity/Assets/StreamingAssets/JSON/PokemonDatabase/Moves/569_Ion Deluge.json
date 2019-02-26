@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 25,
+  "priority": 1,
+  "power": 0,
+  "effects": {
+    "effect": "Changes all Pokémon's normal moves to electric moves for the rest of the turn.",
+    "shortEffect": "Changes all normal moves to electric moves for the rest of the turn."
+  },
+  "ailment": "none",
+  "category": "whole-field-effect",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "entireField",
+  "moveType": "electric",
+  "moveDescription": "The user disperses electrically charged particles,\nwhich changes Normal-type moves to\nElectric-type moves.",
+  "moveName": "Ion Deluge",
+  "id": 569
+}

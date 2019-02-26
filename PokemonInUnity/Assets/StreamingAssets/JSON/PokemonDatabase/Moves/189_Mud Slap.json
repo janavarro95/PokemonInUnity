@@ -1,0 +1,33 @@
+{
+  "accuracy": 100.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 20,
+  "effects": {
+    "effect": "Inflicts regular damage.  Has a $effect_chance% chance to lower the target's accuracy by one stage.",
+    "shortEffect": "Has a $effect_chance% chance to lower the target's accuracy by one stage."
+  },
+  "ailment": "none",
+  "category": "damage+lower",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 100.0,
+  "statChanges": {
+    "accuracy": {
+      "statName": "accuracy",
+      "amountToChange": -1
+    }
+  },
+  "targets": "selectedPokemon",
+  "moveType": "ground",
+  "moveDescription": "The user hurls mud in the target’s face to inflict\ndamage and lower its accuracy.",
+  "moveName": "Mud Slap",
+  "id": 189
+}

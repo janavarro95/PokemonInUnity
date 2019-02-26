@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 40,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Resets the target's evasion to normal and prevents any further boosting until the target leaves the field.  A ghost under this effect takes normal damage from normal and fighting moves.  This move itself ignores accuracy and evasion modifiers.",
+    "shortEffect": "Forces the target to have no Evade, and allows it to be hit by Normal and Fighting moves even if it's a Ghost."
+  },
+  "ailment": "no-type-immunity",
+  "category": "ailment",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "normal",
+  "moveDescription": "Enables a Ghost-type target to be hit by Normal-\nand Fighting-type attacks. This also enables an\nevasive target to be hit.",
+  "moveName": "Foresight",
+  "id": 193
+}

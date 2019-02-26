@@ -1,0 +1,24 @@
+{
+  "speciesName": "Cryogonal",
+  "evolvesTo": {},
+  "isBaby": false,
+  "triggers": {
+    "itemUsed": null,
+    "gender": "null",
+    "heldItemName": null,
+    "knownMoveName": null,
+    "knownMoveType": "null",
+    "minLevel": 0,
+    "minHappiness": 0,
+    "minBeauty": 0,
+    "minAffection": 0,
+    "mustBeRaining": false,
+    "partyPokemonRequired": null,
+    "partyPokemonWithTypeRequired": "null",
+    "relativePhysicalStats": 0,
+    "timeOfDay": null,
+    "mustBeTraded": false,
+    "evolves": false
+  },
+  "id": 311
+}

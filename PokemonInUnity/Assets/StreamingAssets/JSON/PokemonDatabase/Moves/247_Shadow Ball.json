@@ -1,0 +1,33 @@
+{
+  "accuracy": 100.0,
+  "pp": 15,
+  "priority": 0,
+  "power": 80,
+  "effects": {
+    "effect": "Inflicts regular damage.  Has a $effect_chance% chance to lower the target's Special Defense by one stage.",
+    "shortEffect": "Has a $effect_chance% chance to lower the target's Special Defense by one stage."
+  },
+  "ailment": "none",
+  "category": "damage+lower",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 20.0,
+  "statChanges": {
+    "special-defense": {
+      "statName": "special-defense",
+      "amountToChange": -1
+    }
+  },
+  "targets": "selectedPokemon",
+  "moveType": "ghost",
+  "moveDescription": "The user hurls a shadowy blob at the target.\nThis may also lower the target’s Sp. Def stat.",
+  "moveName": "Shadow Ball",
+  "id": 247
+}

@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "The target cannot switch out normally.  Ignores accuracy and evasion modifiers.  This effect ends when the user leaves the field.\n\nThe target may still escape by using baton pass, u turn, or a shed shell.\n\nBoth the user and the target pass on this effect with baton pass.",
+    "shortEffect": "Prevents the target from leaving battle."
+  },
+  "ailment": "none",
+  "category": "unique",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "bug",
+  "moveDescription": "The user ensnares the target with thin, gooey silk\nso it can’t flee from battle.",
+  "moveName": "Spider Web",
+  "id": 169
+}

@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 20,
+  "priority": 1,
+  "power": 15,
+  "effects": {
+    "effect": "Inflicts regular damage.  Hits 2–5 times.",
+    "shortEffect": "Hits 2–5 times."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 2,
+  "maxHits": 5,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "water",
+  "moveDescription": "The user hits the target with throwing stars two to\nfive times in a row. This move always goes first.",
+  "moveName": "Water Shuriken",
+  "id": 594
+}

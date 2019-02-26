@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 20,
+  "priority": 0,
+  "power": 25,
+  "effects": {
+    "effect": "Inflicts regular damage.  Hits twice in the same turn.  Has a $effect_chance% chance to poison the target.",
+    "shortEffect": "Hits twice in the same turn.  Has a $effect_chance% chance to poison the target."
+  },
+  "ailment": "poison",
+  "category": "damage+ailment",
+  "minHits": 2,
+  "maxHits": 2,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 20.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "bug",
+  "moveDescription": "The user damages the target twice in succession\nby jabbing it with two spikes. This may also poison\nthe target.",
+  "moveName": "Twineedle",
+  "id": 41
+}

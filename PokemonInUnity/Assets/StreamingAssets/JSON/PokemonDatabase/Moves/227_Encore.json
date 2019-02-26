@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 5,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "The next 4–8 times (selected at random) the target attempts to move, it is forced to repeat its last used move.  If the selected move allows the trainer to select a target, an opponent will be selected at random each turn.  If the target is prevented from using the selected move by some other effect, struggle will be used instead.  This effect ends if the selected move runs out of PP.\n\nIf the target hasn't used a move since entering the field, if it tried to use a move this turn and failed, if it does not know the selected move, or if the selected move has 0 PP remaining, this move will fail.  If the target's last used move was encore, mimic, mirror move, sketch, struggle, or transform, this move will fail.",
+    "shortEffect": "Forces the target to repeat its last used move every turn for 2 to 6 turns."
+  },
+  "ailment": "none",
+  "category": "unique",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "normal",
+  "moveDescription": "The user compels the target to keep using the move\nit encored for three turns.",
+  "moveName": "Encore",
+  "id": 227
+}

@@ -47,7 +47,7 @@ namespace Assets.Scripts.Content.GameContent
             foreach (var v in Link.EvolvesTo)
             {
                 EvolutionInfo info= new EvolutionInfo(v,chainIndex); //Seems bad but it calls a recursion level down this tree....
-                PokeDatabase.PokemonDatabase.EvolutionByPokemon[PokeDatabase.PokemonDatabase.SanitizeString(currentSpeciesName)].evolvesTo.Add(PokeDatabase.PokemonDatabase.SanitizeString(v.Species.Name), Link.Details.Length >= 1 ? new EvolutionTriggers(Link.Details[0]) : new EvolutionTriggers(false));
+                PokeDatabase.PokemonDatabase.EvolutionByPokemon[PokeDatabase.PokemonDatabase.SanitizeString(currentSpeciesName)].evolvesTo.Add(PokeDatabase.PokemonDatabase.SanitizeString(v.Species.Name), PokeDatabase.PokemonDatabase.EvolutionByPokemon[v.Species.Name].triggers);
             }
             
 

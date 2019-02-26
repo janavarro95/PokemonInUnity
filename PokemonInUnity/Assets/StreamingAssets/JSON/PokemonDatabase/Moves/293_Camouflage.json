@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 20,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "User's type changes according to the terrain.\n\nTerrain        | New type\n-------------- | --------------\nBuilding       | normal\nCave           | rock\nDesert         | ground\nGrass          | grass\nMountain       | rock\nOcean          | water\nPond           | water\nRoad           | ground\nSnow           | ice\nTall grass     | grass\n\nIn Pokémon Battle Revolution:\n\nTerrain        | New type\n-------------- | --------------\nCourtyard      | normal\nCrystal        | rock\nGateway        | water\nMagma          | rock\nMain Street    | normal\nNeon           | normal\nStargazer      | rock\nSunny Park     | grass\nSunset         | ground\nWaterfall      | grass\n",
+    "shortEffect": "User's type changes to match the terrain."
+  },
+  "ailment": "none",
+  "category": "unique",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "user",
+  "moveType": "normal",
+  "moveDescription": "The user’s type is changed depending on its\nenvironment, such as at water’s edge, in grass, or in\na cave.",
+  "moveName": "Camouflage",
+  "id": 293
+}

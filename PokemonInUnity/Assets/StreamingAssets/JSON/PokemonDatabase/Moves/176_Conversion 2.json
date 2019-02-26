@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 30,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Changes the user's type to a type either resistant or immune to the last damaging move that hit it.  The new type is selected at random and cannot be a type the user already is.  If there is no eligible new type, this move will fail.",
+    "shortEffect": "Changes the user's type to a random type either resistant or immune to the last move used against it."
+  },
+  "ailment": "none",
+  "category": "unique",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "normal",
+  "moveDescription": "The user changes its type to make itself resistant to\nthe type of the attack the opponent used last.",
+  "moveName": "Conversion 2",
+  "id": 176
+}

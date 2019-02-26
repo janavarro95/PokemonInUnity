@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 20,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Shoots a web over the opponents' side of the field, which lowers the Speed of any opposing Pokémon that enters the field by one stage.\n\nPokémon in the air, such as flying-types and those with levitate, are unaffected.  rapid spin removes Sticky Web from the user's side of the field; defog removes it from both sides.",
+    "shortEffect": "Covers the opposing field, lowering opponents' Speed by one stage upon switching in."
+  },
+  "ailment": "none",
+  "category": "field-effect",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "opponentsField",
+  "moveType": "bug",
+  "moveDescription": "The user weaves a sticky net around the opposing\nteam, which lowers their Speed stat upon switching\ninto battle.",
+  "moveName": "Sticky Web",
+  "id": 564
+}

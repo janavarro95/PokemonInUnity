@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 75,
+  "effects": {
+    "effect": "Inflicts regular damage.  Drains half the damage inflicted to heal the user.",
+    "shortEffect": "Drains half the damage inflicted to heal the user."
+  },
+  "ailment": "none",
+  "category": "damage+heal",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 50,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "grass",
+  "moveDescription": "The user drains the target’s energy with its horns.\nThe user’s HP is restored by half the damage taken\nby the target.",
+  "moveName": "Horn Leech",
+  "id": 532
+}

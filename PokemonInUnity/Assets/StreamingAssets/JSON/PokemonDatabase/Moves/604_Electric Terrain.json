@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "For five turns, prevents all Pokémon on the ground from sleeping and strengthens their electric moves to 1.5× their power.\n\nChanges nature power to thunderbolt.",
+    "shortEffect": "For five turns, prevents all Pokémon on the ground from sleeping and strengthens their electric moves to 1.5× their power."
+  },
+  "ailment": "none",
+  "category": "whole-field-effect",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "entireField",
+  "moveType": "electric",
+  "moveDescription": "The user electrifies the ground for five turns,\npowering up Electric-type moves. Pokémon on the\nground no longer fall asleep.",
+  "moveName": "Electric Terrain",
+  "id": 604
+}

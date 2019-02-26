@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 5,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "If the user faints before it next acts, the move that fainted it will have its PP dropped to 0.  End-of-turn damage does not trigger this effect.",
+    "shortEffect": "If the user faints this turn, the PP of the move that fainted it drops to 0."
+  },
+  "ailment": "none",
+  "category": "unique",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "user",
+  "moveType": "ghost",
+  "moveDescription": "If the user faints, the user’s grudge fully depletes\nthe PP of the opponent’s move that knocked it out.",
+  "moveName": "Grudge",
+  "id": 288
+}

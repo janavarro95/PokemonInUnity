@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "For five turns, the user is immune to ground moves.\n\nIf the user is under the effect of ingrain or has levitate, this move will fail.\n\nThis effect is temporarily disabled by and cannot be used during gravity.\n\nThis effect is passed on by baton pass.",
+    "shortEffect": "User is immune to Ground moves and effects for five turns."
+  },
+  "ailment": "none",
+  "category": "unique",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 5,
+  "maxTurns": 5,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "user",
+  "moveType": "electric",
+  "moveDescription": "The user levitates using electrically generated\nmagnetism for five turns.",
+  "moveName": "Magnet Rise",
+  "id": 393
+}

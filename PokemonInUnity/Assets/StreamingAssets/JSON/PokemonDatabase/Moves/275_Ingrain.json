@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 20,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Prevents the user from switching out.  User regains 1/16 of its max HP at the end of every turn.  If the user was immune to ground attacks, it will now take normal damage from them.\n\nroar and whirlwind will not affect the user.  The user cannot use magnet rise.\n\nThe user may still use u turn to leave the field.\n\nThis effect can be passed with baton pass.",
+    "shortEffect": "Prevents the user from leaving battle.  User regains 1/16 of its max HP every turn."
+  },
+  "ailment": "ingrain",
+  "category": "ailment",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "user",
+  "moveType": "grass",
+  "moveDescription": "The user lays roots that restore its HP on every turn.\nBecause it’s rooted, it can’t switch out.",
+  "moveName": "Ingrain",
+  "id": 275
+}

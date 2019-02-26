@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 15,
+  "priority": 0,
+  "power": 95,
+  "effects": {
+    "effect": "Inflicts regular damage.  Damage is calculated using the target's attacking stat rather than the user's.",
+    "shortEffect": "Calculates damage with the target's attacking stat."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "dark",
+  "moveDescription": "The user turns the target’s power against it. The\nhigher the target’s Attack stat, the greater the\nmove’s power.",
+  "moveName": "Foul Play",
+  "id": 492
+}

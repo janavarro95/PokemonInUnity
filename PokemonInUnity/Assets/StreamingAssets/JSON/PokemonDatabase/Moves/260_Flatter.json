@@ -1,0 +1,33 @@
+{
+  "accuracy": 100.0,
+  "pp": 15,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Raises the target's Special Attack by one stage, then confuses it.",
+    "shortEffect": "Raises the target's Special Attack by one stage and confuses the target."
+  },
+  "ailment": "confusion",
+  "category": "swagger",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 2,
+  "maxTurns": 5,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {
+    "special-attack": {
+      "statName": "special-attack",
+      "amountToChange": 1
+    }
+  },
+  "targets": "selectedPokemon",
+  "moveType": "dark",
+  "moveDescription": "Flattery is used to confuse the target. However,\nthis also raises the target’s Sp. Atk stat.",
+  "moveName": "Flatter",
+  "id": 260
+}

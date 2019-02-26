@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 15,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Inflicts damage equal to the user's level.  Type immunity applies, but other type effects are ignored.",
+    "shortEffect": "Inflicts damage equal to the user's level."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "ghost",
+  "moveDescription": "The user makes the target see a frightening mirage.\nIt inflicts damage equal to the user’s level.",
+  "moveName": "Night Shade",
+  "id": 101
+}

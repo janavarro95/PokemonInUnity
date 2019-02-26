@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 20,
+  "priority": 0,
+  "power": 70,
+  "effects": {
+    "effect": "Inflicts regular damage.  This move is super-effective against the water type.\n\nThe target's other type will affect damage as usual.  If this move's type is changed, it remains super-effective against Water regardless of its type.",
+    "shortEffect": "Super-effective against water."
+  },
+  "ailment": "freeze",
+  "category": "damage+ailment",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 10.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "ice",
+  "moveDescription": "The user rapidly cools the target. This may also\nleave the target frozen. This move is super effective\non Water types.",
+  "moveName": "Freeze Dry",
+  "id": 573
+}

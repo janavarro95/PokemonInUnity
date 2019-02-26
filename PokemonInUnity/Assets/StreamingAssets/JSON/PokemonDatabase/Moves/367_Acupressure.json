@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 30,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Raises one of the target's stats by two stages.  The raised stat is chosen at random from any stats that can be raised by two stages.  If no stat is eligible, this move will fail.\n\nIf the target has a substitute, this move will have no effect, even if the user is the target.\n\nThis move cannot be copied by mirror move.",
+    "shortEffect": "Raises one of a friendly Pokémon's stats at random by two stages."
+  },
+  "ailment": "none",
+  "category": "unique",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "userOrAlly",
+  "moveType": "normal",
+  "moveDescription": "The user applies pressure to stress points, sharply\nboosting one of its or its allies’ stats.",
+  "moveName": "Acupressure",
+  "id": 367
+}

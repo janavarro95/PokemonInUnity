@@ -1,0 +1,28 @@
+{
+  "accuracy": 95.0,
+  "pp": 20,
+  "priority": 0,
+  "power": 40,
+  "effects": {
+    "effect": "Inflicts regular damage.  Power doubles after every time this move is used, whether consecutively or not, maxing out at 16x.  If this move misses or the user leaves the field, power resets.",
+    "shortEffect": "Power doubles every turn this move is used in succession after the first, maxing out after five turns."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "bug",
+  "moveDescription": "The target is slashed with scythes or claws. This\nattack becomes more powerful if it hits\nin succession.",
+  "moveName": "Fury Cutter",
+  "id": 210
+}

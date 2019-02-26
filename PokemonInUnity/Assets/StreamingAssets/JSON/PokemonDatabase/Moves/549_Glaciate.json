@@ -1,0 +1,33 @@
+{
+  "accuracy": 95.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 65,
+  "effects": {
+    "effect": "Inflicts regular damage.  Lowers the target's Speed by one stage.",
+    "shortEffect": "Lowers the target's Speed by one stage."
+  },
+  "ailment": "none",
+  "category": "damage+lower",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 100.0,
+  "statChanges": {
+    "speed": {
+      "statName": "speed",
+      "amountToChange": -1
+    }
+  },
+  "targets": "allOpponents",
+  "moveType": "ice",
+  "moveDescription": "The user attacks by blowing freezing cold air at\nopposing Pokémon. This lowers their Speed stat.",
+  "moveName": "Glaciate",
+  "id": 549
+}

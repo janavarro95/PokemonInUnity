@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 20,
+  "priority": 1,
+  "power": 40,
+  "effects": {
+    "effect": "Inflicts regular damage.",
+    "shortEffect": "Inflicts regular damage with no additional effect."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "water",
+  "moveDescription": "The user lunges at the target at a speed that makes\nit almost invisible. This move always goes first.",
+  "moveName": "Aqua Jet",
+  "id": 453
+}

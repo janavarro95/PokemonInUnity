@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 25,
+  "priority": 0,
+  "power": 50,
+  "effects": {
+    "effect": "Inflicts regular damage.  Raises the user's Attack by two stages if it KOs the target.",
+    "shortEffect": "Raises the user's Attack by two stages if it KOs the target."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "bug",
+  "moveDescription": "When the user knocks out a target with this move,\nthe user’s Attack stat rises drastically.",
+  "moveName": "Fell Stinger",
+  "id": 565
+}

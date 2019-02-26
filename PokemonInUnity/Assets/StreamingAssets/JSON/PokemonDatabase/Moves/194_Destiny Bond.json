@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 5,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "If the user faints before its next move, the Pokémon that fainted it will automatically faint.  End-of-turn damage is ignored.\n\nThis move cannot be selected by assist or metronome.",
+    "shortEffect": "If the user faints this turn, the target automatically will, too."
+  },
+  "ailment": "none",
+  "category": "unique",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "user",
+  "moveType": "ghost",
+  "moveDescription": "After using this move, if the user faints, the\nPokémon that landed the knockout hit also faints.\nIts chance of failing rises if it is used in succession.",
+  "moveName": "Destiny Bond",
+  "id": 194
+}

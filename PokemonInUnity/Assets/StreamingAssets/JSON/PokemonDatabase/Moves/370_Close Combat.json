@@ -1,0 +1,37 @@
+{
+  "accuracy": 100.0,
+  "pp": 5,
+  "priority": 0,
+  "power": 120,
+  "effects": {
+    "effect": "Inflicts regular damage, then lowers the user's Defense and Special Defense by one stage each.",
+    "shortEffect": "Lowers the user's Defense and Special Defense by one stage after inflicting damage."
+  },
+  "ailment": "none",
+  "category": "damage+raise",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 100.0,
+  "statChanges": {
+    "defense": {
+      "statName": "defense",
+      "amountToChange": -1
+    },
+    "special-defense": {
+      "statName": "special-defense",
+      "amountToChange": -1
+    }
+  },
+  "targets": "selectedPokemon",
+  "moveType": "fighting",
+  "moveDescription": "The user fights the target up close without guarding\nitself. This also lowers the user’s Defense and\nSp. Def stats.",
+  "moveName": "Close Combat",
+  "id": 370
+}

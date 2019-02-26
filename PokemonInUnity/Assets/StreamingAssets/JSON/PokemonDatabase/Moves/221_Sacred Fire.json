@@ -1,0 +1,28 @@
+{
+  "accuracy": 95.0,
+  "pp": 5,
+  "priority": 0,
+  "power": 100,
+  "effects": {
+    "effect": "Inflicts regular damage.  Has a $effect_chance% chance to burn the target.  Frozen Pokémon may use this move, in which case they will thaw.",
+    "shortEffect": "Has a $effect_chance% chance to burn the target.  Lets frozen Pokémon thaw themselves."
+  },
+  "ailment": "burn",
+  "category": "damage+ailment",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 50.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "fire",
+  "moveDescription": "The target is razed with a mystical fire of great\nintensity. This may also leave the target with a burn.",
+  "moveName": "Sacred Fire",
+  "id": 221
+}

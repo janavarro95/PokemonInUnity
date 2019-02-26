@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 15,
+  "priority": 0,
+  "power": 70,
+  "effects": {
+    "effect": "Inflicts regular damage.  If this move successfully hits the target, any Pokémon adjacent to the target are damaged for 1/16 their max HP.",
+    "shortEffect": "Deals splash damage to Pokémon next to the target."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "fire",
+  "moveDescription": "The user attacks the target with a bursting flame.\nThe bursting flame damages Pokémon next to the\ntarget as well.",
+  "moveName": "Flame Burst",
+  "id": 481
+}

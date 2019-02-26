@@ -1,0 +1,28 @@
+{
+  "accuracy": 95.0,
+  "pp": 15,
+  "priority": 0,
+  "power": 65,
+  "effects": {
+    "effect": "Inflicts regular damage.  Has a $effect_chance% chance to paralyze the target and a separate $effect_chance% chance to make the target flinch.",
+    "shortEffect": "Has a $effect_chance% chance to paralyze the target and a $effect_chance% chance to make the target flinch."
+  },
+  "ailment": "paralysis",
+  "category": "damage+ailment",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 10.0,
+  "flinchChance": 10.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "electric",
+  "moveDescription": "The user bites with electrified fangs. This may also\nmake the target flinch or leave it with paralysis.",
+  "moveName": "Thunder Fang",
+  "id": 422
+}

@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 15,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "For the next five turns, the target may not use any moves that only restore HP, and move effects that heal the target are disabled.  Moves that steal HP may still be used, but will only inflict damage and not heal the target.",
+    "shortEffect": "Prevents target from restoring its HP for five turns."
+  },
+  "ailment": "heal-block",
+  "category": "ailment",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 5,
+  "maxTurns": 5,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "allOpponents",
+  "moveType": "psychic",
+  "moveDescription": "For five turns, the user prevents the opposing team\nfrom using any moves, Abilities, or held items that\nrecover HP.",
+  "moveName": "Heal Block",
+  "id": 377
+}

@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 20,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Uses the last move that was used successfully by any Pokémon, including the user.\n\nThis move cannot copy itself, nor roar nor whirlwind.\n\nThis move cannot be copied by mirror move, nor selected by assist, metronome, or sleep talk.",
+    "shortEffect": "Uses the target's last used move."
+  },
+  "ailment": "none",
+  "category": "unique",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "user",
+  "moveType": "normal",
+  "moveDescription": "The user mimics the move used immediately before\nit. The move fails if no other move has been\nused yet.",
+  "moveName": "Copycat",
+  "id": 383
+}

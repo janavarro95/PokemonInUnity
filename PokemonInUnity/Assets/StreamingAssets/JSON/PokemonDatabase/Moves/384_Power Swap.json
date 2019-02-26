@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "User swaps its Attack and Special Attack stat modifiers modifiers with the target.",
+    "shortEffect": "User swaps Attack and Special Attack changes with the target."
+  },
+  "ailment": "none",
+  "category": "unique",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "psychic",
+  "moveDescription": "The user employs its psychic power to switch\nchanges to its Attack and Sp. Atk stats with\nthe target.",
+  "moveName": "Power Swap",
+  "id": 384
+}

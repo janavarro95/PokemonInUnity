@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 15,
+  "priority": 4,
+  "power": 0,
+  "effects": {
+    "effect": "The first non-damaging move targeting the user this turn that inflicts major status effects, stat changes, or trapping effects will be reflected at its user.\n\ndefog, memento, and teeter dance are not reflected.\n\nattract, flatter, gastro acid, leech seed, swagger, worry seed, and yawn are reflected.\n\nThis move cannot be copied by mirror move.",
+    "shortEffect": "Reflects back the first effect move used on the user this turn."
+  },
+  "ailment": "none",
+  "category": "unique",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "user",
+  "moveType": "psychic",
+  "moveDescription": "A barrier reflects back to the target moves like\nLeech Seed and moves that damage status.",
+  "moveName": "Magic Coat",
+  "id": 277
+}

@@ -1,0 +1,33 @@
+{
+  "accuracy": 0.0,
+  "pp": 20,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Lowers the target's Attack by one stage.",
+    "shortEffect": "Lowers the target's Attack by one stage."
+  },
+  "ailment": "none",
+  "category": "net-good-stats",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 100.0,
+  "statChanges": {
+    "attack": {
+      "statName": "attack",
+      "amountToChange": -1
+    }
+  },
+  "targets": "selectedPokemon",
+  "moveType": "normal",
+  "moveDescription": "The user and the target become friends, and the\ntarget loses its will to fight. This lowers the target’s\nAttack stat.",
+  "moveName": "Play Nice",
+  "id": 589
+}

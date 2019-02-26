@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 80,
+  "effects": {
+    "effect": "Inflicts regular damage.  If a friendly Pokémon used fire pledge earlier this turn, all opposing Pokémon will take 1/8 their max HP in damage at the end of every turn for four turns (including this one).",
+    "shortEffect": "With Fire Pledge, damages opposing Pokémon for 1/8 their max HP every turn for four turns."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "grass",
+  "moveDescription": "A column of grass hits the target. When used with\nits water equivalent, its power increases and a vast\nswamp appears.",
+  "moveName": "Grass Pledge",
+  "id": 520
+}

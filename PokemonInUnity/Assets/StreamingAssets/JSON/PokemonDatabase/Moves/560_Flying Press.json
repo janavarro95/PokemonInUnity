@@ -1,0 +1,28 @@
+{
+  "accuracy": 95.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 100,
+  "effects": {
+    "effect": "Inflicts regular damage.  For the purposes of type effectiveness, this move is both fighting- and flying-type: its final effectiveness is determined by multiplying the effectiveness of each type against each of the target's types.\n\nFor all other purposes, this move is pure Fighting-type.  If this move's type is changed, its Fighting typing is overwritten, and its secondary type remains Flying.\n\nIf the target has used minimize since entering battle, this move has double power and will never miss.",
+    "shortEffect": "Deals both fighting and flying-type damage."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "fighting",
+  "moveDescription": "The user dives down onto the target from the sky.\nThis move is Fighting and Flying type simultaneously.",
+  "moveName": "Flying Press",
+  "id": 560
+}

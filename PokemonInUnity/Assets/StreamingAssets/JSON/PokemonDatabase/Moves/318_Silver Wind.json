@@ -1,0 +1,53 @@
+{
+  "accuracy": 100.0,
+  "pp": 5,
+  "priority": 0,
+  "power": 60,
+  "effects": {
+    "effect": "Inflicts regular damage. Has a $effect_chance% chance to raise all of the user's stats one stage.",
+    "shortEffect": "Has a $effect_chance% chance to raise all of the user's stats by one stage."
+  },
+  "ailment": "none",
+  "category": "damage+raise",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 10.0,
+  "statChanges": {
+    "hp": {
+      "statName": "hp",
+      "amountToChange": 1
+    },
+    "attack": {
+      "statName": "attack",
+      "amountToChange": 1
+    },
+    "defense": {
+      "statName": "defense",
+      "amountToChange": 1
+    },
+    "special-attack": {
+      "statName": "special-attack",
+      "amountToChange": 1
+    },
+    "special-defense": {
+      "statName": "special-defense",
+      "amountToChange": 1
+    },
+    "speed": {
+      "statName": "speed",
+      "amountToChange": 1
+    }
+  },
+  "targets": "selectedPokemon",
+  "moveType": "bug",
+  "moveDescription": "The target is attacked with powdery scales blown\nby the wind. This may also raise all the user’s stats.",
+  "moveName": "Silver Wind",
+  "id": 318
+}

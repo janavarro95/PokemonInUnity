@@ -1,0 +1,28 @@
+{
+  "accuracy": 90.0,
+  "pp": 20,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Inflicts exactly 20 damage.",
+    "shortEffect": "Inflicts 20 points of damage."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "normal",
+  "moveDescription": "The target is hit with a destructive shock wave that\nalways inflicts 20 HP damage.",
+  "moveName": "Sonic Boom",
+  "id": 49
+}

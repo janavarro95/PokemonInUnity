@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 20,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Confuses all targets.",
+    "shortEffect": "Confuses the target."
+  },
+  "ailment": "confusion",
+  "category": "ailment",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 2,
+  "maxTurns": 5,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "allOtherPokemon",
+  "moveType": "normal",
+  "moveDescription": "The user performs a wobbly dance that confuses\nthe Pokémon around it.",
+  "moveName": "Teeter Dance",
+  "id": 298
+}

@@ -1,0 +1,43 @@
+{
+  "speciesName": "Dartrix",
+  "evolvesTo": {
+    "Decidueye": {
+      "itemUsed": "",
+      "gender": "genderless",
+      "heldItemName": "",
+      "knownMoveName": "",
+      "knownMoveType": "null",
+      "minLevel": 17,
+      "minHappiness": 0,
+      "minBeauty": 0,
+      "minAffection": 0,
+      "mustBeRaining": false,
+      "partyPokemonRequired": "",
+      "partyPokemonWithTypeRequired": "null",
+      "relativePhysicalStats": 999,
+      "timeOfDay": null,
+      "mustBeTraded": false,
+      "evolves": false
+    }
+  },
+  "isBaby": false,
+  "triggers": {
+    "itemUsed": "",
+    "gender": "genderless",
+    "heldItemName": "",
+    "knownMoveName": "",
+    "knownMoveType": "null",
+    "minLevel": 17,
+    "minHappiness": 0,
+    "minBeauty": 0,
+    "minAffection": 0,
+    "mustBeRaining": false,
+    "partyPokemonRequired": "",
+    "partyPokemonWithTypeRequired": "null",
+    "relativePhysicalStats": 999,
+    "timeOfDay": null,
+    "mustBeTraded": false,
+    "evolves": false
+  },
+  "id": 374
+}

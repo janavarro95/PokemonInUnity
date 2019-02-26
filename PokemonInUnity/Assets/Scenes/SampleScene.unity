@@ -720,7 +720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 221243a56ae3c0a40b5f07a33f4c3b5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 70697728}
+  loadingText: {fileID: 70697728}
 --- !u!4 &1728786711
 Transform:
   m_ObjectHideFlags: 0

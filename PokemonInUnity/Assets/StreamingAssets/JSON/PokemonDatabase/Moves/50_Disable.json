@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 20,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Disables the target's last used move, preventing its use for 4–7 turns, selected at random, or until the target leaves the field.  If the target hasn't used a move since entering the field, if it tried to use a move this turn and failed,  if its last used move has 0 PP remaining, or if it already has a move disabled, this move will fail.",
+    "shortEffect": "Disables the target's last used move for 1-8 turns."
+  },
+  "ailment": "disable",
+  "category": "unique",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 4,
+  "maxTurns": 4,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "normal",
+  "moveDescription": "For four turns, this move prevents the target from\nusing the move it last used.",
+  "moveName": "Disable",
+  "id": 50
+}

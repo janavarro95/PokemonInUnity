@@ -1,0 +1,33 @@
+{
+  "accuracy": 95.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 75,
+  "effects": {
+    "effect": "Inflicts regular damage.  Has a $effect_chance% chance to lower the target's Defense by one stage.",
+    "shortEffect": "Has a $effect_chance% chance to lower the target's Defense by one stage."
+  },
+  "ailment": "none",
+  "category": "damage+lower",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 50.0,
+  "statChanges": {
+    "defense": {
+      "statName": "defense",
+      "amountToChange": -1
+    }
+  },
+  "targets": "selectedPokemon",
+  "moveType": "water",
+  "moveDescription": "The user cuts its target with sharp shells. This may\nalso lower the target’s Defense stat.",
+  "moveName": "Razor Shell",
+  "id": 534
+}

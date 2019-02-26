@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 15,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "For the next three turns, all Pokémon on the user's side of the field have their original Speed doubled.  This effect remains if the user leaves the field.",
+    "shortEffect": "For three turns, friendly Pokémon have doubled Speed."
+  },
+  "ailment": "none",
+  "category": "field-effect",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "usersField",
+  "moveType": "flying",
+  "moveDescription": "The user whips up a turbulent whirlwind that ups\nthe Speed stat of the user and its allies for\nfour turns.",
+  "moveName": "Tailwind",
+  "id": 366
+}

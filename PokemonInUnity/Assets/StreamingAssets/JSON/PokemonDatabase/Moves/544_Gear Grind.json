@@ -1,0 +1,28 @@
+{
+  "accuracy": 85.0,
+  "pp": 15,
+  "priority": 0,
+  "power": 50,
+  "effects": {
+    "effect": "Inflicts regular damage.  Hits twice in one turn.",
+    "shortEffect": "Hits twice in one turn."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 2,
+  "maxHits": 2,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "steel",
+  "moveDescription": "The user attacks by throwing steel gears at its\ntarget twice.",
+  "moveName": "Gear Grind",
+  "id": 544
+}

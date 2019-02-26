@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 5,
+  "priority": 0,
+  "power": 100,
+  "effects": {
+    "effect": "Inflicts regular damage.  Bypasses and removes any protection effect on the target.",
+    "shortEffect": "Ignores and destroys protection effects."
+  },
+  "ailment": "none",
+  "category": "damage+raise",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "dark",
+  "moveDescription": "Using its many arms, the user unleashes a barrage of\nattacks that ignore the effects of moves like Protect\nand Detect. But the user’s Defense stat falls.",
+  "moveName": "Hyperspace Fury",
+  "id": 621
+}

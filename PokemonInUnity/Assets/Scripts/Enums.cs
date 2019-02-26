@@ -122,6 +122,20 @@ namespace Assets.Scripts
             Fairy
         }
 
+        public enum MoveLearnedType
+        {
+            LevelUp,
+            /// <summary>
+            /// Only possible if father knew the move too.
+            /// </summary>
+            Egg,
+            Tutor,
+            /// <summary>
+            /// Also known as TM/HM
+            /// </summary>
+            Machine
+        }
+
         public enum TargetType
         {
             /// <summary>

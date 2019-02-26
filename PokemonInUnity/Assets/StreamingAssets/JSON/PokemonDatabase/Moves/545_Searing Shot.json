@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 5,
+  "priority": 0,
+  "power": 100,
+  "effects": {
+    "effect": "Inflicts regular damage.  Has a $effect_chance% chance to burn the target.",
+    "shortEffect": "Has a $effect_chance% chance to burn the target."
+  },
+  "ailment": "burn",
+  "category": "damage+ailment",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 30.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "allOtherPokemon",
+  "moveType": "fire",
+  "moveDescription": "The user torches everything around it in an inferno\nof scarlet flames. This may also leave those it hits\nwith a burn.",
+  "moveName": "Searing Shot",
+  "id": 545
+}

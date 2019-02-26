@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 20,
+  "priority": 5,
+  "power": 0,
+  "effects": {
+    "effect": "Boosts the power of the target's moves by 50% until the end of this turn.\n\nThis move cannot be copied by mirror move, nor selected by assist or metronome.",
+    "shortEffect": "Ally's next move inflicts half more damage."
+  },
+  "ailment": "none",
+  "category": "unique",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "ally",
+  "moveType": "normal",
+  "moveDescription": "The user assists an ally by boosting the power of\nthat ally’s attack.",
+  "moveName": "Helping Hand",
+  "id": 270
+}

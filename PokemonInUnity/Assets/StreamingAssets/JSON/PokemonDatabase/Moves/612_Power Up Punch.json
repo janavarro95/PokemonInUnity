@@ -1,0 +1,33 @@
+{
+  "accuracy": 100.0,
+  "pp": 20,
+  "priority": 0,
+  "power": 40,
+  "effects": {
+    "effect": "Inflicts regular damage.  Raises the user's Attack by one stage.",
+    "shortEffect": "Raises the user's Attack by one stage after inflicting damage."
+  },
+  "ailment": "none",
+  "category": "damage+raise",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 100.0,
+  "statChanges": {
+    "attack": {
+      "statName": "attack",
+      "amountToChange": 1
+    }
+  },
+  "targets": "selectedPokemon",
+  "moveType": "fighting",
+  "moveDescription": "Striking opponents over and over makes the user’s\nfists harder. Hitting a target raises the Attack stat.",
+  "moveName": "Power Up Punch",
+  "id": 612
+}

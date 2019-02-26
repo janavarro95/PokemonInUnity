@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 5,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Removes major status effects and confusion from every Pokémon in the user's party.",
+    "shortEffect": "Cures the entire party of major status effects."
+  },
+  "ailment": "none",
+  "category": "unique",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "userAndAllies",
+  "moveType": "normal",
+  "moveDescription": "The user makes a soothing bell chime to heal the\nstatus conditions of all the party Pokémon.",
+  "moveName": "Heal Bell",
+  "id": 215
+}

@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "For five turns, protects all Pokémon on the ground from major status ailments and confusion and weakens dragon moves used against them to 0.5× their power.\n\nChanges nature power to moonblast.",
+    "shortEffect": "For five turns, protects all Pokémon on the ground from major status ailments and confusion, and halves the power of incoming dragon moves."
+  },
+  "ailment": "none",
+  "category": "whole-field-effect",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "entireField",
+  "moveType": "fairy",
+  "moveDescription": "This protects Pokémon on the ground from status\nconditions and halves damage from Dragon-type\nmoves for five turns.",
+  "moveName": "Misty Terrain",
+  "id": 581
+}

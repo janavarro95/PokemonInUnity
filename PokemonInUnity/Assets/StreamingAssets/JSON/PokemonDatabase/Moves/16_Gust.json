@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 35,
+  "priority": 0,
+  "power": 40,
+  "effects": {
+    "effect": "Inflicts regular damage.\n\nIf the target is under the effect of bounce, fly, or sky drop, this move will hit with double power.",
+    "shortEffect": "Inflicts regular damage and can hit Pokémon in the air."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "flying",
+  "moveDescription": "A gust of wind is whipped up by wings and launched\nat the target to inflict damage.",
+  "moveName": "Gust",
+  "id": 16
+}

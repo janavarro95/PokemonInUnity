@@ -1,0 +1,28 @@
+{
+  "accuracy": 90.0,
+  "pp": 20,
+  "priority": 0,
+  "power": 30,
+  "effects": {
+    "effect": "Inflicts regular damage.  User is forced to use this move for five turns.  Power doubles every time this move is used in succession to a maximum of 16x, and resets to normal after the lock-in ends.  If this move misses or becomes unusable, the lock-in ends.\n\nIf the user has used defense curl since entering the field, this move has double power.",
+    "shortEffect": "Power doubles every turn this move is used in succession after the first, resetting after five turns."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "ice",
+  "moveDescription": "The user attacks the target for five turns.\nThe move’s power increases each time it hits.",
+  "moveName": "Ice Ball",
+  "id": 301
+}

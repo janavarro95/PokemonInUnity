@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 40,
+  "priority": 0,
+  "power": 20,
+  "effects": {
+    "effect": "Inflicts regular damage.  Removes leech seed from the user, frees the user from bind, clamp, fire spin, magma storm, sand tomb, whirlpool, and wrap, and clears spikes, stealth rock, and toxic spikes from the user's side of the field.  If this move misses or has no effect, its effect doesn't activate.",
+    "shortEffect": "Frees the user from binding moves, removes Leech Seed, and blows away Spikes."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "normal",
+  "moveDescription": "A spin attack that can also eliminate such moves as\nBind, Wrap, Leech Seed, and Spikes.",
+  "moveName": "Rapid Spin",
+  "id": 229
+}

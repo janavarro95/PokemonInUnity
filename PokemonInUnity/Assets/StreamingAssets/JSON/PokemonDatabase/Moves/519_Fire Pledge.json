@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 80,
+  "effects": {
+    "effect": "Inflicts regular damage.  If a friendly Pokémon used water pledge earlier this turn, moves used by any friendly Pokémon have doubled effect chance for four turns (including this one).",
+    "shortEffect": "With Water Pledge, doubles the effect chance of friendly Pokémon's moves for four turns."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "fire",
+  "moveDescription": "A column of fire hits the target. When used with its\ngrass equivalent, its power increases and a vast sea\nof fire appears.",
+  "moveName": "Fire Pledge",
+  "id": 519
+}

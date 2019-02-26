@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 20,
+  "priority": 0,
+  "power": 70,
+  "effects": {
+    "effect": "Inflicts regular damage.  User's critical hit rate is one level higher when using this move. Has a $effect_chance% chance to poison the target.",
+    "shortEffect": "Has an increased chance for a critical hit and a $effect_chance% chance to poison the target."
+  },
+  "ailment": "poison",
+  "category": "damage+ailment",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 1,
+  "ailmentChance": 10.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "poison",
+  "moveDescription": "A slashing attack with a poisonous blade that may\nalso poison the target. Critical hits land more easily.",
+  "moveName": "Cross Poison",
+  "id": 440
+}

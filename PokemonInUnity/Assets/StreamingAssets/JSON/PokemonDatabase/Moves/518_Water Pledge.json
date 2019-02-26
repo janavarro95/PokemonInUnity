@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 80,
+  "effects": {
+    "effect": "Inflicts regular damage.  If a friendly Pokémon used grass pledge earlier this turn, all opposing Pokémon have halved Speed for four turns (including this one).",
+    "shortEffect": "With Grass Pledge, halves opposing Pokémon's Speed for four turns."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "water",
+  "moveDescription": "A column of water strikes the target. When combined\nwith its fire equivalent, its power increases and a\nrainbow appears.",
+  "moveName": "Water Pledge",
+  "id": 518
+}

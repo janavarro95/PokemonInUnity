@@ -1,0 +1,28 @@
+{
+  "accuracy": 90.0,
+  "pp": 15,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Randomly uses one of the following effects.\n\nEffect                                             | Chance\n-------------------------------------------------- | -----:\nInflicts regular damage with 40 power  |    40%\nInflicts regular damage with 80 power  |    30%\nInflicts regular damage with 120 power |    10%\nHeals the target for 1/4 its max HP    |    20%\n\nOn average, this move inflicts regular damage with 52 power and heals the target for 1/20 its max HP.",
+    "shortEffect": "Randomly inflicts damage with power from 40 to 120 or heals the target for 1/4 its max HP."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "normal",
+  "moveDescription": "The user attacks by giving the target a gift with a\nhidden trap. It restores HP sometimes, however.",
+  "moveName": "Present",
+  "id": 217
+}

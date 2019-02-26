@@ -1,0 +1,33 @@
+{
+  "accuracy": 0.0,
+  "pp": 30,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Raises the user's Defense by one stage.",
+    "shortEffect": "Raises the user's Defense by one stage."
+  },
+  "ailment": "none",
+  "category": "net-good-stats",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {
+    "defense": {
+      "statName": "defense",
+      "amountToChange": 1
+    }
+  },
+  "targets": "user",
+  "moveType": "normal",
+  "moveDescription": "The user stiffens all the muscles in its body to raise\nits Defense stat.",
+  "moveName": "Harden",
+  "id": 106
+}

@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 75,
+  "effects": {
+    "effect": "Inflicts regular damage.  Has a $effect_chance% chance to put the target to sleep.\nIf the user is a meloetta, it will toggle between Aria and Pirouette Forme.",
+    "shortEffect": "Has a $effect_chance% chance to put the target to sleep."
+  },
+  "ailment": "sleep",
+  "category": "damage+ailment",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 2,
+  "maxTurns": 4,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 10.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "allOpponents",
+  "moveType": "normal",
+  "moveDescription": "The user sings an ancient song and attacks by\nappealing to the hearts of the listening opposing\nPokémon. This may also induce sleep.",
+  "moveName": "Relic Song",
+  "id": 547
+}

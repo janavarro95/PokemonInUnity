@@ -14,13 +14,17 @@ namespace Assets.Scripts.Content.PokeDatabase
 
         public static Dictionary<int, EvolutionInfo> EvolutionByIndex = new Dictionary<int, EvolutionInfo>();
         public static Dictionary<string, EvolutionInfo> EvolutionByPokemon = new Dictionary<string, EvolutionInfo>();
+
+        public static Dictionary<int, PokemonInfo> PokemonInfoByIndex = new Dictionary<int, PokemonInfo>();
+        public static Dictionary<string, PokemonInfo> PokemonInfoByName = new Dictionary<string, PokemonInfo>();
         
 
         public static void AddMove(MoveInfo Move)
         {
-            if (!MovesByName.ContainsKey(Move.moveName))
+            string name = SanitizeString(Move.moveName);
+            if (!MovesByName.ContainsKey(name))
             {
-                MovesByName.Add(Move.moveName, Move);
+                MovesByName.Add(name, Move);
             }
             if (!MovesByIndex.ContainsKey(Move.id))
             {
@@ -30,13 +34,27 @@ namespace Assets.Scripts.Content.PokeDatabase
 
         public static void AddEvolutionInfoPokemon(EvolutionInfo Info)
         {
-            if (!EvolutionByPokemon.ContainsKey(Info.speciesName))
+            string name = SanitizeString(Info.speciesName);
+            if (!EvolutionByPokemon.ContainsKey(name))
             {
-                EvolutionByPokemon.Add(Info.speciesName,Info);
+                EvolutionByPokemon.Add(name,Info);
             }
             if (!EvolutionByIndex.ContainsKey(Info.id))
             {
                 EvolutionByIndex.Add(Info.id, Info);
+            }
+        }
+
+        public static void AddPokemonInfo(PokemonInfo Poke)
+        {
+            string name = SanitizeString(Poke.pokemonName);
+            if (!PokemonInfoByIndex.ContainsKey(Poke.pokedexNumber))
+            {
+                PokemonInfoByIndex.Add(Poke.pokedexNumber, Poke);
+            }
+            if (!PokemonInfoByName.ContainsKey(name))
+            {
+                PokemonInfoByName.Add(name, Poke);
             }
         }
 
@@ -118,6 +136,18 @@ namespace Assets.Scripts.Content.PokeDatabase
                 }
             }
             return "";
+        }
+
+        public static KeyValuePair<Enums.MoveLearnedType,int> GetProperMoveLearnedInfo(PokeAPI.MoveVersionGroupDetails[] Texts)
+        {
+            foreach (var obj in Texts)
+            {
+                if ( obj.VersionGroup.Name == "ultra-sun-ultra-moon")
+                {
+                    return new KeyValuePair<Enums.MoveLearnedType, int>(Enums.ParseEnum<Enums.MoveLearnedType>(SanitizeStringNoSpaces(obj.LearnMethod.Name)),obj.LearnedAt);
+                }
+            }
+            return new KeyValuePair<Enums.MoveLearnedType, int>();
         }
     }
 }

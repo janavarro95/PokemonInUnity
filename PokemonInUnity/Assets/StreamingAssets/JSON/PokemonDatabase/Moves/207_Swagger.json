@@ -1,0 +1,33 @@
+{
+  "accuracy": 85.0,
+  "pp": 15,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Raises the target's Attack by two stages, then confuses it.  If the target's Attack cannot be raised by two stages, the confusion is not applied.",
+    "shortEffect": "Raises the target's Attack by two stages and confuses the target."
+  },
+  "ailment": "confusion",
+  "category": "swagger",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 2,
+  "maxTurns": 5,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {
+    "attack": {
+      "statName": "attack",
+      "amountToChange": 2
+    }
+  },
+  "targets": "selectedPokemon",
+  "moveType": "normal",
+  "moveDescription": "The user enrages and confuses the target. However,\nthis also sharply raises the target’s Attack stat.",
+  "moveName": "Swagger",
+  "id": 207
+}

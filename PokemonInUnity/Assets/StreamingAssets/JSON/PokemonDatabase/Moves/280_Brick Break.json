@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 15,
+  "priority": 0,
+  "power": 75,
+  "effects": {
+    "effect": "Destroys any light screen or reflect on the target's side of the field, then inflicts regular damage.",
+    "shortEffect": "Destroys Reflect and Light Screen."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "fighting",
+  "moveDescription": "The user attacks with a swift chop. It can also break\nbarriers, such as Light Screen and Reflect.",
+  "moveName": "Brick Break",
+  "id": 280
+}

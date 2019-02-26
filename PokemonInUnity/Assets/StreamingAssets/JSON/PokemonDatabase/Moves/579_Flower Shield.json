@@ -1,0 +1,33 @@
+{
+  "accuracy": 0.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Raises the Defense of all grass Pokémon in battle.",
+    "shortEffect": "Raises the Defense of all grass Pokémon in battle."
+  },
+  "ailment": "none",
+  "category": "unique",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 100.0,
+  "statChanges": {
+    "defense": {
+      "statName": "defense",
+      "amountToChange": 1
+    }
+  },
+  "targets": "allPokemon",
+  "moveType": "fairy",
+  "moveDescription": "The user raises the Defense stat of all Grass-type\nPokémon in battle with a mysterious power.",
+  "moveName": "Flower Shield",
+  "id": 579
+}

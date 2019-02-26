@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 70,
+  "effects": {
+    "effect": "Inflicts regular damage.  If the target is sleeping, this move has double power, and the target wakes up.",
+    "shortEffect": "If the target is asleep, has double power and wakes it up."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "fighting",
+  "moveDescription": "This attack inflicts big damage on a sleeping target.\nThis also wakes the target up, however.",
+  "moveName": "Wake Up Slap",
+  "id": 358
+}

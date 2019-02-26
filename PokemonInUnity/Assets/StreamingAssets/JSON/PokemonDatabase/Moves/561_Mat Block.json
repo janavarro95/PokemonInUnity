@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Protects all friendly Pokémon from damaging moves.  Only works on the first turn after the user is sent out.",
+    "shortEffect": "Protects all friendly Pokémon from damaging moves.  Only works on the first turn after the user is sent out."
+  },
+  "ailment": "none",
+  "category": "field-effect",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "usersField",
+  "moveType": "fighting",
+  "moveDescription": "Using a pulled-up mat as a shield, the user protects\nitself and its allies from damaging moves. This does\nnot stop status moves.",
+  "moveName": "Mat Block",
+  "id": 561
+}

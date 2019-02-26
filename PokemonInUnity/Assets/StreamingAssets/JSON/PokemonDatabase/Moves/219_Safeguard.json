@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 25,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Protects Pokémon on the user's side of the field from major status effects and confusion for five turns.  Does not cancel existing ailments.  This effect remains even if the user leaves the field.\n\nIf yawn is used while this move is in effect, it will immediately fail.\n\ndefog used by an opponent will end this effect.\n\nThis effect does not prevent the confusion caused by outrage, petal dance, or thrash.",
+    "shortEffect": "Protects the user's field from major status ailments and confusion for five turns."
+  },
+  "ailment": "none",
+  "category": "field-effect",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "usersField",
+  "moveType": "normal",
+  "moveDescription": "The user creates a protective field that prevents\nstatus conditions for five turns.",
+  "moveName": "Safeguard",
+  "id": 219
+}

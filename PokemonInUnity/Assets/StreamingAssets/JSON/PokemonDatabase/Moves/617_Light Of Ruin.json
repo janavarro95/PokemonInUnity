@@ -1,0 +1,28 @@
+{
+  "accuracy": 90.0,
+  "pp": 5,
+  "priority": 0,
+  "power": 140,
+  "effects": {
+    "effect": "Inflicts regular damage.  User takes 1/2 the damage it inflicts in recoil.",
+    "shortEffect": "User receives 1/2 the damage inflicted in recoil."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": -50,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "fairy",
+  "moveDescription": "Drawing power from the Eternal Flower, the user\nfires a powerful beam of light. This also damages the\nuser quite a lot.",
+  "moveName": "Light Of Ruin",
+  "id": 617
+}

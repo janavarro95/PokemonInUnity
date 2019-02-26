@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 10,
+  "priority": 3,
+  "power": 0,
+  "effects": {
+    "effect": "Moves with multiple targets will not hit friendly Pokémon for the remainder of this turn.  If the user is last to act this turn, this move will fail.\n\nThis move cannot be selected by assist or metronome.",
+    "shortEffect": "Prevents any multi-target moves from hitting friendly Pokémon this turn."
+  },
+  "ailment": "none",
+  "category": "field-effect",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "usersField",
+  "moveType": "rock",
+  "moveDescription": "The user and its allies are protected from\nwide-ranging attacks for one turn.",
+  "moveName": "Wide Guard",
+  "id": 469
+}

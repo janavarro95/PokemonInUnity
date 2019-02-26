@@ -1,0 +1,28 @@
+{
+  "accuracy": 90.0,
+  "pp": 5,
+  "priority": 0,
+  "power": 140,
+  "effects": {
+    "effect": "Inflicts regular damage.  Has a $effect_chance% chance to paralyze the target.  User charges for one turn before attacking.",
+    "shortEffect": "Requires a turn to charge before attacking.  Has a $effect_chance% chance to paralyze the target."
+  },
+  "ailment": "paralysis",
+  "category": "damage+ailment",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 30.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "ice",
+  "moveDescription": "On the second turn, the user hits the target with\nelectrically charged ice. This may also leave the\ntarget with paralysis.",
+  "moveName": "Freeze Shock",
+  "id": 553
+}

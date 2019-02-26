@@ -1,0 +1,28 @@
+{
+  "accuracy": 90.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 120,
+  "effects": {
+    "effect": "Inflicts regular damage.  Can only be used if the user has eaten a berry since the beginning of the battle.\n\nAfter the user eats a berry, it may use this move any number of times until the end of the battle, even if it switches out.  Eating a held berry, eating a berry via bug bite or pluck, or being the target of a Flung berry will enable this move.  Feeding a Pokémon a berry from the bag or using natural gift will not.\n\nIf the trainer chooses this move when it cannot be used, the choice is rejected outright and the trainer must choose another move.",
+    "shortEffect": "Can only be used after the user has eaten a berry."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "poison",
+  "moveDescription": "The user lets out a damaging belch at the target.\nThe user must eat a held Berry to use this move.",
+  "moveName": "Belch",
+  "id": 562
+}

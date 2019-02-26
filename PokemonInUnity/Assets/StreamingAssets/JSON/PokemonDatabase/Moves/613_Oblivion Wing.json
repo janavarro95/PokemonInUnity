@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 80,
+  "effects": {
+    "effect": "Deals regular damage.  Drains 75% of the damage inflicted to heal the user.",
+    "shortEffect": "Drains 75% of the damage inflicted to heal the user."
+  },
+  "ailment": "none",
+  "category": "damage+heal",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 75,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "flying",
+  "moveDescription": "The user absorbs its target’s HP. The user’s HP is\nrestored by over half of the damage taken by\nthe target.",
+  "moveName": "Oblivion Wing",
+  "id": 613
+}

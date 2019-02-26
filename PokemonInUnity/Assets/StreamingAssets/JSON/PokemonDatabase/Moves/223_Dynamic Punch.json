@@ -1,0 +1,28 @@
+{
+  "accuracy": 50.0,
+  "pp": 5,
+  "priority": 0,
+  "power": 100,
+  "effects": {
+    "effect": "Inflicts regular damage.  Has a $effect_chance% chance to confuse the target.",
+    "shortEffect": "Has a $effect_chance% chance to confuse the target."
+  },
+  "ailment": "confusion",
+  "category": "damage+ailment",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 2,
+  "maxTurns": 5,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 100.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "fighting",
+  "moveDescription": "The user punches the target with full, concentrated\npower. This confuses the target if it hits.",
+  "moveName": "Dynamic Punch",
+  "id": 223
+}

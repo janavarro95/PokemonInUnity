@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 15,
+  "priority": 2,
+  "power": 0,
+  "effects": {
+    "effect": "User switches position on the field with the friendly Pokémon opposite it.  If the user is in the middle position in a triple battle, or there are no other friendly Pokémon, this move will fail.",
+    "shortEffect": "User switches places with the friendly Pokémon opposite it."
+  },
+  "ailment": "none",
+  "category": "unique",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "user",
+  "moveType": "psychic",
+  "moveDescription": "The user teleports using a strange power and\nswitches places with one of its allies.",
+  "moveName": "Ally Switch",
+  "id": 502
+}

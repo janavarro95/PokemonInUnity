@@ -14,9 +14,11 @@ namespace Assets.Scripts.Content.PokeDatabase
         [SerializeField]
         Text loadingText;
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Await.Warning", "CS4014:Await.Warning")]
         public void Awake()
         {
-            StartCoroutine(PokemonDatabaseScraper.InitializeDataBase());
+            
+            PokemonDatabaseScraper.InitializeDataBase();
 
             //PokemonDatabase.ScrapePokemonSpecies();
             /*
@@ -57,7 +59,8 @@ namespace Assets.Scripts.Content.PokeDatabase
             this.loadingText.text = "Pokemon Species Loaded: " + PokemonDatabaseScraper.PokemonSpeciesByDex.Count + "/" + PokemonDatabaseScraper.NumberOfPokemon +
             Environment.NewLine + "Pokemon Loaded: " + PokemonDatabaseScraper.PokemonByDex.Count + "/" + PokemonDatabaseScraper.NumberOfPokemon +
             Environment.NewLine + "Moves Loaded:" + PokemonDatabase.MovesByIndex.Count + "/" + PokemonDatabaseScraper.NumberOfMoves +
-            Environment.NewLine + "Evolution Chains Loaded" + (PokemonDatabase.EvolutionByIndex.Count + 1) + "/" + PokemonDatabaseScraper.NumberOfEvolutionChains;
+            Environment.NewLine + "Evolution Chains Loaded: " + (PokemonDatabase.EvolutionByIndex.Count) + "/" + (PokemonDatabaseScraper.NumberOfEvolutionChains-8)+
+            Environment.NewLine + "Pokemon Info Loaded: " + (PokemonDatabase.PokemonInfoByIndex.Count) + "/" + PokemonDatabaseScraper.NumberOfPokemon;
             
         }
 

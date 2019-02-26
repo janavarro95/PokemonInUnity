@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 20,
+  "priority": 0,
+  "power": 40,
+  "effects": {
+    "effect": "Inflicts regular damage.  Has a $effect_chance% chance to make each target flinch.\n\nIf the target is under the effect of bounce, fly, or sky drop, this move will hit with double power.",
+    "shortEffect": "Has a $effect_chance% chance to make the target flinch."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 20.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "allOpponents",
+  "moveType": "dragon",
+  "moveDescription": "The user whips up a vicious tornado to tear at the\nopposing Pokémon. This may also make them flinch.",
+  "moveName": "Twister",
+  "id": 239
+}

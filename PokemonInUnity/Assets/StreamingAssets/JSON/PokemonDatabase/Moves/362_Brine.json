@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 65,
+  "effects": {
+    "effect": "Inflicts regular damage.  If the target has less than half its max HP remaining, this move has double power.",
+    "shortEffect": "Has double power against Pokémon that have less than half their max HP remaining."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "water",
+  "moveDescription": "If the target’s HP is half or less, this attack will hit\nwith double the power.",
+  "moveName": "Brine",
+  "id": 362
+}

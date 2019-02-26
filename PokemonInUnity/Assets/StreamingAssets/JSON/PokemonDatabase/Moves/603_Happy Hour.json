@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 30,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Doubles prize money.\n\nStacks with a held item.  Only works once per battle.",
+    "shortEffect": "Doubles prize money."
+  },
+  "ailment": "none",
+  "category": "unique",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "usersField",
+  "moveType": "normal",
+  "moveDescription": "Using Happy Hour doubles the amount of prize\nmoney received after battle.",
+  "moveName": "Happy Hour",
+  "id": 603
+}

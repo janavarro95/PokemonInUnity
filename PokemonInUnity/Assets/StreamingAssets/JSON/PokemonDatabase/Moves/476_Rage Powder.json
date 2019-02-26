@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.0,
+  "pp": 20,
+  "priority": 2,
+  "power": 0,
+  "effects": {
+    "effect": "Until the end of this turn, any moves that opposing Pokémon target solely at the user's ally will instead target the user.  If both Pokémon on the same side of the field use this move on the same turn, the Pokémon that uses it last will become the target.\n\nThis effect takes priority over lightning rod and storm drain.\n\nIf the user's ally switches out, opposing Pokémon may still hit it with pursuit.\n\nThis move cannot be selected by assist or metronome.",
+    "shortEffect": "Redirects the target's single-target effects to the user for this turn."
+  },
+  "ailment": "none",
+  "category": "unique",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "user",
+  "moveType": "bug",
+  "moveDescription": "The user scatters a cloud of irritating powder to\ndraw attention to itself. Opponents aim only at\nthe user.",
+  "moveName": "Rage Powder",
+  "id": 476
+}

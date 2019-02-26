@@ -5,28 +5,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace Assets.Scripts.Content.GameContent
 {
     public class PokemonInfo
     {
-        string pokemonName;
+        public string pokemonName;
 
-        public List<string> learnableMoves;
-        /*
-        Move[] Moves;
-        public bool knowsFourMoves
-        {
-            get
-            {
-                for(int i = 0; i <= 3; i++)
-                {
-                    if (Moves[i] == null) return false;
-                }
-                return true;
-            }
-        }
-        */
+        public int pokedexNumber;
+        public string pokedexDescription;
 
         public int baseHP;
         public int baseAttack;
@@ -37,9 +25,18 @@ namespace Assets.Scripts.Content.GameContent
 
         public List<Enums.Type> types;
 
+
+        public string evolvesFrom;
+        public EvolutionInfo evolutionInfo;
+
+
+        /// <summary>
+        /// Should always be 0?
+        /// </summary>
         public int baseExperience;
 
         public float genderRateRaw;
+        [Newtonsoft.Json.JsonIgnore]
         public float GenderRate
         {
             get
@@ -52,6 +49,7 @@ namespace Assets.Scripts.Content.GameContent
         /// The base capture rate; up to 255. The higher the number, the easier the catch.
         /// </summary>
         public float captureRateRaw;
+        [Newtonsoft.Json.JsonIgnore]
         public float captureRatePercent
         {
             get
@@ -77,16 +75,13 @@ namespace Assets.Scripts.Content.GameContent
 
         public Enums.ExperienceGrowthRate growthRate;
 
-        public int pokedexNumber;
-        public string pokedexDescription;
-
         public List<Enums.EggGroup> eggGroups;
 
-        public string evolvesFrom;
 
-        public EvolutionInfo evolutionInfo;
-
-        
+        /// <summary>
+        /// A dictionary of method types. The int in the nested dictionary is for what level the move is learned at.
+        /// </summary>
+        public Dictionary<Enums.MoveLearnedType, Dictionary<string, int>> learnableMoves;
 
 
         public PokemonInfo()
@@ -129,46 +124,75 @@ namespace Assets.Scripts.Content.GameContent
 
             this.baseExperience = pokeInfo.BaseExperience;
 
-            learnableMoves = new List<string>();
+            learnableMoves = new Dictionary<Enums.MoveLearnedType, Dictionary<string, int>>();
+            foreach(var num in Enums.GetValues<Enums.MoveLearnedType>())
+            {
+                learnableMoves.Add(num, new Dictionary<string, int>());
+            }
+            int index = 0;
             foreach (var v in pokeInfo.Moves)
             {
-                learnableMoves.Add(PokeDatabase.PokemonDatabase.SanitizeString(v.Move.Name));
+                Debug.Log("Processing Move: " + v.Move.Name + " on Pokemon: " + this.pokemonName);
+                Debug.Log("Processing Move: " + v.Move.Name + " Progress: " + index +pokeInfo.Moves.Length);
+                index++;
+                var pair = PokeDatabase.PokemonDatabase.GetProperMoveLearnedInfo(v.VersionGroupDetails);
+                learnableMoves[pair.Key].Add(PokeDatabase.PokemonDatabase.SanitizeString(v.Move.Name), pair.Value);
             }
+            Debug.Log("Process Types");
+
+            types = new List<Enums.Type>();
             foreach (var type in pokeInfo.Types)
             {
+                Debug.Log("processing type: " + type.Type.Name);
                 types.Add(Enums.ParseEnum<Enums.Type>(type.Type.Name));
             }
+            Debug.Log("Done with types");
 
+            Debug.Log("Get species info");
+            PokemonSpecies speciesInfo = PokemonDatabaseScraper.PokemonSpeciesByDex[dexNumber];
 
-            PokemonSpecies speciesInfo = PokemonDatabaseScraper.PokemonSpeciesByName[PokemonDatabase.SanitizeString(pokeInfo.Species.Name)];
-
+            Debug.Log("Got species info");
             this.genderRateRaw = speciesInfo.FemaleToMaleRate.Value;
             this.captureRateRaw = speciesInfo.CaptureRate;
             this.baseHappiness = speciesInfo.BaseHappiness;
             this.hatchCounter = speciesInfo.HatchCounter;
             this.hasMultipleForms = speciesInfo.FormsAreSwitchable;
 
+            Debug.Log("Process exp rate");
             this.growthRate = Enums.ParseEnum<Enums.ExperienceGrowthRate>(PokeDatabase.PokemonDatabase.SanitizeStringNoSpaces(speciesInfo.GrowthRate.Name));
+            Debug.Log("done with exp rate");
+
             this.pokedexNumber = dexNumber;
 
+            Debug.Log("Process dex description");
             this.pokedexDescription = PokeDatabase.PokemonDatabase.GetProperFlavorText(speciesInfo.FlavorTexts);
+            Debug.Log("Done with dex description");
 
             this.eggGroups = new List<Enums.EggGroup>();
+            Debug.Log("Process egg groups");
             foreach(var group in speciesInfo.EggGroups)
             {
                eggGroups.Add( Enums.ParseEnum<Enums.EggGroup>(PokeDatabase.PokemonDatabase.SanitizeStringNoSpaces(group.Name)));
             }
+            Debug.Log("done with egg groups");
 
+            /*
+            Debug.Log("Get evolves from");
             this.evolvesFrom =PokeDatabase.PokemonDatabase.SanitizeString(speciesInfo.EvolvesFromSpecies.Name);
+            Debug.Log("Got evolves from");
+            */
 
+            Debug.Log("Get evolution info");
             //throw new Exception("Need to implement pokemon color for pokedex search?");
-            this.evolutionInfo = PokeDatabase.PokemonDatabase.EvolutionByPokemon[this.pokemonName];
-        }
-
-        public bool canLearnMove(MoveInfo move)
-        {
-            if (this.learnableMoves.Contains(move.moveName)) return true;
-            return false;
+            try
+            {
+                this.evolutionInfo = PokeDatabase.PokemonDatabase.EvolutionByPokemon[this.pokemonName];
+            }
+            catch (Exception err)
+            {
+                Debug.Log(err);
+            }
+            Debug.Log("Got evolution info");
         }
 
     }

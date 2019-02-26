@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 120,
+  "effects": {
+    "effect": "Inflicts regular damage.  Only Pokémon that share a type with the user will take damage from this move.",
+    "shortEffect": "Hits any Pokémon that shares a type with the user."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "allOtherPokemon",
+  "moveType": "psychic",
+  "moveDescription": "Using an odd shock wave, the user inflicts damage\non any Pokémon of the same type in the area\naround it.",
+  "moveName": "Synchronoise",
+  "id": 485
+}

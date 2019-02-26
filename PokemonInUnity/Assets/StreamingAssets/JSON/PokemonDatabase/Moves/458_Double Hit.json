@@ -1,0 +1,28 @@
+{
+  "accuracy": 90.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 35,
+  "effects": {
+    "effect": "Inflicts regular damage.  Hits twice in one turn.",
+    "shortEffect": "Hits twice in one turn."
+  },
+  "ailment": "none",
+  "category": "damage",
+  "minHits": 2,
+  "maxHits": 2,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "normal",
+  "moveDescription": "The user slams the target with a long tail, vines, or a\ntentacle. The target is hit twice in a row.",
+  "moveName": "Double Hit",
+  "id": 458
+}

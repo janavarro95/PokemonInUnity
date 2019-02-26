@@ -1,0 +1,28 @@
+{
+  "accuracy": 100.0,
+  "pp": 10,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "The target's ability is disabled as long as it remains on the field.\n\nThis effect is passed on by baton pass.",
+    "shortEffect": "Nullifies target's ability until it leaves battle."
+  },
+  "ailment": "none",
+  "category": "unique",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {},
+  "targets": "selectedPokemon",
+  "moveType": "poison",
+  "moveDescription": "The user hurls up its stomach acids on the target.\nThe fluid eliminates the effect of the target’s Ability.",
+  "moveName": "Gastro Acid",
+  "id": 380
+}

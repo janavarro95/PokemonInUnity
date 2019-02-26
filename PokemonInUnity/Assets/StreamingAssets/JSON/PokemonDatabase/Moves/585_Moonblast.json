@@ -1,0 +1,33 @@
+{
+  "accuracy": 100.0,
+  "pp": 15,
+  "priority": 0,
+  "power": 95,
+  "effects": {
+    "effect": "Inflicts regular damage.  Has a $effect_chance% chance to lower the target's Special Attack by one stage.",
+    "shortEffect": "Has a $effect_chance% chance to lower the target's Special Attack by one stage."
+  },
+  "ailment": "none",
+  "category": "damage+lower",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 30.0,
+  "statChanges": {
+    "special-attack": {
+      "statName": "special-attack",
+      "amountToChange": -1
+    }
+  },
+  "targets": "selectedPokemon",
+  "moveType": "fairy",
+  "moveDescription": "Borrowing the power of the moon, the user attacks\nthe target. This may also lower the target’s\nSp. Atk stat.",
+  "moveName": "Moonblast",
+  "id": 585
+}

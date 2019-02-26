@@ -1,0 +1,33 @@
+{
+  "accuracy": 0.0,
+  "pp": 20,
+  "priority": 0,
+  "power": 0,
+  "effects": {
+    "effect": "Raises the user's Special Defense by two stages.",
+    "shortEffect": "Raises the user's Special Defense by two stages."
+  },
+  "ailment": "none",
+  "category": "net-good-stats",
+  "minHits": 0,
+  "maxHits": 0,
+  "minTurns": 0,
+  "maxTurns": 0,
+  "drainRecoil": 0,
+  "healing": 0,
+  "critRate": 0,
+  "ailmentChance": 0.0,
+  "flinchChance": 0.0,
+  "statChance": 0.0,
+  "statChanges": {
+    "special-defense": {
+      "statName": "special-defense",
+      "amountToChange": 2
+    }
+  },
+  "targets": "user",
+  "moveType": "psychic",
+  "moveDescription": "The user temporarily empties its mind to forget its\nconcerns. This sharply raises the user’s Sp. Def stat.",
+  "moveName": "Amnesia",
+  "id": 133
+}
