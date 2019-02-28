@@ -1,6 +1,11 @@
 # PokemonInUnity
 An attempt to make a example of a Pokemon game in Unity. This is NOT a finished game but a demo demonstrating simple systems from Pokemon recreated in Unity to use as a showcase and for an understanding of Computer Game Design.
 
+## Credits
+PokeAPI: https://pokeapi.co/ (Used for querrying lots of Pokemon data to recreate simple logic such as base stats and moves)
+SuperTiled2Unity: https://seanba.itch.io/supertiled2unity/devlog/47956/introducing-supertiled2unity (Used to import Tiled maps into Unity)
+Tiled: https://www.mapeditor.org/ (Used to recreate maps from Pokemon)
+
 ## License
 PokémonInUnity is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. https://creativecommons.org/licenses/by-nc-sa/4.0/
 
