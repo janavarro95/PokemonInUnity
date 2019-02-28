@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Utilities.Timers;
+using SuperTiled2Unity;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,9 +9,10 @@ namespace Assets.Scripts.Characters {
     public class PlayerMovement : CharacterMovement
     {
 
-        
+        [SerializeField]
+        AudioClip playerBumpSound;
 
-        
+        DeltaTimer bumpSoundTimer;
 
         // Start is called before the first frame update
         protected override void Start()
@@ -17,8 +20,10 @@ namespace Assets.Scripts.Characters {
             this.oldPosition = this.gameObject.transform.position;
             this.currentPosition = this.gameObject.transform.position;
             this.newPosition = this.gameObject.transform.position;
-
+            bumpSoundTimer = new DeltaTimer(0.5m, Enums.TimerType.CountDown, false);
+            bumpSoundTimer.start();
             
+            /*
             this.setMovementPath(new List<Enums.Direction>()
             {
                 Enums.Direction.Right,
@@ -27,12 +32,13 @@ namespace Assets.Scripts.Characters {
                 Enums.Direction.Right,
                 Enums.Direction.Down,
             });
-            
+            */   
         }
 
         // Update is called once per frame
         void Update()
-        { 
+        {
+            bumpSoundTimer.Update();
         }
 
         protected override void FixedUpdate()
@@ -94,7 +100,6 @@ namespace Assets.Scripts.Characters {
             if (hit.collider != null)
             {
                 GameObject detectedGameObject = hit.collider.gameObject;
-                Debug.Log(detectedGameObject.name);
                 if (detectedGameObject.GetComponent<Collider2D>() == null)
                 {
                     //move
@@ -104,7 +109,25 @@ namespace Assets.Scripts.Characters {
                 else
                 {
                     //Do logic!
+                    GameObject detectedCollisionObject = hit.collider.gameObject.transform.parent.gameObject;
                     Debug.Log("COLLISION AT: " + checkPosition);
+                    Debug.Log("COLLISION WITH: " + detectedCollisionObject.name);
+                    SuperTiled2Unity.SuperCustomProperties properties = detectedCollisionObject.GetComponent<SuperTiled2Unity.SuperCustomProperties>();
+
+                    if (bumpSoundTimer.IsFinished)
+                    {
+                        GameInformation.GameManager.SoundManager.playSound(playerBumpSound,0.75f);
+                        bumpSoundTimer.restart();
+                    }
+                    CustomProperty p;
+                    if (properties.TryGetCustomProperty("Surfable", out p) == true)
+                    {
+                        if (p.m_Value == "true")
+                        {
+                            Debug.Log("Could surf here.");
+                        }
+                    }
+                    
                 }
             }
             if(hit.collider == null)

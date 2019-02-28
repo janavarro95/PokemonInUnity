@@ -11,8 +11,29 @@ namespace Assets.Scripts.GameInformation
     {
 
         public static GameManager Manager;
+        public static GameOptions Options
+        {
+            get
+            {
+                return Manager.options;
+            }
+        }
+        public static GameSoundManager SoundManager
+        {
+            get
+            {
+                return Manager.soundManager;
+            }
+            set
+            {
+                Manager.soundManager = value;
+            }
+        }
+        
 
         public Serializer serializer;
+        public GameOptions options;
+        public GameSoundManager soundManager;
         /// <summary>
         /// Initializing the game manager.
         /// </summary>
@@ -22,6 +43,7 @@ namespace Assets.Scripts.GameInformation
             DontDestroyOnLoad(this.gameObject);
             initializeGame();
             serializer = new Serializer();
+            options = new GameOptions();
         }
 
         // Start is called before the first frame update
