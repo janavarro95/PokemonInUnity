@@ -44,6 +44,7 @@ namespace Assets.Scripts.GameInformation
             initializeGame();
             serializer = new Serializer();
             options = new GameOptions();
+            this.gameObject.AddComponent<GameSoundManager>();
         }
 
         // Start is called before the first frame update

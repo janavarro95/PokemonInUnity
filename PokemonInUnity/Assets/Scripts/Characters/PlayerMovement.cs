@@ -14,6 +14,10 @@ namespace Assets.Scripts.Characters {
 
         DeltaTimer bumpSoundTimer;
 
+        [SerializeField]
+        Enums.Direction facingDirection;
+        
+
         // Start is called before the first frame update
         protected override void Start()
         {
@@ -22,7 +26,7 @@ namespace Assets.Scripts.Characters {
             this.newPosition = this.gameObject.transform.position;
             bumpSoundTimer = new DeltaTimer(0.5m, Enums.TimerType.CountDown, false);
             bumpSoundTimer.start();
-            
+
             /*
             this.setMovementPath(new List<Enums.Direction>()
             {
@@ -32,7 +36,8 @@ namespace Assets.Scripts.Characters {
                 Enums.Direction.Right,
                 Enums.Direction.Down,
             });
-            */   
+            */
+            facingDirection = Enums.Direction.Down;
         }
 
         // Update is called once per frame
@@ -59,16 +64,18 @@ namespace Assets.Scripts.Characters {
             Vector2 delta=new Vector3(GameInput.InputControls.LeftJoystickHorizontal, GameInput.InputControls.LeftJoystickVertical, 0) * Time.deltaTime;
 
             Vector2 checkPosition = new Vector2();
+            Enums.Direction nextDirection=Enums.Direction.Down;
             if (Mathf.Abs(delta.x) > Mathf.Abs(delta.y))
             {
                 if (delta.x < 0)
                 {
                     checkPosition = new Vector2(-1, 0);
+                    nextDirection = Enums.Direction.Left;
                 }
                 else if (delta.x > 0)
                 {
                     checkPosition = new Vector2(1, 0);
-
+                    nextDirection = Enums.Direction.Right;
                 }
                 else if (delta.x == 0)
                 {
@@ -80,10 +87,12 @@ namespace Assets.Scripts.Characters {
                 if (delta.y < 0)
                 {
                     checkPosition = new Vector2(0, -1);
+                    nextDirection = Enums.Direction.Down;
                 }
                 else if (delta.y > 0)
                 {
                     checkPosition = new Vector2(0, 1);
+                    nextDirection = Enums.Direction.Up;
                 }
                 else if (delta.y == 0)
                 {
@@ -105,6 +114,8 @@ namespace Assets.Scripts.Characters {
                     //move
                     oldPosition = this.gameObject.transform.position;
                     newPosition = this.gameObject.transform.position + (Vector3)checkPosition;
+                    this.facingDirection = nextDirection;
+                    //Dont think this actually runs...
                 }
                 else
                 {
@@ -132,8 +143,10 @@ namespace Assets.Scripts.Characters {
             }
             if(hit.collider == null)
             {
+                //If no object detected!
                 oldPosition = this.gameObject.transform.position;
                 newPosition=this.gameObject.transform.position + (Vector3)checkPosition;
+                this.facingDirection = nextDirection;
             }
         }
 

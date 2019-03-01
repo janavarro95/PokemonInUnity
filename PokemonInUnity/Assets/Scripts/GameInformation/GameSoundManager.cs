@@ -13,17 +13,26 @@ namespace Assets.Scripts.GameInformation
 
     public class GameSoundManager : MonoBehaviour
     {
+        public AudioClip currentSong;
+        public AudioSource currentSongSource;
 
         /// <summary>
         /// A dictionary to keep track of all of the currently playing audio sources.
         /// </summary>
         public Dictionary<string, List<AudioSource>> audioSources = new Dictionary<string, List<AudioSource>>();
 
-        // Start is called before the first frame update
-        void Start()
+        private void Awake()
         {
             GameManager.SoundManager = this;
             DontDestroyOnLoad(this.gameObject);
+            currentSongSource = this.gameObject.AddComponent<AudioSource>();
+            this.currentSongSource.loop = true;
+        }
+
+        // Start is called before the first frame update
+        void Start()
+        {
+
 
         }
 
@@ -152,5 +161,34 @@ namespace Assets.Scripts.GameInformation
             return this.audioSources[clip.name].Count > 0;
         }
 
+
+        public void playSong(AudioClip clip)
+        {
+
+            if (this.currentSong == null)
+            {
+                this.currentSong = clip;
+                this.currentSongSource.clip = this.currentSong;
+                this.currentSongSource.Play();
+                return;
+            }
+            if (this.currentSong == clip)
+            {
+                return;
+            }
+            else
+            {
+                this.currentSongSource.Stop();
+                this.currentSong = clip;
+                this.currentSongSource.clip = this.currentSong;
+                this.currentSongSource.Play();
+            }
+        }
+
+        public void stopSong()
+        {
+            if (this.currentSong == null) return;
+            this.currentSongSource.Stop();
+        }
     }
 }

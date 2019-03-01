@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Assets.Scripts.Content.PokeDatabase
@@ -14,11 +15,15 @@ namespace Assets.Scripts.Content.PokeDatabase
         [SerializeField]
         Text loadingText;
 
+        public string nextScene = "SampleScene";
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Await.Warning", "CS4014:Await.Warning")]
         public void Awake()
         {
             
-            PokemonDatabaseScraper.InitializeDataBase();
+            PokemonDatabaseScraper.InitializeDataBase(new Action<bool>(loadNextScene));
+
+            
 
             //PokemonDatabase.ScrapePokemonSpecies();
             /*
@@ -32,6 +37,11 @@ namespace Assets.Scripts.Content.PokeDatabase
 
             }
             */
+        }
+
+        public void loadNextScene(bool ok)
+        {
+            SceneManager.LoadScene(nextScene);
         }
 
         public void StartPage()
@@ -56,8 +66,8 @@ namespace Assets.Scripts.Content.PokeDatabase
 
         public void Update()
         {
-            this.loadingText.text = "Pokemon Species Loaded: " + PokemonDatabaseScraper.PokemonSpeciesByDex.Count + "/" + PokemonDatabaseScraper.NumberOfPokemon +
-            Environment.NewLine + "Pokemon Loaded: " + PokemonDatabaseScraper.PokemonByDex.Count + "/" + PokemonDatabaseScraper.NumberOfPokemon +
+            this.loadingText.text = "Pokemon Species Loaded: " + Mathf.Max(PokemonDatabaseScraper.PokemonSpeciesByDex.Count, PokemonDatabase.PokemonInfoByIndex.Count) + "/" + PokemonDatabaseScraper.NumberOfPokemon +
+            Environment.NewLine + "Pokemon Loaded: " + Mathf.Max(PokemonDatabaseScraper.PokemonByDex.Count, PokemonDatabase.PokemonInfoByIndex.Count) + "/" + PokemonDatabaseScraper.NumberOfPokemon +
             Environment.NewLine + "Moves Loaded:" + PokemonDatabase.MovesByIndex.Count + "/" + PokemonDatabaseScraper.NumberOfMoves +
             Environment.NewLine + "Evolution Chains Loaded: " + (PokemonDatabase.EvolutionByIndex.Count) + "/" + (PokemonDatabaseScraper.NumberOfEvolutionChains-8)+
             Environment.NewLine + "Pokemon Info Loaded: " + (PokemonDatabase.PokemonInfoByIndex.Count) + "/" + PokemonDatabaseScraper.NumberOfPokemon;
