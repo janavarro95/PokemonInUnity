@@ -5,5 +5,6 @@ using System.Text;
 
 namespace Assets.Scripts.Utilities.Delegates
 {
+    [Serializable]
     public delegate void VoidDelegate();
 }

@@ -538,10 +538,7 @@ namespace Assets.Scripts.GameInput
         /// </summary>
         /// <returns></returns>
         public static ControllerType GetControllerType()
-        {
-            Debug.Log(Input.GetJoystickNames()[0].ToLower());
-
-            
+        {   
             if (Input.GetJoystickNames().Length == 0) return ControllerType.Keyboard;
             try
             {

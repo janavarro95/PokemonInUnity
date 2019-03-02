@@ -34,6 +34,7 @@ namespace Assets.Scripts.GameInformation
         public Serializer serializer;
         public GameOptions options;
         public GameSoundManager soundManager;
+        public DialogueManager dialogueManager;
         /// <summary>
         /// Initializing the game manager.
         /// </summary>
@@ -45,6 +46,7 @@ namespace Assets.Scripts.GameInformation
             serializer = new Serializer();
             options = new GameOptions();
             this.gameObject.AddComponent<GameSoundManager>();
+            this.dialogueManager=this.gameObject.AddComponent<DialogueManager>();
         }
 
         // Start is called before the first frame update
