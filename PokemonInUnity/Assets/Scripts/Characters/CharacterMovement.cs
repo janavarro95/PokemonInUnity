@@ -20,6 +20,20 @@ namespace Assets.Scripts.Characters
 
         List<Enums.Direction> directionsToMove=new List<Enums.Direction>();
 
+        [SerializeField]
+        protected Animator characterAnimator;
+
+        [SerializeField]
+        protected Enums.Direction facingDirection;
+
+        
+        public Sprite leftSprite;
+        public Sprite rightSprite;
+        public Sprite upSprite;
+        public Sprite downSprite;
+
+        protected SpriteRenderer spriteRenderer;
+
         protected bool IsMoving
         {
             get
@@ -55,9 +69,12 @@ namespace Assets.Scripts.Characters
         // Start is called before the first frame update
         protected virtual void Start()
         {
+            this.characterAnimator = this.gameObject.GetComponent<Animator>();
+            this.spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
             this.oldPosition = this.gameObject.transform.position;
             this.currentPosition = this.gameObject.transform.position;
             this.newPosition = this.gameObject.transform.position;
+
         }
 
         // Update is called once per frame
@@ -72,6 +89,7 @@ namespace Assets.Scripts.Characters
             //checkForCollisionRaycast();
             getNextMovementPositionFromPath();
             moveLerp();
+            resetMovementAnimation();
         }
 
         protected void getNextMovementPositionFromPath()
@@ -117,7 +135,6 @@ namespace Assets.Scripts.Characters
                     this.currentPosition = this.gameObject.transform.position;
                     this.newPosition = this.gameObject.transform.position;
                     movementLerp = 0;
-                    Debug.Log("NANI??");
                 }
 
                 return;
@@ -140,9 +157,9 @@ namespace Assets.Scripts.Characters
         /// For tile direction
         /// </summary>
         /// <param name="direction"></param>
-        protected virtual void checkForCollisionRaycast(Vector2 direction)
+        protected virtual bool checkForCollisionRaycast(Vector2 direction)
         {
-            if (CanAutoMove == false) return;
+            if (CanAutoMove == false) return false;
             Vector2 delta = direction;
 
             Vector2 checkPosition = new Vector2();
@@ -182,7 +199,7 @@ namespace Assets.Scripts.Characters
 
             }
 
-            if (checkPosition.x == 0 && checkPosition.y == 0) return;
+            if (checkPosition.x == 0 && checkPosition.y == 0) return false;
             RaycastHit2D hit = Physics2D.Raycast(this.gameObject.transform.position, checkPosition, 1f);
             if (hit.collider != null)
             {
@@ -193,11 +210,12 @@ namespace Assets.Scripts.Characters
                     //move
                     oldPosition = this.gameObject.transform.position;
                     newPosition = this.gameObject.transform.position + (Vector3)checkPosition;
+                    return true;
                 }
                 else
                 {
                     //Do logic!
-                    
+                    return false;
                 }
             }
             if (hit.collider == null)
@@ -205,25 +223,63 @@ namespace Assets.Scripts.Characters
                 
                 oldPosition = this.gameObject.transform.position;
                 newPosition = this.gameObject.transform.position + (Vector3)checkPosition;
+                return true;
             }
+            return false;
         }
 
 
         protected virtual void moveLeft()
         {
-            checkForCollisionRaycast(new Vector2(-1, 0));
+            bool animate=checkForCollisionRaycast(new Vector2(-1, 0));
+            if (animate == true)
+            {
+                characterAnimator.Play("WalkingLeft");
+            }
+            else
+            {
+                characterAnimator.Play("StandingIdleLeft");
+            }
+            this.facingDirection = Enums.Direction.Left;
         }
         protected virtual void moveRight()
         {
-            checkForCollisionRaycast(new Vector2(1, 0));
+            bool animate = checkForCollisionRaycast(new Vector2(1, 0));
+            if (animate == true)
+            {
+                characterAnimator.Play("WalkingLeft");
+            }
+            else
+            {
+                characterAnimator.Play("StandingIdleLeft");
+            }
+            this.facingDirection = Enums.Direction.Right;
         }
         protected virtual void moveDown()
         {
-            checkForCollisionRaycast(new Vector2(0, -1));
+            bool animate = checkForCollisionRaycast(new Vector2(0, -1));
+            if (animate == true)
+            {
+                characterAnimator.Play("WalkingLeft");
+            }
+            else
+            {
+                characterAnimator.Play("StandingIdleLeft");
+            }
+            this.facingDirection = Enums.Direction.Down;
         }
         protected virtual void moveUp()
         {
-            checkForCollisionRaycast(new Vector2(0, 1));
+            bool animate = checkForCollisionRaycast(new Vector2(0, 1));
+            if (animate == true)
+            {
+                characterAnimator.Play("WalkingLeft");
+            }
+            else
+            {
+                characterAnimator.Play("StandingIdleLeft");
+            }
+            this.facingDirection = Enums.Direction.Up;
         }
 
 
@@ -234,6 +290,66 @@ namespace Assets.Scripts.Characters
         public virtual void setMovementPath(List<Enums.Direction> movementPath)
         {
             this.directionsToMove = movementPath;
+        }
+
+        protected virtual void playMovementAnimation(Enums.Direction direction, bool hasMoved)
+        {
+            if (direction == Enums.Direction.Down)
+            {
+                if (hasMoved)
+                {
+                    this.characterAnimator.Play("WalkingDown");
+                }
+                else
+                {
+                    this.spriteRenderer.sprite = downSprite;
+                    this.characterAnimator.Play("StandingIdleDown");
+                }
+            }
+            if (direction == Enums.Direction.Left)
+            {
+                if (hasMoved)
+                {
+                    this.characterAnimator.Play("WalkingLeft");
+                }
+                else
+                {
+                    this.spriteRenderer.sprite = leftSprite;
+                    this.characterAnimator.Play("StandingIdleLeft");
+                }
+            }
+            if (direction == Enums.Direction.Up)
+            {
+                if (hasMoved)
+                {
+                    this.characterAnimator.Play("WalkingUp");
+                }
+                else
+                {
+                    this.spriteRenderer.sprite = upSprite;
+                    this.characterAnimator.Play("StandingIdleUp");
+                }
+            }
+            if (direction == Enums.Direction.Right)
+            {
+                if (hasMoved)
+                {
+                    this.characterAnimator.Play("WalkingRight");
+                }
+                else
+                {
+                    this.spriteRenderer.sprite = rightSprite;
+                    this.characterAnimator.Play("StandingIdleRight");
+                }
+            }
+        }
+
+        protected virtual void resetMovementAnimation()
+        {
+            if (CanMove == true)
+            {
+                playMovementAnimation(this.facingDirection, false);
+            }
         }
 
         /*

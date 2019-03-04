@@ -185,12 +185,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 400052, guid: 600154411e08dc64195b65386044d421, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400052, guid: 600154411e08dc64195b65386044d421, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 3664157343022684176, guid: 600154411e08dc64195b65386044d421,
         type: 3}
       propertyPath: m_ChunkCullingBounds.x
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3664157343022684176, guid: 600154411e08dc64195b65386044d421,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664157343022684178, guid: 600154411e08dc64195b65386044d421,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664157343022684178, guid: 600154411e08dc64195b65386044d421,
         type: 3}
       propertyPath: m_ChunkCullingBounds.y
       value: 0.5
@@ -1307,24 +1325,6 @@ PrefabInstance:
       propertyPath: m_CompositePaths.m_Paths.Array.data[2].Array.data[3].y
       value: -6
       objectReference: {fileID: 0}
-    - target: {fileID: 400052, guid: 600154411e08dc64195b65386044d421, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400052, guid: 600154411e08dc64195b65386044d421, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3664157343022684178, guid: 600154411e08dc64195b65386044d421,
-        type: 3}
-      propertyPath: m_ChunkCullingBounds.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3664157343022684178, guid: 600154411e08dc64195b65386044d421,
-        type: 3}
-      propertyPath: m_ChunkCullingBounds.y
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 6600002, guid: 600154411e08dc64195b65386044d421, type: 3}
       propertyPath: m_ColliderPaths.Array.size
       value: 3
@@ -1778,6 +1778,7 @@ GameObject:
   - component: {fileID: 1730250103}
   - component: {fileID: 1730250102}
   - component: {fileID: 1730250101}
+  - component: {fileID: 1730250106}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1800,9 +1801,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 16, y: 24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1846,6 +1847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementLerp: 0
   movementSpeed: 4
+  characterAnimator: {fileID: 0}
   playerBumpSound: {fileID: 8300000, guid: b6dff07960b41734c817973a9fd8f195, type: 3}
   facingDirection: 0
 --- !u!212 &1730250104
@@ -1885,7 +1887,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 0adcabceeb4297549a5c26e81917da94, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1905,11 +1907,30 @@ Transform:
   m_GameObject: {fileID: 1730250100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.5, y: 9.5, z: 1}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1730250106
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730250100}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3de25650a469ee6458e8f89c3f8a206c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!60 &1814315409 stripped
 PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 6000010, guid: 600154411e08dc64195b65386044d421,

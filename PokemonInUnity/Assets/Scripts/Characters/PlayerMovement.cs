@@ -14,13 +14,17 @@ namespace Assets.Scripts.Characters {
 
         DeltaTimer bumpSoundTimer;
 
-        [SerializeField]
-        Enums.Direction facingDirection;
-        
+
+        public Sprite leftBikeSprite;
+        public Sprite rightBikeSprite;
+        public Sprite upBikeSprite;
+        public Sprite downBikeSprite;
 
         // Start is called before the first frame update
         protected override void Start()
         {
+            this.spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
+            this.characterAnimator = this.gameObject.GetComponent<Animator>();
             this.oldPosition = this.gameObject.transform.position;
             this.currentPosition = this.gameObject.transform.position;
             this.newPosition = this.gameObject.transform.position;
@@ -38,6 +42,9 @@ namespace Assets.Scripts.Characters {
             });
             */
             facingDirection = Enums.Direction.Down;
+
+            this.playMovementAnimation(facingDirection, false);
+
         }
 
         // Update is called once per frame
@@ -53,6 +60,7 @@ namespace Assets.Scripts.Characters {
             checkForCollisionRaycast();
             moveLerp();
             Camera.main.transform.position = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, -10);
+            //resetMovementAnimation();
         }
 
         /// <summary>
@@ -104,7 +112,12 @@ namespace Assets.Scripts.Characters {
 
             }
 
-            if (checkPosition.x == 0 && checkPosition.y == 0) return;
+            if (checkPosition.x == 0 && checkPosition.y == 0)
+            {
+
+                resetMovementAnimation();
+                return;
+            }
             RaycastHit2D hit = Physics2D.Raycast(this.gameObject.transform.position, checkPosition,1f);
             if (hit.collider != null)
             {
@@ -112,9 +125,7 @@ namespace Assets.Scripts.Characters {
                 if (detectedGameObject.GetComponent<Collider2D>() == null)
                 {
                     //move
-                    oldPosition = this.gameObject.transform.position;
-                    newPosition = this.gameObject.transform.position + (Vector3)checkPosition;
-                    this.facingDirection = nextDirection;
+                  
                     //Dont think this actually runs...
                 }
                 else
@@ -130,6 +141,7 @@ namespace Assets.Scripts.Characters {
                         GameInformation.GameManager.SoundManager.playSound(playerBumpSound,0.75f);
                         bumpSoundTimer.restart();
                     }
+                    playMovementAnimation(this.facingDirection, false);
                     CustomProperty p;
                     if (properties.TryGetCustomProperty("Surfable", out p) == true)
                     {
@@ -144,10 +156,18 @@ namespace Assets.Scripts.Characters {
             if(hit.collider == null)
             {
                 //If no object detected!
+                Debug.Log("HELLO CHECK!");
                 oldPosition = this.gameObject.transform.position;
                 newPosition=this.gameObject.transform.position + (Vector3)checkPosition;
                 this.facingDirection = nextDirection;
+                playMovementAnimation(this.facingDirection, true);
             }
+        }
+
+        protected override void playMovementAnimation(Enums.Direction direction, bool hasMoved)
+        {
+            base.playMovementAnimation(direction, hasMoved);
+            return;
         }
 
         
