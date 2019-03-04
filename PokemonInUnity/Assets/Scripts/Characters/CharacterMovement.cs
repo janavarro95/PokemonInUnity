@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Assets.Scripts.GameInformation;
+using Assets.Scripts.Utilities.Timers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,6 +36,17 @@ namespace Assets.Scripts.Characters
 
         protected SpriteRenderer spriteRenderer;
 
+        private enum MovementType
+        {
+            Stationary,
+            Random
+        }
+
+        [SerializeField]
+        private MovementType movementType;
+        [SerializeField]
+        private DeltaTimer randomMoveTimer;
+
         protected bool IsMoving
         {
             get
@@ -60,7 +73,7 @@ namespace Assets.Scripts.Characters
         {
             get
             {
-                return (CanAutoMove && this.directionsToMove.Count==0);
+                return (CanAutoMove && this.directionsToMove.Count==0 && GameManager.Manager.isObjectActiveInteractable(this.gameObject)==false && GameInformation.GameManager.Manager.dialogueManager.isDialogueUp==false);
             }
         }
 
@@ -75,12 +88,18 @@ namespace Assets.Scripts.Characters
             this.currentPosition = this.gameObject.transform.position;
             this.newPosition = this.gameObject.transform.position;
 
+            if(this.movementType== MovementType.Random)
+            {
+                float time = UnityEngine.Random.Range(0.0f, 10.0f);
+                this.randomMoveTimer = new DeltaTimer(time, Enums.TimerType.CountDown, false, new Utilities.Delegates.VoidDelegate(randomMove));
+                this.randomMoveTimer.start();
+            }
         }
 
         // Update is called once per frame
         void Update()
         {
-
+            if (this.randomMoveTimer != null) this.randomMoveTimer.Update();
         }
 
         protected virtual void FixedUpdate()
@@ -89,7 +108,11 @@ namespace Assets.Scripts.Characters
             //checkForCollisionRaycast();
             getNextMovementPositionFromPath();
             moveLerp();
-            resetMovementAnimation();
+            if (this.directionsToMove.Count == 0 && CanMove)
+            {
+                Debug.Log("Yay");
+                resetMovementAnimation();
+            }
         }
 
         protected void getNextMovementPositionFromPath()
@@ -97,8 +120,11 @@ namespace Assets.Scripts.Characters
 
             if (CanAutoMove)
             {
-                if (this.directionsToMove.Count == 0) return;
-
+                if (this.directionsToMove.Count == 0)
+                {
+                    //resetMovementAnimation();
+                    return;
+                }
 
                 //Same as dequeue
                 Enums.Direction direction = this.directionsToMove[0];
@@ -204,7 +230,6 @@ namespace Assets.Scripts.Characters
             if (hit.collider != null)
             {
                 GameObject detectedGameObject = hit.collider.gameObject;
-                Debug.Log(detectedGameObject.name);
                 if (detectedGameObject.GetComponent<Collider2D>() == null)
                 {
                     //move
@@ -247,11 +272,11 @@ namespace Assets.Scripts.Characters
             bool animate = checkForCollisionRaycast(new Vector2(1, 0));
             if (animate == true)
             {
-                characterAnimator.Play("WalkingLeft");
+                characterAnimator.Play("WalkingRight");
             }
             else
             {
-                characterAnimator.Play("StandingIdleLeft");
+                characterAnimator.Play("StandingIdleRight");
             }
             this.facingDirection = Enums.Direction.Right;
         }
@@ -260,11 +285,11 @@ namespace Assets.Scripts.Characters
             bool animate = checkForCollisionRaycast(new Vector2(0, -1));
             if (animate == true)
             {
-                characterAnimator.Play("WalkingLeft");
+                characterAnimator.Play("WalkingDown");
             }
             else
             {
-                characterAnimator.Play("StandingIdleLeft");
+                characterAnimator.Play("StandingIdleDown");
             }
             this.facingDirection = Enums.Direction.Down;
         }
@@ -273,11 +298,11 @@ namespace Assets.Scripts.Characters
             bool animate = checkForCollisionRaycast(new Vector2(0, 1));
             if (animate == true)
             {
-                characterAnimator.Play("WalkingLeft");
+                characterAnimator.Play("WalkingUp");
             }
             else
             {
-                characterAnimator.Play("StandingIdleLeft");
+                characterAnimator.Play("StandingIdleUp");
             }
             this.facingDirection = Enums.Direction.Up;
         }
@@ -350,6 +375,16 @@ namespace Assets.Scripts.Characters
             {
                 playMovementAnimation(this.facingDirection, false);
             }
+        }
+
+        private void randomMove()
+        {
+            Debug.Log("RESTART?");
+            Enums.Direction dir =(Enums.Direction)UnityEngine.Random.Range(0, 4);
+            this.directionsToMove.Add(dir);
+            float time = UnityEngine.Random.Range(0.0f, 10.0f);
+            this.randomMoveTimer = new DeltaTimer(time, Enums.TimerType.CountDown, false, randomMove);
+            this.randomMoveTimer.start();
         }
 
         /*

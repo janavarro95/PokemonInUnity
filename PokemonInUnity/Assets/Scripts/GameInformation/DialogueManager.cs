@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.Utilities.Timers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,12 @@ namespace Assets.Scripts.GameInformation
         public GameObject dialogueBox;
         public Text dialogueText;
 
+        public DeltaTimer typingDelayTimer;
+
+        public double delayForNextCharacter=0.01f;
+
+        bool eatFirstInput;
+
         public string targetSentence
         {
             get
@@ -46,6 +53,8 @@ namespace Assets.Scripts.GameInformation
             this.dialogueText = this.dialogueBox.transform.Find("Canvas").Find("Image").Find("DialogueText").gameObject.GetComponent<Text>();
             this.dialogueBox.SetActive(false);
             DontDestroyOnLoad(this.dialogueBox);
+            typingDelayTimer = new DeltaTimer(delayForNextCharacter, Enums.TimerType.CountDown, false, getNextChar);
+            typingDelayTimer.start();
         }
 
         public void initializeDialogues(string speakerName, List<string> dialogues, UnityEvent onFinished = null)
@@ -56,14 +65,17 @@ namespace Assets.Scripts.GameInformation
             this.onDialogueFinished = onFinished;
             this.isDialogueUp = true;
             this.currentSentence = "";
+            getNextChar();
+            typingDelayTimer = new DeltaTimer(delayForNextCharacter, Enums.TimerType.CountDown, false, getNextChar);
+            typingDelayTimer.start();
         }
 
         public void Update()
         {
             if (this.isDialogueUp)
             {
+                typingDelayTimer.Update();
                 checkForInput();
-                getNextChar();
                 this.dialogueText.text = currentSentence;
             }
         }
@@ -81,6 +93,11 @@ namespace Assets.Scripts.GameInformation
 
             if (GameInput.InputControls.APressed)
             {
+                if (eatFirstInput == false)
+                {
+                    eatFirstInput = true;
+                    return;
+                }
                 if (currentSentence != targetSentence)
                 {
                     currentSentence = targetSentence;
@@ -101,6 +118,7 @@ namespace Assets.Scripts.GameInformation
                 {
                     onDialogueFinished.Invoke();
                 }
+                GameInformation.GameManager.Manager.currentInteractable = null;
                 return;
             }
 
@@ -112,18 +130,21 @@ namespace Assets.Scripts.GameInformation
             if (this.currentSentence.Length < this.targetSentence.Length)
             {
                 this.currentSentence += this.targetSentence[this.currentSentence.Length];
+                typingDelayTimer = new DeltaTimer(delayForNextCharacter, Enums.TimerType.CountDown, false, getNextChar);
+                typingDelayTimer.start();
             }
         }
 
         public void clearDialogue()
         {
-            this.currentDialogues.Clear();
+            //this.currentDialogues.Clear();
             this.currentDialogueIndex = 0;
             this.currentSentence = "";
             this.speakerName = "";
             this.onDialogueFinished = null;
             this.dialogueBox.SetActive(false);
             isDialogueUp = false;
+            eatFirstInput = false;
         }
 
     }

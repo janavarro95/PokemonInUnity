@@ -35,6 +35,7 @@ namespace Assets.Scripts.GameInformation
         public GameOptions options;
         public GameSoundManager soundManager;
         public DialogueManager dialogueManager;
+        public Interactables.Interactable currentInteractable;
         /// <summary>
         /// Initializing the game manager.
         /// </summary>
@@ -67,6 +68,13 @@ namespace Assets.Scripts.GameInformation
             SceneManager.sceneUnloaded += OnSceneUnLoaded;
 
 
+        }
+
+        public bool isObjectActiveInteractable(GameObject o)
+        {
+            if (o.GetComponent<Interactables.Interactable>() == null) return false;
+            if (currentInteractable == null) return false;
+            return this.currentInteractable.gameObject == o;
         }
 
         /// <summary>

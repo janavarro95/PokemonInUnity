@@ -1,10 +1,13 @@
-﻿using Assets.Scripts.Utilities.Timers;
+﻿using Assets.Scripts.Interactables;
+using Assets.Scripts.Utilities.Timers;
 using SuperTiled2Unity;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Scripts.Characters {
+namespace Assets.Scripts.Characters
+{
 
     public class PlayerMovement : CharacterMovement
     {
@@ -28,7 +31,7 @@ namespace Assets.Scripts.Characters {
             this.oldPosition = this.gameObject.transform.position;
             this.currentPosition = this.gameObject.transform.position;
             this.newPosition = this.gameObject.transform.position;
-            bumpSoundTimer = new DeltaTimer(0.5m, Enums.TimerType.CountDown, false);
+            bumpSoundTimer = new DeltaTimer(0.5f, Enums.TimerType.CountDown, false);
             bumpSoundTimer.start();
 
             /*
@@ -57,22 +60,27 @@ namespace Assets.Scripts.Characters {
         {
             //this.gameObject.transform.position += new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0) * Time.deltaTime;
             getNextMovementPositionFromPath();
-            checkForCollisionRaycast();
+            checkForCollisionMovementRaycast();
             moveLerp();
             Camera.main.transform.position = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, -10);
+            if (GameInput.InputControls.APressed&& this.CanMove)
+            {
+                checkForCollisionInteractionRaycast();
+            }
+            
             //resetMovementAnimation();
         }
 
         /// <summary>
         /// For determining input movement
         /// </summary>
-        private void checkForCollisionRaycast()
+        private void checkForCollisionMovementRaycast()
         {
-            if (CanMove==false) return;
-            Vector2 delta=new Vector3(GameInput.InputControls.LeftJoystickHorizontal, GameInput.InputControls.LeftJoystickVertical, 0) * Time.deltaTime;
+            if (CanMove == false) return;
+            Vector2 delta = new Vector3(GameInput.InputControls.LeftJoystickHorizontal, GameInput.InputControls.LeftJoystickVertical, 0) * Time.deltaTime;
 
             Vector2 checkPosition = new Vector2();
-            Enums.Direction nextDirection=Enums.Direction.Down;
+            Enums.Direction nextDirection = Enums.Direction.Down;
             if (Mathf.Abs(delta.x) > Mathf.Abs(delta.y))
             {
                 if (delta.x < 0)
@@ -90,7 +98,7 @@ namespace Assets.Scripts.Characters {
 
                 }
             }
-            else if(Mathf.Abs(delta.x) < Mathf.Abs(delta.y))
+            else if (Mathf.Abs(delta.x) < Mathf.Abs(delta.y))
             {
                 if (delta.y < 0)
                 {
@@ -107,7 +115,7 @@ namespace Assets.Scripts.Characters {
 
                 }
             }
-            else if(Mathf.Abs(delta.x) == Mathf.Abs(delta.y))
+            else if (Mathf.Abs(delta.x) == Mathf.Abs(delta.y))
             {
 
             }
@@ -118,51 +126,128 @@ namespace Assets.Scripts.Characters {
                 resetMovementAnimation();
                 return;
             }
-            RaycastHit2D hit = Physics2D.Raycast(this.gameObject.transform.position, checkPosition,1f);
+            RaycastHit2D hit = Physics2D.Raycast(this.gameObject.transform.position, checkPosition, 1f);
             if (hit.collider != null)
             {
                 GameObject detectedGameObject = hit.collider.gameObject;
                 if (detectedGameObject.GetComponent<Collider2D>() == null)
                 {
                     //move
-                  
+
                     //Dont think this actually runs...
                 }
                 else
                 {
-                    //Do logic!
-                    GameObject detectedCollisionObject = hit.collider.gameObject.transform.parent.gameObject;
-                    Debug.Log("COLLISION AT: " + checkPosition);
-                    Debug.Log("COLLISION WITH: " + detectedCollisionObject.name);
-                    SuperTiled2Unity.SuperCustomProperties properties = detectedCollisionObject.GetComponent<SuperTiled2Unity.SuperCustomProperties>();
-
-                    if (bumpSoundTimer.IsFinished)
+                    if (hit.collider.gameObject.transform.parent != null)
                     {
-                        GameInformation.GameManager.SoundManager.playSound(playerBumpSound,0.75f);
-                        bumpSoundTimer.restart();
+                        //Do logic!
+                        GameObject detectedCollisionObject = hit.collider.gameObject.transform.parent.gameObject;
+                        Debug.Log("COLLISION AT: " + checkPosition);
+                        Debug.Log("COLLISION WITH: " + detectedCollisionObject.name);
+                        SuperTiled2Unity.SuperCustomProperties properties = detectedCollisionObject.GetComponent<SuperTiled2Unity.SuperCustomProperties>();
+
+                        if (bumpSoundTimer.IsFinished)
+                        {
+                            GameInformation.GameManager.SoundManager.playSound(playerBumpSound, 0.75f);
+                            bumpSoundTimer.restart();
+                        }
+                        this.facingDirection = nextDirection;
+                        playMovementAnimation(this.facingDirection, false);
+                        CustomProperty p;
+                        if (properties.TryGetCustomProperty("Surfable", out p) == true)
+                        {
+                            if (p.m_Value == "true")
+                            {
+                                Debug.Log("Could surf here.");
+                            }
+                        }
                     }
+                    else
+                    {
+                        this.facingDirection = nextDirection;
+                        if (bumpSoundTimer.IsFinished)
+                        {
+                            GameInformation.GameManager.SoundManager.playSound(playerBumpSound, 0.75f);
+                            bumpSoundTimer.restart();
+                        }
+                        playMovementAnimation(this.facingDirection, false);
+                    }
+
+                }
+            }
+            if (hit.collider == null)
+            {
+                //If no object detected!
+                oldPosition = this.gameObject.transform.position;
+                newPosition = this.gameObject.transform.position + (Vector3)checkPosition;
+                this.facingDirection = nextDirection;
+                playMovementAnimation(this.facingDirection, true);
+            }
+        }
+
+        private void checkForCollisionInteractionRaycast()
+        {
+
+
+            Vector2 checkPosition = new Vector2();
+            Enums.Direction nextDirection = this.facingDirection;
+            if (nextDirection == Enums.Direction.Left)
+            {
+                checkPosition = new Vector2(-1, 0);
+            }
+            else if (nextDirection == Enums.Direction.Right)
+            {
+                checkPosition = new Vector2(1, 0);
+            }
+            else if (nextDirection == Enums.Direction.Up)
+            {
+                checkPosition = new Vector2(0, 1);
+            }
+            else if (nextDirection == Enums.Direction.Down)
+            {
+                checkPosition = new Vector2(0, -1);
+            }
+
+
+
+            RaycastHit2D hit = Physics2D.Raycast(this.gameObject.transform.position, checkPosition, 1f);
+            if (hit.collider != null)
+            {
+
+                //Do logic!
+
+
+                Interactable i=hit.collider.gameObject.GetComponent<Interactables.Interactable>();
+                if (i != null)
+                {
+                    i.interact();
+                    return;
+                }
+                try
+                {
+                    GameObject detectedCollisionObject = hit.collider.gameObject.transform.parent.gameObject;
+                    SuperTiled2Unity.SuperCustomProperties properties = detectedCollisionObject.GetComponent<SuperTiled2Unity.SuperCustomProperties>();
                     playMovementAnimation(this.facingDirection, false);
                     CustomProperty p;
                     if (properties.TryGetCustomProperty("Surfable", out p) == true)
                     {
                         if (p.m_Value == "true")
                         {
-                            Debug.Log("Could surf here.");
+                            Debug.Log("Could surf here: Interaction");
                         }
                     }
-                    
+                }
+                catch(Exception err)
+                {
+
                 }
             }
-            if(hit.collider == null)
+            if (hit.collider == null)
             {
-                //If no object detected!
-                Debug.Log("HELLO CHECK!");
-                oldPosition = this.gameObject.transform.position;
-                newPosition=this.gameObject.transform.position + (Vector3)checkPosition;
-                this.facingDirection = nextDirection;
-                playMovementAnimation(this.facingDirection, true);
+                //Do nothing.
             }
         }
+
 
         protected override void playMovementAnimation(Enums.Direction direction, bool hasMoved)
         {
@@ -170,6 +255,6 @@ namespace Assets.Scripts.Characters {
             return;
         }
 
-        
+
     }
 }

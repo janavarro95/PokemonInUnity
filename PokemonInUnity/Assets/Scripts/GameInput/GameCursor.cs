@@ -87,7 +87,7 @@ namespace Assets.Scripts.GameInput
             visibilityTimer = new Utilities.Timers.DeltaTimer(5, Enums.TimerType.CountDown, false,new Utilities.Delegates.VoidDelegate(makeInvisible));
             visibilityTimer.start();
             rect = this.gameObject.GetComponent<RectTransform>();
-            snapTimer = new DeltaTimer((decimal)snapDelay, Enums.TimerType.CountDown, false, null);
+            snapTimer = new DeltaTimer((double)snapDelay, Enums.TimerType.CountDown, false, null);
             snapTimer.start();
 
         }
