@@ -107,6 +107,9 @@ namespace Assets.Scripts.GameInformation
                 {
                     currentSentence = "";
                     currentDialogueIndex++;
+                    getNextChar();
+                    typingDelayTimer = new DeltaTimer(delayForNextCharacter, Enums.TimerType.CountDown, false, getNextChar);
+                    typingDelayTimer.start();
                     return;
                 }
             }

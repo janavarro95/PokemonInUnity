@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace Assets.Scripts.Interactables
 {
     public class DialogueInteractable : Interactable
     {
-
+        [TextArea(3, 10)]
         public List<string> dialogueStrings;
         public string speakerName;
 
