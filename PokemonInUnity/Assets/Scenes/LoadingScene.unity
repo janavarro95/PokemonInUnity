@@ -162,7 +162,7 @@ PrefabInstance:
     - target: {fileID: 9092734890103740943, guid: 26d60a0e449c2f544aff41548916f938,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9092734890103740943, guid: 26d60a0e449c2f544aff41548916f938,
         type: 3}
@@ -306,7 +306,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &859898298
 PrefabInstance:
@@ -431,9 +431,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 7f0b83f649e54d049a1dda3ecdfb3879,
         type: 3}
+    - target: {fileID: 2137384659885123553, guid: 3ed251e6670db094e8422bd1707f9444,
+        type: 3}
+      propertyPath: nextScene
+      value: PalletTown
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137384661547979784, guid: 3ed251e6670db094e8422bd1707f9444,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ed251e6670db094e8422bd1707f9444, type: 3}
---- !u!1001 &1786832078
+--- !u!1001 &1096912335
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -444,6 +454,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3268380623729428864, guid: 569bb594222224945b2b4c4dba478cdd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3268380623729428878, guid: 569bb594222224945b2b4c4dba478cdd,
         type: 3}
@@ -483,7 +498,7 @@ PrefabInstance:
     - target: {fileID: 3268380623729428878, guid: 569bb594222224945b2b4c4dba478cdd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3268380623729428878, guid: 569bb594222224945b2b4c4dba478cdd,
         type: 3}
@@ -498,11 +513,6 @@ PrefabInstance:
     - target: {fileID: 3268380623729428878, guid: 569bb594222224945b2b4c4dba478cdd,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4153112934528989146, guid: 569bb594222224945b2b4c4dba478cdd,
-        type: 3}
-      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

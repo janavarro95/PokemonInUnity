@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 9092734890103740928}
   - component: {fileID: 9092734890103740931}
   - component: {fileID: 9092734890103740940}
+  - component: {fileID: 352472811864856479}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c4c64e83807011a4f937c1f464c81407, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105,6 +106,8 @@ MonoBehaviour:
   downSprite: {fileID: 21300000, guid: 67f72c552ca70064cab0da6e322c2c21, type: 3}
   movementType: 0
   randomMoveTimer:
+    currentTime: 0
+    maxTime: 0
     type: 0
     state: 0
     autoRestart: 0
@@ -179,3 +182,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &352472811864856479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9092734890103740930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 196565ed075db554ea89142aa24a974c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

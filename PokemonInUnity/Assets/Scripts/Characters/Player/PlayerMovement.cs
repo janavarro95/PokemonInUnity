@@ -135,29 +135,56 @@ namespace Assets.Scripts.Characters
                 if (hit.collider != null)
                 {
                     GameObject detectedGameObject = hit.collider.gameObject;
-                    if (detectedGameObject.GetComponent<Collider2D>() == null)
-                    {
-                        //move
-                        //Dont think this actually runs...
-                    }
+
+                    if (hit.collider.isTrigger == false) canMove = false;
                     else
                     {
-                        if(hit.collider.isTrigger==false) canMove = false;
-                        if (hit.collider.gameObject.transform.parent != null)
+                        GameObject detectedCollisionObject = hit.collider.gameObject.transform.parent.gameObject;
+                        SuperTiled2Unity.SuperCustomProperties properties = detectedCollisionObject.GetComponent<SuperTiled2Unity.SuperCustomProperties>();
+                        if (properties != null)
                         {
-                            //Do logic!
-                            GameObject detectedCollisionObject = hit.collider.gameObject.transform.parent.gameObject;
-                            Debug.Log("COLLISION AT: " + checkPosition);
-                            Debug.Log("COLLISION WITH: " + detectedCollisionObject.name);
-                           
-
-                            if (bumpSoundTimer.IsFinished)
+                            CustomProperty p;
+                            if (properties.TryGetCustomProperty("Surfable", out p) == true)
                             {
-                                GameInformation.GameManager.SoundManager.playSound(playerBumpSound, 0.75f);
-                                bumpSoundTimer.restart();
+                                if (p.m_Value == "true")
+                                {
+                                    Debug.Log("Could surf here.");
+                                    canMove = false;
+                                }
                             }
-                            this.facingDirection = nextDirection;
-                            playMovementAnimation(this.facingDirection, false);
+                        }
+                    }
+                    Debug.Log("First level hit:" + hit.collider.gameObject.name);
+                    this.facingDirection = nextDirection;
+                    if (bumpSoundTimer.IsFinished)
+                    {
+                        GameInformation.GameManager.SoundManager.playSound(playerBumpSound, 0.75f);
+                        bumpSoundTimer.restart();
+                    }
+                    playMovementAnimation(this.facingDirection, false);
+
+                    /*
+                        
+                        if (hit.collider.gameObject.transform.parent.gameObject.GetComponent<Collider2D>() != null)
+                        {
+                            GameObject detectedCollisionObject = hit.collider.gameObject.transform.parent.gameObject;
+                            if (hit.collider.gameObject.transform.parent.gameObject.GetComponent<Collider2D>().isTrigger == false)
+                            {
+                                canMove = false;
+                                //Do logic!
+                                
+                                Debug.Log("COLLISION AT: " + checkPosition);
+                                Debug.Log("COLLISION WITH: " + detectedCollisionObject.name);
+
+
+                                if (bumpSoundTimer.IsFinished)
+                                {
+                                    GameInformation.GameManager.SoundManager.playSound(playerBumpSound, 0.75f);
+                                    bumpSoundTimer.restart();
+                                }
+                                this.facingDirection = nextDirection;
+                                playMovementAnimation(this.facingDirection, false);
+                            }
 
                             SuperTiled2Unity.SuperCustomProperties properties = detectedCollisionObject.GetComponent<SuperTiled2Unity.SuperCustomProperties>();
                             if (properties == null) continue;
@@ -174,16 +201,10 @@ namespace Assets.Scripts.Characters
                         }
                         else
                         {
-                            this.facingDirection = nextDirection;
-                            if (bumpSoundTimer.IsFinished)
-                            {
-                                GameInformation.GameManager.SoundManager.playSound(playerBumpSound, 0.75f);
-                                bumpSoundTimer.restart();
-                            }
-                            playMovementAnimation(this.facingDirection, false);
-                        }
 
-                    }
+                        }
+                        */
+
                 }
             }
             if (canMove)

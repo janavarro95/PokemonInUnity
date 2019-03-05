@@ -75,14 +75,17 @@ public class SpriteTintShader : MonoBehaviour
                         mapRenderer.sharedMaterial.color = Color.white;
                     }
                 }
-                if (spriteRenderer != null)
+                else
                 {
-                    spriteRenderer.material.color = Assets.Scripts.GameInformation.GameManager.Manager.currentMap.mapColor;
+                    if (spriteRenderer != null)
+                    {
+                        spriteRenderer.material.color = Assets.Scripts.GameInformation.GameManager.Manager.currentMap.mapColor;
 
-                }
-                else if (mapRenderer != null)
-                {
-                    mapRenderer.material.color = Assets.Scripts.GameInformation.GameManager.Manager.currentMap.mapColor;
+                    }
+                    else if (mapRenderer != null)
+                    {
+                        mapRenderer.material.color = Assets.Scripts.GameInformation.GameManager.Manager.currentMap.mapColor;
+                    }
                 }
             }
             else

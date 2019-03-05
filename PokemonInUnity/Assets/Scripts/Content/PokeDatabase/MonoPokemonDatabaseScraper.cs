@@ -15,7 +15,7 @@ namespace Assets.Scripts.Content.PokeDatabase
         [SerializeField]
         Text loadingText;
 
-        public string nextScene = "SampleScene";
+        public string nextScene = "PalletTown";
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Await.Warning", "CS4014:Await.Warning")]
         public void Awake()
