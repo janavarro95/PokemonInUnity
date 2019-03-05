@@ -126,57 +126,71 @@ namespace Assets.Scripts.Characters
                 resetMovementAnimation();
                 return;
             }
-            RaycastHit2D hit = Physics2D.Raycast(this.gameObject.transform.position, checkPosition, 1f);
-            if (hit.collider != null)
+            RaycastHit2D[] hits = Physics2D.RaycastAll(this.gameObject.transform.position, checkPosition, 1f);
+            bool canMove = true;
+
+            foreach (RaycastHit2D hit in hits)
             {
-                GameObject detectedGameObject = hit.collider.gameObject;
-                if (detectedGameObject.GetComponent<Collider2D>() == null)
+                if (hit.collider != null)
                 {
-                    //move
-
-                    //Dont think this actually runs...
-                }
-                else
-                {
-                    if (hit.collider.gameObject.transform.parent != null)
+                    GameObject detectedGameObject = hit.collider.gameObject;
+                    if (detectedGameObject.GetComponent<Collider2D>() == null)
                     {
-                        //Do logic!
-                        GameObject detectedCollisionObject = hit.collider.gameObject.transform.parent.gameObject;
-                        Debug.Log("COLLISION AT: " + checkPosition);
-                        Debug.Log("COLLISION WITH: " + detectedCollisionObject.name);
-                        SuperTiled2Unity.SuperCustomProperties properties = detectedCollisionObject.GetComponent<SuperTiled2Unity.SuperCustomProperties>();
-
-                        if (bumpSoundTimer.IsFinished)
-                        {
-                            GameInformation.GameManager.SoundManager.playSound(playerBumpSound, 0.75f);
-                            bumpSoundTimer.restart();
-                        }
-                        this.facingDirection = nextDirection;
-                        playMovementAnimation(this.facingDirection, false);
-                        CustomProperty p;
-                        if (properties.TryGetCustomProperty("Surfable", out p) == true)
-                        {
-                            if (p.m_Value == "true")
-                            {
-                                Debug.Log("Could surf here.");
-                            }
-                        }
+                        //move
+                        //Dont think this actually runs...
                     }
                     else
                     {
-                        this.facingDirection = nextDirection;
-                        if (bumpSoundTimer.IsFinished)
+                        if(hit.collider.isTrigger==false) canMove = false;
+                        if (hit.collider.gameObject.transform.parent != null)
                         {
-                            GameInformation.GameManager.SoundManager.playSound(playerBumpSound, 0.75f);
-                            bumpSoundTimer.restart();
+                            //Do logic!
+                            GameObject detectedCollisionObject = hit.collider.gameObject.transform.parent.gameObject;
+                            Debug.Log("COLLISION AT: " + checkPosition);
+                            Debug.Log("COLLISION WITH: " + detectedCollisionObject.name);
+                           
+
+                            if (bumpSoundTimer.IsFinished)
+                            {
+                                GameInformation.GameManager.SoundManager.playSound(playerBumpSound, 0.75f);
+                                bumpSoundTimer.restart();
+                            }
+                            this.facingDirection = nextDirection;
+                            playMovementAnimation(this.facingDirection, false);
+
+                            SuperTiled2Unity.SuperCustomProperties properties = detectedCollisionObject.GetComponent<SuperTiled2Unity.SuperCustomProperties>();
+                            if (properties == null) continue;
+                            CustomProperty p;
+                            if (properties.TryGetCustomProperty("Surfable", out p) == true)
+                            {
+                                if (p.m_Value == "true")
+                                {
+                                    Debug.Log("Could surf here.");
+                                }
+                            }
+
                         }
-                        playMovementAnimation(this.facingDirection, false);
+                        else
+                        {
+                            this.facingDirection = nextDirection;
+                            if (bumpSoundTimer.IsFinished)
+                            {
+                                GameInformation.GameManager.SoundManager.playSound(playerBumpSound, 0.75f);
+                                bumpSoundTimer.restart();
+                            }
+                            playMovementAnimation(this.facingDirection, false);
+                        }
+
                     }
+                }
+                if (hit.collider == null)
+                {
 
                 }
             }
-            if (hit.collider == null)
+            if (canMove)
             {
+                Debug.Log("Move!");
                 //If no object detected!
                 oldPosition = this.gameObject.transform.position;
                 newPosition = this.gameObject.transform.position + (Vector3)checkPosition;
@@ -209,48 +223,52 @@ namespace Assets.Scripts.Characters
             }
 
 
+            RaycastHit2D[] hits = Physics2D.RaycastAll(this.gameObject.transform.position, checkPosition, 1f);
 
-            RaycastHit2D hit = Physics2D.Raycast(this.gameObject.transform.position, checkPosition, 1f);
-            if (hit.collider != null)
+            foreach (RaycastHit2D hit in hits)
             {
-
-                //Do logic!
-
-
-                Interactable i=hit.collider.gameObject.GetComponent<Interactables.Interactable>();
-                if (i != null)
+                //RaycastHit2D hit = Physics2D.Raycast(this.gameObject.transform.position, checkPosition, 1f);
+                if (hit.collider != null)
                 {
-                    if (hit.collider.gameObject.GetComponent<CharacterMovement>() != null)
-                    {
 
-                        hit.collider.gameObject.GetComponent<CharacterMovement>().faceDirection(Enums.GetOppositeDirection(nextDirection));
-                    }
+                    //Do logic!
 
-                    i.interact();
-                    return;
-                }
-                try
-                {
-                    GameObject detectedCollisionObject = hit.collider.gameObject.transform.parent.gameObject;
-                    SuperTiled2Unity.SuperCustomProperties properties = detectedCollisionObject.GetComponent<SuperTiled2Unity.SuperCustomProperties>();
-                    playMovementAnimation(this.facingDirection, false);
-                    CustomProperty p;
-                    if (properties.TryGetCustomProperty("Surfable", out p) == true)
+
+                    Interactable i = hit.collider.gameObject.GetComponent<Interactables.Interactable>();
+                    if (i != null)
                     {
-                        if (p.m_Value == "true")
+                        if (hit.collider.gameObject.GetComponent<CharacterMovement>() != null)
                         {
-                            Debug.Log("Could surf here: Interaction");
+
+                            hit.collider.gameObject.GetComponent<CharacterMovement>().faceDirection(Enums.GetOppositeDirection(nextDirection));
+                        }
+
+                        i.interact();
+                        return;
+                    }
+                    try
+                    {
+                        GameObject detectedCollisionObject = hit.collider.gameObject.transform.parent.gameObject;
+                        SuperTiled2Unity.SuperCustomProperties properties = detectedCollisionObject.GetComponent<SuperTiled2Unity.SuperCustomProperties>();
+                        playMovementAnimation(this.facingDirection, false);
+                        CustomProperty p;
+                        if (properties.TryGetCustomProperty("Surfable", out p) == true)
+                        {
+                            if (p.m_Value == "true")
+                            {
+                                Debug.Log("Could surf here: Interaction");
+                            }
                         }
                     }
-                }
-                catch(Exception err)
-                {
+                    catch (Exception err)
+                    {
 
+                    }
                 }
-            }
-            if (hit.collider == null)
-            {
-                //Do nothing.
+                if (hit.collider == null)
+                {
+                    //Do nothing.
+                }
             }
         }
 
