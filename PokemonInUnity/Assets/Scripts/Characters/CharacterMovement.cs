@@ -99,7 +99,7 @@ namespace Assets.Scripts.Characters
         // Update is called once per frame
         void Update()
         {
-            if (this.randomMoveTimer != null) this.randomMoveTimer.Update();
+            if (this.randomMoveTimer != null && this.CanMove) this.randomMoveTimer.Update();
         }
 
         protected virtual void FixedUpdate()
@@ -110,7 +110,6 @@ namespace Assets.Scripts.Characters
             moveLerp();
             if (this.directionsToMove.Count == 0 && CanMove)
             {
-                Debug.Log("Yay");
                 resetMovementAnimation();
             }
         }
