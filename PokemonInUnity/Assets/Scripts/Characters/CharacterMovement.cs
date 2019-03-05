@@ -225,29 +225,32 @@ namespace Assets.Scripts.Characters
             }
 
             if (checkPosition.x == 0 && checkPosition.y == 0) return false;
-            RaycastHit2D hit = Physics2D.Raycast(this.gameObject.transform.position, checkPosition, 1f);
-            if (hit.collider != null)
+            RaycastHit2D[] hits = Physics2D.RaycastAll(this.gameObject.transform.position, checkPosition, 1f);
+            foreach (RaycastHit2D hit in hits)
             {
-                GameObject detectedGameObject = hit.collider.gameObject;
-                if (detectedGameObject.GetComponent<Collider2D>() == null)
+                if (hit.collider != null)
                 {
-                    //move
+                    GameObject detectedGameObject = hit.collider.gameObject;
+                    if (detectedGameObject.GetComponent<Collider2D>() == null)
+                    {
+                        //move
+                        oldPosition = this.gameObject.transform.position;
+                        newPosition = this.gameObject.transform.position + (Vector3)checkPosition;
+                        return true;
+                    }
+                    else
+                    {
+                        //Do logic!
+                        return false;
+                    }
+                }
+                if (hit.collider == null)
+                {
+
                     oldPosition = this.gameObject.transform.position;
                     newPosition = this.gameObject.transform.position + (Vector3)checkPosition;
                     return true;
                 }
-                else
-                {
-                    //Do logic!
-                    return false;
-                }
-            }
-            if (hit.collider == null)
-            {
-                
-                oldPosition = this.gameObject.transform.position;
-                newPosition = this.gameObject.transform.position + (Vector3)checkPosition;
-                return true;
             }
             return false;
         }
