@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Interactables;
+using Assets.Scripts.Utilities;
 using Assets.Scripts.Utilities.Timers;
 using SuperTiled2Unity;
 using System;
@@ -156,10 +157,15 @@ namespace Assets.Scripts.Characters
                     }
                     Debug.Log("First level hit:" + hit.collider.gameObject.name);
                     this.facingDirection = nextDirection;
-                    if (bumpSoundTimer.IsFinished)
+
+
+                    if (hit.collider.gameObject.GetComponent<Warp>() == null)
                     {
-                        GameInformation.GameManager.SoundManager.playSound(playerBumpSound, 0.75f);
-                        bumpSoundTimer.restart();
+                        if (bumpSoundTimer.IsFinished)
+                        {
+                            GameInformation.GameManager.SoundManager.playSound(playerBumpSound, 0.75f);
+                            bumpSoundTimer.restart();
+                        }
                     }
                     playMovementAnimation(this.facingDirection, false);
 
