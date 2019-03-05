@@ -166,6 +166,7 @@ namespace Assets.Scripts.Characters
                                 if (p.m_Value == "true")
                                 {
                                     Debug.Log("Could surf here.");
+                                    canMove = false;
                                 }
                             }
 
@@ -182,10 +183,6 @@ namespace Assets.Scripts.Characters
                         }
 
                     }
-                }
-                if (hit.collider == null)
-                {
-
                 }
             }
             if (canMove)
