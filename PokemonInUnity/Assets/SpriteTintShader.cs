@@ -63,6 +63,18 @@ public class SpriteTintShader : MonoBehaviour
         {
             if (Assets.Scripts.GameInformation.GameManager.Manager != null)
             {
+                if (GameManager.Manager.currentMap == null)
+                {
+                    if (spriteRenderer != null)
+                    {
+                        spriteRenderer.sharedMaterial.color = Color.white;
+
+                    }
+                    else if (mapRenderer != null)
+                    {
+                        mapRenderer.sharedMaterial.color = Color.white;
+                    }
+                }
                 if (spriteRenderer != null)
                 {
                     spriteRenderer.material.color = Assets.Scripts.GameInformation.GameManager.Manager.currentMap.mapColor;

@@ -16,9 +16,9 @@ namespace Assets.Scripts.Characters
         protected float movementLerp;
         public float movementSpeed = 1f;
 
-        protected Vector2 oldPosition;
-        protected Vector2 newPosition;
-        protected Vector2 currentPosition;
+        protected Vector2? oldPosition;
+        protected Vector2? newPosition;
+        protected Vector2? currentPosition;
 
         List<Enums.Direction> directionsToMove=new List<Enums.Direction>();
 
@@ -26,7 +26,7 @@ namespace Assets.Scripts.Characters
         protected Animator characterAnimator;
 
         [SerializeField]
-        protected Enums.Direction facingDirection;
+        public Enums.Direction facingDirection;
 
         
         public Sprite leftSprite;
@@ -150,25 +150,23 @@ namespace Assets.Scripts.Characters
 
         protected virtual void moveLerp()
         {
-            
+            if (newPosition == null) return;
+
             if (newPosition == (Vector2)this.gameObject.transform.position)
             {
                 this.movementLerp = 1f;
-                if (movementLerp == 1f)
-                {
-                    this.oldPosition = this.gameObject.transform.position;
-                    this.currentPosition = this.gameObject.transform.position;
-                    this.newPosition = this.gameObject.transform.position;
-                    movementLerp = 0;
-                }
 
+                this.oldPosition = null;
+                this.currentPosition = null;
+                this.newPosition = null;
+                movementLerp = 0;
                 return;
             }
             
             
             movementLerp += getMovementSpeed();
-            currentPosition = Vector2.Lerp(oldPosition, newPosition, movementLerp);
-            this.gameObject.transform.position = currentPosition;
+            currentPosition = Vector2.Lerp(oldPosition.Value, newPosition.Value, movementLerp);
+            this.gameObject.transform.position = currentPosition.Value;
 
 
         }

@@ -48,6 +48,7 @@ namespace Assets.Scripts.Characters
 
             this.playMovementAnimation(facingDirection, false);
 
+            DontDestroyOnLoad(this.gameObject);
         }
 
         // Update is called once per frame

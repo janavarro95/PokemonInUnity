@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Utilities.Serialization;
+﻿using Assets.Scripts.Characters.Player;
+using Assets.Scripts.Utilities.Serialization;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,7 +30,14 @@ namespace Assets.Scripts.GameInformation
                 Manager.soundManager = value;
             }
         }
-        
+        public static PlayerInfo Player
+        {
+            get
+            {
+                return Manager.player;
+            }
+        }
+
 
         public Serializer serializer;
         public GameOptions options;
@@ -38,6 +46,9 @@ namespace Assets.Scripts.GameInformation
         public Interactables.Interactable currentInteractable;
         public MapManager currentMap;
         public SoundEffects soundEffects;
+
+
+        public PlayerInfo player;
         /// <summary>
         /// Initializing the game manager.
         /// </summary>
@@ -51,6 +62,8 @@ namespace Assets.Scripts.GameInformation
             this.gameObject.AddComponent<GameSoundManager>();
             this.dialogueManager=this.gameObject.AddComponent<DialogueManager>();
             this.soundEffects = this.gameObject.transform.Find("SoundEffects").GetComponent<SoundEffects>();
+
+            player = new PlayerInfo();
         }
 
         // Start is called before the first frame update
