@@ -96,11 +96,13 @@ namespace Assets.Scripts.GameInformation
                 if (eatFirstInput == false)
                 {
                     eatFirstInput = true;
+                    GameManager.Manager.soundManager.playSound(GameManager.Manager.soundEffects.selectSound);
                     return;
                 }
                 if (currentSentence != targetSentence)
                 {
                     currentSentence = targetSentence;
+                    GameManager.Manager.soundManager.playSound(GameManager.Manager.soundEffects.selectSound);
                     return;
                 }
                 else if (currentSentence == targetSentence)
@@ -110,6 +112,11 @@ namespace Assets.Scripts.GameInformation
                     getNextChar();
                     typingDelayTimer = new DeltaTimer(delayForNextCharacter, Enums.TimerType.CountDown, false, getNextChar);
                     typingDelayTimer.start();
+
+                    if (IsFinished == false)
+                    {
+                        GameManager.Manager.soundManager.playSound(GameManager.Manager.soundEffects.selectSound);
+                    }
                     return;
                 }
             }

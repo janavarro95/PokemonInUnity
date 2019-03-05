@@ -37,6 +37,7 @@ namespace Assets.Scripts.GameInformation
         public DialogueManager dialogueManager;
         public Interactables.Interactable currentInteractable;
         public MapManager currentMap;
+        public SoundEffects soundEffects;
         /// <summary>
         /// Initializing the game manager.
         /// </summary>
@@ -49,6 +50,7 @@ namespace Assets.Scripts.GameInformation
             options = new GameOptions();
             this.gameObject.AddComponent<GameSoundManager>();
             this.dialogueManager=this.gameObject.AddComponent<DialogueManager>();
+            this.soundEffects = this.gameObject.transform.Find("SoundEffects").GetComponent<SoundEffects>();
         }
 
         // Start is called before the first frame update
