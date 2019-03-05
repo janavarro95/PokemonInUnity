@@ -36,6 +36,7 @@ namespace Assets.Scripts.GameInformation
         public GameSoundManager soundManager;
         public DialogueManager dialogueManager;
         public Interactables.Interactable currentInteractable;
+        public MapManager currentMap;
         /// <summary>
         /// Initializing the game manager.
         /// </summary>

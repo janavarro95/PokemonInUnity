@@ -299,10 +299,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 697939064}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34042c6449ae3ae43b25dcaf3ba91cbb, type: 3}
+  m_Script: {fileID: 11500000, guid: 1edb224f3d285b1459603e05c4dc86fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   songToPlay: {fileID: 8300000, guid: e10ccb832ca1f96449901368037ecf7a, type: 3}
+  mapColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &697939066
 Transform:
   m_ObjectHideFlags: 0
