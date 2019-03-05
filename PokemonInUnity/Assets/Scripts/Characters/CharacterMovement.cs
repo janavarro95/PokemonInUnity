@@ -226,7 +226,7 @@ namespace Assets.Scripts.Characters
 
             if (checkPosition.x == 0 && checkPosition.y == 0) return false;
             RaycastHit2D[] hits = Physics2D.RaycastAll(this.gameObject.transform.position, checkPosition, 1f);
-            bool moved = false;
+            bool animate = true;
             foreach (RaycastHit2D hit in hits)
             {
                 if (hit.collider != null)
@@ -237,22 +237,22 @@ namespace Assets.Scripts.Characters
                         //move
                         oldPosition = this.gameObject.transform.position;
                         newPosition = this.gameObject.transform.position + (Vector3)checkPosition;
-                        moved = true;
+                        animate = false;
                     }
                     else
                     {
                         //Do logic!
                     }
                 }
-                if (hit.collider == null)
-                {
-
-                    oldPosition = this.gameObject.transform.position;
-                    newPosition = this.gameObject.transform.position + (Vector3)checkPosition;
-                    moved = true;
-                }
             }
-            return moved;
+
+            if (animate == true)
+            {
+                oldPosition = this.gameObject.transform.position;
+                newPosition = this.gameObject.transform.position + (Vector3)checkPosition;
+            }
+
+            return animate;
         }
 
 
