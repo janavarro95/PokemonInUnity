@@ -307,6 +307,50 @@ namespace Assets.Scripts.Characters
         }
 
 
+        public virtual void faceDirection(Enums.Direction Dir)
+        {
+            if(Dir== Enums.Direction.Down)
+            {
+                faceDown();
+            }
+            else if(Dir== Enums.Direction.Left)
+            {
+                faceLeft();
+            }
+            else if(Dir== Enums.Direction.Right)
+            {
+                faceRight();
+            }
+            else if(Dir== Enums.Direction.Up)
+            {
+                faceUp();
+            }
+        }
+
+        public virtual void faceLeft()
+        {
+            this.facingDirection = Enums.Direction.Left;
+            this.resetMovementAnimation();
+        }
+
+        public virtual void faceRight()
+        {
+            this.facingDirection = Enums.Direction.Right;
+            this.resetMovementAnimation();
+        }
+
+        public virtual void faceDown()
+        {
+            this.facingDirection = Enums.Direction.Down;
+            this.resetMovementAnimation();
+        }
+
+        public virtual void faceUp()
+        {
+            this.facingDirection = Enums.Direction.Up;
+            this.resetMovementAnimation();
+        }
+
         /// <summary>
         /// Sets a forced movement path for the player to follow.
         /// </summary>

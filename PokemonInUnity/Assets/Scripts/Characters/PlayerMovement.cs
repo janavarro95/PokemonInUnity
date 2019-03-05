@@ -220,6 +220,12 @@ namespace Assets.Scripts.Characters
                 Interactable i=hit.collider.gameObject.GetComponent<Interactables.Interactable>();
                 if (i != null)
                 {
+                    if (hit.collider.gameObject.GetComponent<CharacterMovement>() != null)
+                    {
+
+                        hit.collider.gameObject.GetComponent<CharacterMovement>().faceDirection(Enums.GetOppositeDirection(nextDirection));
+                    }
+
                     i.interact();
                     return;
                 }

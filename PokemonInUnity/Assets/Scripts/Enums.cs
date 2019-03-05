@@ -277,6 +277,20 @@ namespace Assets.Scripts
             return (TargetType)(TargetID - 1);
         }
 
+        /// <summary>
+        /// Returns the opposite direction of the given direction.
+        /// </summary>
+        /// <param name="currentDirection"></param>
+        /// <returns></returns>
+        public static Direction GetOppositeDirection(Direction currentDirection)
+        {
+            if (currentDirection == Direction.Down) return Direction.Up;
+            if (currentDirection == Direction.Up) return Direction.Down;
+            if (currentDirection == Direction.Left) return Direction.Right;
+            if (currentDirection == Direction.Right) return Direction.Left;
+            return Direction.Down;
+        }
+
         public static T ParseEnum<T>(string EnumValue)
         {
             return (T)Enum.Parse(typeof(T), EnumValue, true);
