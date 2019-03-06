@@ -20,6 +20,14 @@ public class FadeInOut : MonoBehaviour
     /// </summary>
     public Assets.Scripts.Enums.Visibility visibility;
 
+    public enum FadeType
+    {
+        Fade,
+        Blink
+    }
+
+    public FadeType fadeStyle;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,7 +67,7 @@ public class FadeInOut : MonoBehaviour
             Debug.Log("Hello world");
             this.fadeTimer = new DeltaTimer(fadeTime, Assets.Scripts.Enums.TimerType.CountDown, false, fadeOut);
             this.fadeTimer.start();
-            visibility = Assets.Scripts.Enums.Visibility.Invisible;
+            visibility = Assets.Scripts.Enums.Visibility.Visible;
             return;
         /*
         else if(visibility == Assets.Scripts.Enums.Visibility.Invisible)
@@ -78,7 +86,7 @@ public class FadeInOut : MonoBehaviour
             Debug.Log("Reset?");
             this.fadeTimer = new DeltaTimer(fadeTime, Assets.Scripts.Enums.TimerType.CountUp, false, fadeIn);
             this.fadeTimer.start();
-            visibility = Assets.Scripts.Enums.Visibility.Visible;
+            visibility = Assets.Scripts.Enums.Visibility.Invisible;
             return;
     }
 
@@ -91,20 +99,35 @@ public class FadeInOut : MonoBehaviour
 
     void updateVisibility()
     {
+        float alpha = getAlphaFromFade();
             if (img != null)
             {
                 Color c = this.img.color;
-                this.img.color = new Color(c.r, c.g, c.b, (float)(fadeTimer.currentTime / fadeTimer.maxTime));
+                this.img.color = new Color(c.r, c.g, c.b, alpha);
             }
             if (text!=null)
             {
                 Color c = this.text.color;
-                this.text.color = new Color(c.r, c.g, c.b, (float)(fadeTimer.currentTime / fadeTimer.maxTime));
+                this.text.color = new Color(c.r, c.g, c.b, alpha);
             }
             if (this.gameObject.GetComponent<SpriteRenderer>() != null)
             {
                 Color c = this.spriteRenderer.color;
-                this.spriteRenderer.color = new Color(c.r, c.g, c.b, (float)(fadeTimer.currentTime / fadeTimer.maxTime));
+                this.spriteRenderer.color = new Color(c.r, c.g, c.b, alpha);
             }
+    }
+
+    float getAlphaFromFade()
+    {
+        if(this.fadeStyle== FadeType.Blink)
+        {
+            if (this.visibility == Assets.Scripts.Enums.Visibility.Invisible) return 0f;
+            else return 1f;
+        }
+        if(this.fadeStyle== FadeType.Fade)
+        {
+            return (float)(fadeTimer.currentTime / fadeTimer.maxTime);
+        }
+        return (float)(fadeTimer.currentTime / fadeTimer.maxTime);
     }
 }
