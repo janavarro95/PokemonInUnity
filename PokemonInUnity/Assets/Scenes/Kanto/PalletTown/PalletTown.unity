@@ -2397,6 +2397,11 @@ PrefabInstance:
       propertyPath: pressAToWarp
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7556481722185351593, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: soundType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7181431462189532565, guid: 4a25a48307dee724c93fc8f3a24301fc,
         type: 3}
       propertyPath: m_IsTrigger

@@ -218,6 +218,7 @@ MonoBehaviour:
     autoRestart: 0
   fadeTime: 2
   visibility: 0
+  fadeStyle: 0
 --- !u!1 &759133783
 GameObject:
   m_ObjectHideFlags: 0

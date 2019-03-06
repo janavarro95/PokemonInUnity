@@ -55,6 +55,7 @@ Shader "Custom/TintShader"
 			fixed4 frag(v2f IN) : SV_Target
 			{
 				float4 rawColor=tex2D(_MainTex, IN.texcoord);
+				if(rawColor.a<1) return float4(0,0,0,0);
 				if( (rawColor.r+rawColor.g+rawColor.b)/3<.9){
 					return rawColor* float4(IN.color.r*_Color.r,IN.color.g*_Color.g,IN.color.b*_Color.b,1);
 				}

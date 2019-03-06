@@ -177,6 +177,16 @@ PrefabInstance:
       propertyPath: m_ChunkCullingBounds.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3664157343022684180, guid: 381434665f69db744bc8cdb671ec08bf,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664157343022684180, guid: 381434665f69db744bc8cdb671ec08bf,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6600000, guid: 381434665f69db744bc8cdb671ec08bf, type: 3}
       propertyPath: m_ColliderPaths.Array.size
       value: 3
@@ -409,16 +419,6 @@ PrefabInstance:
       propertyPath: m_CompositePaths.m_Paths.Array.data[1].Array.data[3].y
       value: -1.1191406
       objectReference: {fileID: 0}
-    - target: {fileID: 3664157343022684180, guid: 381434665f69db744bc8cdb671ec08bf,
-        type: 3}
-      propertyPath: m_ChunkCullingBounds.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3664157343022684180, guid: 381434665f69db744bc8cdb671ec08bf,
-        type: 3}
-      propertyPath: m_ChunkCullingBounds.y
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 381434665f69db744bc8cdb671ec08bf, type: 3}
 --- !u!60 &91287521 stripped
@@ -593,6 +593,7 @@ MonoBehaviour:
   sceneToWarpTo: PalletTown
   warpLocation: {x: 5.5, y: 11.5}
   transitionTime: 0.5
+  soundType: 2
 --- !u!1 &899138424
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,6 +921,7 @@ MonoBehaviour:
   sceneToWarpTo: PalletTown
   warpLocation: {x: 5.5, y: 11.5}
   transitionTime: 0.5
+  soundType: 2
 --- !u!1 &1600078587
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,6 +996,7 @@ MonoBehaviour:
   sceneToWarpTo: PalletTown_RedsHouseF2
   warpLocation: {x: 6.5, y: 8.5}
   transitionTime: 0.5
+  soundType: 1
 --- !u!1 &1606812613
 GameObject:
   m_ObjectHideFlags: 0

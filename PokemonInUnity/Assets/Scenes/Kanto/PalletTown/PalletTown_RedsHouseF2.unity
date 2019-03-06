@@ -843,6 +843,7 @@ MonoBehaviour:
   sceneToWarpTo: PalletTown_RedsHouseF1
   warpLocation: {x: 6.5, y: 8.5}
   transitionTime: 0.5
+  soundType: 2
 --- !u!1 &1036992806
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,6 +21,16 @@ namespace Assets.Scripts.Utilities
 
         [SerializeField]
         private float transitionTime = .5f;
+        
+
+        public enum WarpSoundType
+        {
+            None,
+            EnterDoor,
+            ExitDoor,
+            Warp
+        }
+        public WarpSoundType soundType = WarpSoundType.None;
 
         // Start is called before the first frame update
         void Start()
@@ -42,11 +52,13 @@ namespace Assets.Scripts.Utilities
                 {
                     if (Assets.Scripts.GameInput.InputControls.APressed)
                     {
+                        playWarpSound();
                         ScreenTransitions.StartSceneTransition(transitionTime, sceneToWarpTo, Color.black, ScreenTransitions.TransitionState.FadeOut, new VoidDelegate(finishedTransition));
                     }
                 }
                 else
                 {
+                    playWarpSound();
                     ScreenTransitions.StartSceneTransition(transitionTime, sceneToWarpTo, Color.black, ScreenTransitions.TransitionState.FadeOut, new VoidDelegate(finishedTransition));
                 }
             }
@@ -58,6 +70,26 @@ namespace Assets.Scripts.Utilities
             SceneManager.LoadScene(sceneToWarpTo);
             //ScreenTransitions.StartSceneTransition(transitionTime, "", Color.black, ScreenTransitions.TransitionState.FadeIn);
             ScreenTransitions.PrepareForSceneFadeIn(.5f, Color.black);
+        }
+
+        private void playWarpSound()
+        {
+            if(soundType== WarpSoundType.None)
+            {
+
+            }
+            else if(soundType== WarpSoundType.EnterDoor)
+            {
+               GameInformation.GameManager.Manager.soundManager.playSound(GameInformation.GameManager.Manager.soundEffects.enterDoor); 
+            }
+            else if(soundType== WarpSoundType.ExitDoor)
+            {
+                GameInformation.GameManager.Manager.soundManager.playSound(GameInformation.GameManager.Manager.soundEffects.exitDoor);
+            }
+            else if(soundType== WarpSoundType.Warp)
+            {
+
+            }
         }
     }
 }

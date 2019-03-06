@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.GameInformation;
+using Assets.Scripts.Utilities;
 using Assets.Scripts.Utilities.Timers;
 using System;
 using System.Collections.Generic;
@@ -73,7 +74,7 @@ namespace Assets.Scripts.Characters
         {
             get
             {
-                return (CanAutoMove && this.directionsToMove.Count==0 && GameManager.Manager.isObjectActiveInteractable(this.gameObject)==false && GameInformation.GameManager.Manager.dialogueManager.isDialogueUp==false);
+                return (CanAutoMove && this.directionsToMove.Count==0 && ScreenTransitions.IsTransitioning==false && GameManager.Manager.isObjectActiveInteractable(this.gameObject)==false && GameInformation.GameManager.Manager.dialogueManager.isDialogueUp==false);
             }
         }
 

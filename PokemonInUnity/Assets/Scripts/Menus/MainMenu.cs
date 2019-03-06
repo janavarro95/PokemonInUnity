@@ -45,6 +45,10 @@ namespace Assets.Scripts.Menus
         /// </summary>
         public override void Update()
         {
+            if (GameInput.InputControls.APressed)
+            {
+                SceneManager.LoadScene("LoadingScene");
+            }
         }
         /// <summary>
         /// Close the active menu.

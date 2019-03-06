@@ -14,6 +14,14 @@ namespace Assets.Scripts.Utilities
     {
 
         public static ScreenTransitions CurrentTransition;
+        public static bool IsTransitioning
+        {
+            get
+            {
+                if (CurrentTransition == null) return false;
+                else return CurrentTransition.isTransitioning;
+            }
+        }
 
         /// <summary>
         /// The image to overlay the screen. This is typically just a blank image.
@@ -66,7 +74,7 @@ namespace Assets.Scripts.Utilities
         /// </summary>
         public TransitionState currentState;
 
-        public bool IsTransitioning
+        public bool isTransitioning
         {
             get
             {
