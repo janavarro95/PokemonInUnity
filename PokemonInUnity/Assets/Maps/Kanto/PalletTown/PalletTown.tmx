@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.2" tiledversion="1.2.2" orientation="orthogonal" renderorder="right-down" width="20" height="18" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="10">
- <tileset firstgid="1" source="MapTilesheet.tsx"/>
+ <tileset firstgid="1" source="../MapTilesheet.tsx"/>
  <layer id="1" name="Tile Layer 1" width="20" height="18">
   <data encoding="csv">
 39,39,39,7,39,39,39,39,39,7,41,41,7,39,39,39,39,39,7,39,
