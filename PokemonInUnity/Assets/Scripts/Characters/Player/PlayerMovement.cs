@@ -155,7 +155,6 @@ namespace Assets.Scripts.Characters
                             }
                         }
                     }
-                    Debug.Log("First level hit:" + hit.collider.gameObject.name);
                     this.facingDirection = nextDirection;
 
 
@@ -168,54 +167,10 @@ namespace Assets.Scripts.Characters
                         }
                     }
                     playMovementAnimation(this.facingDirection, false);
-
-                    /*
-                        
-                        if (hit.collider.gameObject.transform.parent.gameObject.GetComponent<Collider2D>() != null)
-                        {
-                            GameObject detectedCollisionObject = hit.collider.gameObject.transform.parent.gameObject;
-                            if (hit.collider.gameObject.transform.parent.gameObject.GetComponent<Collider2D>().isTrigger == false)
-                            {
-                                canMove = false;
-                                //Do logic!
-                                
-                                Debug.Log("COLLISION AT: " + checkPosition);
-                                Debug.Log("COLLISION WITH: " + detectedCollisionObject.name);
-
-
-                                if (bumpSoundTimer.IsFinished)
-                                {
-                                    GameInformation.GameManager.SoundManager.playSound(playerBumpSound, 0.75f);
-                                    bumpSoundTimer.restart();
-                                }
-                                this.facingDirection = nextDirection;
-                                playMovementAnimation(this.facingDirection, false);
-                            }
-
-                            SuperTiled2Unity.SuperCustomProperties properties = detectedCollisionObject.GetComponent<SuperTiled2Unity.SuperCustomProperties>();
-                            if (properties == null) continue;
-                            CustomProperty p;
-                            if (properties.TryGetCustomProperty("Surfable", out p) == true)
-                            {
-                                if (p.m_Value == "true")
-                                {
-                                    Debug.Log("Could surf here.");
-                                    canMove = false;
-                                }
-                            }
-
-                        }
-                        else
-                        {
-
-                        }
-                        */
-
                 }
             }
             if (canMove)
             {
-                Debug.Log("Move!");
                 //If no object detected!
                 oldPosition = this.gameObject.transform.position;
                 newPosition = this.gameObject.transform.position + (Vector3)checkPosition;

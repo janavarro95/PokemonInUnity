@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Utilities.Delegates;
+﻿using Assets.Scripts.Utilities;
+using Assets.Scripts.Utilities.Delegates;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,7 @@ namespace Assets.Scripts.Interactables
         public override void Start()
         {
             //interact();
+            dialogueStrings = StringUtilities.ParseAndSanitizeDialogueList(dialogueStrings);
         }
 
         public override void interact()

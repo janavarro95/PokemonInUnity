@@ -98,7 +98,7 @@ namespace Assets.Scripts.Characters.Player
 
         public PlayerInfo()
         {
-
+            this.playerName = "Red";
         }
 
         public void setSpriteVisibility(Enums.Visibility visibility)

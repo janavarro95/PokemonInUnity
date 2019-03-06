@@ -45,6 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectSound: {fileID: 8300000, guid: d6f07e8739dd143448c020ca766a044c, type: 3}
   bumpSound: {fileID: 8300000, guid: b6dff07960b41734c817973a9fd8f195, type: 3}
+  enterDoor: {fileID: 8300000, guid: e51ca826e553a0648acce688863c7d3d, type: 3}
+  exitDoor: {fileID: 8300000, guid: 4558d2c70696cad48a9600cb56617a84, type: 3}
 --- !u!1 &997344617537884471
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
