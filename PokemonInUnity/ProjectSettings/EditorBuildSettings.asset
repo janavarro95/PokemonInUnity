@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Kanto/PalletTown/PalletTown_RedsHouseF2.unity
     guid: b026e17114ca4ad469ccb67c24a0cc7f
+  - enabled: 1
+    path: Assets/Scenes/Kanto/PalletTown/PalletTownRivalsHome.unity
+    guid: e584cd93654e89b4fb961ec5f4288658
   m_configObjects: {}

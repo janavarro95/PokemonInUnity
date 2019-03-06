@@ -8,6 +8,11 @@ namespace Assets.Scripts.Utilities
     public class StringUtilities
     {
 
+        /// <summary>
+        /// Parses a list of dialogue strings.
+        /// </summary>
+        /// <param name="strs">The dialogue strings to parse.</param>
+        /// <returns></returns>
         public static List<string> ParseAndSanitizeDialogueList(string[] strs)
         {
             List<string> news = new List<string>();
@@ -17,6 +22,11 @@ namespace Assets.Scripts.Utilities
             }
             return news;
         }
+        /// <summary>
+        /// Parses a list of dialogue strings.
+        /// </summary>
+        /// <param name="strs">The dialogue strings to parse.</param>
+        /// <returns></returns>
         public static List<string> ParseAndSanitizeDialogueList(List<string> strs)
         {
             List<string> news = new List<string>();
@@ -27,6 +37,11 @@ namespace Assets.Scripts.Utilities
             return news;
         }
 
+        /// <summary>
+        /// Parses a string to replace information.
+        /// </summary>
+        /// <param name="old"></param>
+        /// <returns></returns>
         public static string ParseAndSanitizeDialogueString(string old)
         {
             string str= old;

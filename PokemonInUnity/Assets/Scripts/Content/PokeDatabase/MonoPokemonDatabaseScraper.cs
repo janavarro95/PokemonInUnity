@@ -16,13 +16,15 @@ namespace Assets.Scripts.Content.PokeDatabase
         Text loadingText;
 
         public string nextScene = "PalletTown";
+        public bool loadPokemon = true;
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Await.Warning", "CS4014:Await.Warning")]
         public void Awake()
         {
-            
-            PokemonDatabaseScraper.InitializeDataBase(new Action<bool>(loadNextScene));
-
+            if (loadPokemon)
+            {
+                PokemonDatabaseScraper.InitializeDataBase(new Action<bool>(loadNextScene));
+            }
             
 
             //PokemonDatabase.ScrapePokemonSpecies();
@@ -37,6 +39,14 @@ namespace Assets.Scripts.Content.PokeDatabase
 
             }
             */
+        }
+
+        public void Start()
+        {
+            if (loadPokemon == false)
+            {
+                loadNextScene(true);
+            }
         }
 
         public void loadNextScene(bool ok)
