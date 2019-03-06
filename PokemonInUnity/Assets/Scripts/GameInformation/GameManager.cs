@@ -54,6 +54,12 @@ namespace Assets.Scripts.GameInformation
         /// </summary>
         private void Awake()
         {
+            if (Manager != null)
+            {
+                Destroy(this.gameObject);
+                return;
+            }
+
             Manager = this;
             DontDestroyOnLoad(this.gameObject);
             initializeGame();

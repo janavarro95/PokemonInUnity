@@ -16,22 +16,26 @@ namespace Assets.Scripts.Menus
     public class SplashScreen:Menu
     {
         DeltaTimer timerToShow;
-
+        public AudioClip splashSound;
 
         public override void Start()
         {
             GameObject canvas = this.gameObject.transform.Find("Canvas").gameObject;
             Image background = canvas.transform.Find("Image").gameObject.GetComponent<Image>();
-                background.rectTransform.sizeDelta = new Vector2(Camera.main.pixelRect.width, Camera.main.pixelRect.height);
+            background.rectTransform.sizeDelta = new Vector2(Camera.main.pixelRect.width, Camera.main.pixelRect.height);
 
-            background.sprite = ContentManager.Instance.loadSprite(Path.Combine("ContentPacks", "BaseGame", "Graphics", "Menus", "SplashScreen", "ACoolFlowerThing.png"));
+            //background.sprite = ContentManager.Instance.loadSprite(Path.Combine("ContentPacks", "BaseGame", "Graphics", "Menus", "SplashScreen", "ACoolFlowerThing.png"));
 
             Menu.ActiveMenu = this;
 
-            ScreenTransitions.StartSceneTransition(3, "", Color.white, ScreenTransitions.TransitionState.FadeIn,new VoidDelegate(fadeInFinished));
-            timerToShow = new DeltaTimer(3, Enums.TimerType.CountDown, false, new VoidDelegate(fadeToMainMenu));
+            ScreenTransitions.StartSceneTransition(1, "", Color.white, ScreenTransitions.TransitionState.FadeIn,new VoidDelegate(fadeInFinished));
+            timerToShow = new DeltaTimer(1, Enums.TimerType.CountDown, false, new VoidDelegate(fadeToMainMenu));
 
             this.menuCursor = GameInput.GameCursor.Instance;
+            if (splashSound != null)
+            {
+                GameInformation.GameManager.SoundManager.playSound(splashSound);
+            }
         }
 
         public override void Update()
