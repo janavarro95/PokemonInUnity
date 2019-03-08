@@ -22,5 +22,10 @@ namespace Assets.Scripts.Content.GameContent
             this.currentPP = Info.pp;
         }
 
+        public Move clone()
+        {
+            return new Move(this.moveInfo);
+        }
+
     }
 }

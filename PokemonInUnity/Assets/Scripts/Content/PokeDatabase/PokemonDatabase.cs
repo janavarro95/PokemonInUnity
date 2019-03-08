@@ -32,6 +32,11 @@ namespace Assets.Scripts.Content.PokeDatabase
             }
         }
 
+        public static Move GetMove(string MoveName)
+        {
+            return new Move(MovesByName[MoveName]);
+        }
+
         public static void AddEvolutionInfoPokemon(EvolutionInfo Info)
         {
             string name = SanitizeString(Info.speciesName);

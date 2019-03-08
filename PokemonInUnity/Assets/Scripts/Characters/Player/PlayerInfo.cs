@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Assets.Scripts.Content.GameContent;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,6 +52,8 @@ namespace Assets.Scripts.Characters.Player
                 }
             }
         }
+
+
         public Vector3 position
         {
             get
@@ -76,8 +79,9 @@ namespace Assets.Scripts.Characters.Player
             }
         }
 
-
+        [JsonIgnore]
         private SpriteRenderer renderer;
+        [JsonIgnore]
         public SpriteRenderer Renderer
         {
             get
@@ -95,10 +99,12 @@ namespace Assets.Scripts.Characters.Player
             }
         }
 
+        public PokemonInventory pokemon;
 
         public PlayerInfo()
         {
             this.playerName = "Red";
+            pokemon = new PokemonInventory(6);
         }
 
         public void setSpriteVisibility(Enums.Visibility visibility)

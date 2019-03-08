@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.Content.GameContent;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,8 @@ namespace Assets.Scripts.Content.PokeDatabase
             if (loadPokemon)
             {
                 PokemonDatabaseScraper.InitializeDataBase(new Action<bool>(loadNextScene));
+
+
             }
             
 
@@ -51,27 +54,28 @@ namespace Assets.Scripts.Content.PokeDatabase
 
         public void loadNextScene(bool ok)
         {
+            Pokemon bulba = new Pokemon(Assets.Scripts.Content.PokeDatabase.PokemonDatabase.PokemonInfoByIndex[1],5);
+            if (bulba == null)
+            {
+                Debug.Log("BULBA IS DEAD");
+            }
+            else
+            {
+                Debug.Log("BULBA LIVES");
+            }
+            bool added=GameInformation.GameManager.Manager.player.pokemon.addPokemon(bulba);
+            GameInformation.GameManager.Manager.serializer.Serialize(Application.dataPath + "POkemonTest1.json", bulba);
+
+            if (added == false)
+            {
+                Debug.Log("ERRROR ADDING BULBA");
+            }
+            else
+            {
+               Debug.Log(GameInformation.GameManager.Manager.player.pokemon.getPokemonAtIndex(0).Name);
+            }
+
             SceneManager.LoadScene(nextScene);
-        }
-
-        public void StartPage()
-        {
-            print("in StartPage()");
-            StartCoroutine(FinishFirst(5.0f, DoLast));
-        }
-
-        IEnumerator FinishFirst(float waitTime, Action doLast)
-        {
-            print("in FinishFirst");
-            yield return new WaitForSeconds(waitTime);
-            print("leave FinishFirst");
-            doLast();
-        }
-
-        void DoLast()
-        {
-            print("do after everything is finished");
-            print("done");
         }
 
         public void Update()
