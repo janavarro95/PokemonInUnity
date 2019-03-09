@@ -25,6 +25,7 @@ namespace Assets.Scripts.Menus
         /// </summary>
         public override void Start()
         {
+            GameManager.ActiveMenu = this;
             GameObject canvas=this.transform.Find("Canvas").gameObject;
             background = canvas.transform.Find("Background").gameObject.GetComponent<Image>();
             background.rectTransform.sizeDelta = new Vector2(Camera.main.pixelWidth, Camera.main.pixelHeight);

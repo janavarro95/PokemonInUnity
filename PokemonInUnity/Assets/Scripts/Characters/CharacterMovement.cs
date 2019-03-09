@@ -74,7 +74,7 @@ namespace Assets.Scripts.Characters
         {
             get
             {
-                return (CanAutoMove && this.directionsToMove.Count==0 && ScreenTransitions.IsTransitioning==false && GameManager.Manager.isObjectActiveInteractable(this.gameObject)==false && GameInformation.GameManager.Manager.dialogueManager.isDialogueUp==false);
+                return (CanAutoMove && this.directionsToMove.Count==0 &&Menus.Menu.ActiveMenu==null &&ScreenTransitions.IsTransitioning==false && GameManager.Manager.isObjectActiveInteractable(this.gameObject)==false && GameInformation.GameManager.Manager.dialogueManager.isDialogueUp==false);
             }
         }
 

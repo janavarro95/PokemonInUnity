@@ -52,6 +52,7 @@ namespace Assets.Scripts.Menus.Components
             {
                 if (Menu.ActiveMenu.selectedComponent != null)
                 {
+                    Debug.Log("SNAP TO COMPONENT");
                     Menu.ActiveMenu.menuCursor.gameObject.GetComponent<RectTransform>().position = this.unityObject.transform.position;
                 }
             }

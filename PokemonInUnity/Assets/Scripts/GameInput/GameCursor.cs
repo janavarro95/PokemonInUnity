@@ -105,7 +105,7 @@ namespace Assets.Scripts.GameInput
                 if (Menu.ActiveMenu.snapCompatible() == true)
                 {
                     checkForSnappyMovement();
-                    checkForNonSnapMovement();
+                    //checkForNonSnapMovement();
 
                 }
                 else
@@ -152,7 +152,7 @@ namespace Assets.Scripts.GameInput
                         return;
                     }
                 }
-                else if(Mathf.Abs(delta.x) > Mathf.Abs(delta.y))
+                else if(Mathf.Abs(delta.x) < Mathf.Abs(delta.y))
                 {
                     if (delta.y < -snapSensitivity)
                     {
@@ -227,6 +227,7 @@ namespace Assets.Scripts.GameInput
             {
                 if (Menu.ActiveMenu.selectedComponent != null)
                 {
+                    Debug.Log("SNAP");
                     this.gameObject.GetComponent<RectTransform>().position = Menu.ActiveMenu.selectedComponent.unityObject.transform.position;
                 }
             }

@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Characters.Player;
+using Assets.Scripts.Menus;
 using Assets.Scripts.Utilities.Serialization;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,6 +13,19 @@ namespace Assets.Scripts.GameInformation
     {
 
         public static GameManager Manager;
+
+        public static Menu ActiveMenu
+        {
+            get
+            {
+                return Menu.ActiveMenu;
+            }
+            set
+            {
+                Menu.ActiveMenu = value;
+            }
+        }
+
         public static GameOptions Options
         {
             get
