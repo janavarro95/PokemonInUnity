@@ -92,6 +92,7 @@ namespace Assets.Scripts.Interactables
         {
             Menus.Menu.Instantiate<Menus.PokemonPartyMenu>();
             (Menus.Menu.ActiveMenu as Menus.PokemonPartyMenu).onPokemonSelected.AddListener(sayPokemonNameCleanUp);
+            (Menus.Menu.ActiveMenu as Menus.PokemonPartyMenu).onMenuClose.AddListener(sayPokemonNameNoPokemonSelected);
         }
 
         public void sayPokemonNameCleanUp()
@@ -102,6 +103,12 @@ namespace Assets.Scripts.Interactables
             }
             Menus.Menu.exitMenusUntilThisOne(goodPrompt.dialogueMenu);
             GameManager.Manager.dialogueManager.forceNextSentence();
+        }
+
+        public void sayPokemonNameNoPokemonSelected()
+        {
+            Menus.Menu.exitMenusUntilThisOne(goodPrompt.dialogueMenu);
+            badPrompt.interact();
         }
 
     }

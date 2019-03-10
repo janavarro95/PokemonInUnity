@@ -48,6 +48,7 @@ namespace Assets.Scripts.Menus
         PartyMemberSelectMenu selectMenu;
 
         public UnityEvent onPokemonSelected;
+        public UnityEvent onMenuClose;
         public Pokemon selectedPokemon;
 
 
@@ -92,6 +93,11 @@ namespace Assets.Scripts.Menus
                 if (this.onPokemonSelected.GetPersistentEventCount() == 0 && GameInput.InputControls.APressed==true)
                 {
                     this.onPokemonSelected.AddListener(openStatsMenu);
+                }
+
+                if(this.onMenuClose.GetPersistentEventCount()==0 && GameInput.InputControls.APressed == true)
+                {
+                    
                 }
 
                 if (snap1 != null)
@@ -145,6 +151,7 @@ namespace Assets.Scripts.Menus
                 if (this.menuCursor.simulateMousePress(closeSnap))
                 {
                     this.exitMenu();
+                    if (onMenuClose != null) onMenuClose.Invoke();
                 }
             }
             else
