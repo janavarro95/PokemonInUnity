@@ -27,13 +27,11 @@ namespace Assets.Scripts.Interactables
         public override void interact()
         {
             GameInformation.GameManager.Manager.currentInteractable = this;
-            GameInformation.GameManager.Manager.dialogueManager.initializeDialogues(this.speakerName, this.dialogueStrings, null);
-            /*
+            GameInformation.GameManager.Manager.dialogueManager.initializeDialogues(this.speakerName, this.dialogueStrings, null);          
             if (onFinished != null)
             {
                 onFinished.Invoke();
             }
-            */
         }
 
     }

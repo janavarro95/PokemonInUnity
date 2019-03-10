@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Utilities.Timers;
+﻿using Assets.Scripts.Menus;
+using Assets.Scripts.Utilities.Timers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ using UnityEngine.UI;
 
 namespace Assets.Scripts.GameInformation
 {
-    public class DialogueManager: MonoBehaviour
+    public class DialogueManager: Menu
     {
         public string speakerName;
         public List<string> currentDialogues;
@@ -47,7 +48,7 @@ namespace Assets.Scripts.GameInformation
             }
         }
 
-        public void Start()
+        public override void Start()
         {
             this.dialogueBox=this.transform.Find("DialogueBox").gameObject;
             this.dialogueText = this.dialogueBox.transform.Find("Canvas").Find("Image").Find("DialogueText").gameObject.GetComponent<Text>();
@@ -59,6 +60,7 @@ namespace Assets.Scripts.GameInformation
 
         public void initializeDialogues(string speakerName, List<string> dialogues, UnityEvent onFinished = null)
         {
+            Menu.ActiveMenu = this;
             this.speakerName = speakerName;
             this.currentDialogues = dialogues;
             this.currentDialogueIndex = 0;
@@ -70,9 +72,9 @@ namespace Assets.Scripts.GameInformation
             typingDelayTimer.start();
         }
 
-        public void Update()
+        public override void Update()
         {
-            if (this.isDialogueUp)
+            if (this.isDialogueUp && Menu.ActiveMenu==this)
             {
                 typingDelayTimer.Update();
                 checkForInput();
@@ -155,6 +157,22 @@ namespace Assets.Scripts.GameInformation
             this.dialogueBox.SetActive(false);
             isDialogueUp = false;
             eatFirstInput = false;
+            Menu.ActiveMenu = null;
+        }
+
+        public override void exitMenu()
+        {
+            clearDialogue();
+        }
+
+        public override void setUpForSnapping()
+        {
+            
+        }
+
+        public override bool snapCompatible()
+        {
+            return false;
         }
 
     }
