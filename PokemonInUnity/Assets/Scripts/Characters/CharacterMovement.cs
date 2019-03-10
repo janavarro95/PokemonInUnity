@@ -1,6 +1,7 @@
 ﻿using Assets.Scripts.GameInformation;
 using Assets.Scripts.Utilities;
 using Assets.Scripts.Utilities.Timers;
+using SuperTiled2Unity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -225,33 +226,41 @@ namespace Assets.Scripts.Characters
 
             if (checkPosition.x == 0 && checkPosition.y == 0) return false;
             RaycastHit2D[] hits = Physics2D.RaycastAll(this.gameObject.transform.position, checkPosition, 1f);
-            bool animate = true;
+            bool canMove = true;
+
             foreach (RaycastHit2D hit in hits)
             {
                 if (hit.collider != null)
                 {
                     GameObject detectedGameObject = hit.collider.gameObject;
-                    if (detectedGameObject.GetComponent<Collider2D>() == null)
-                    {
-                        //move
-                        oldPosition = this.gameObject.transform.position;
-                        newPosition = this.gameObject.transform.position + (Vector3)checkPosition;
-                        animate = false;
-                    }
+
+                    if (hit.collider.isTrigger == false) canMove = false;
                     else
                     {
-                        //Do logic!
+                        GameObject detectedCollisionObject = hit.collider.gameObject.transform.parent.gameObject;
+                        SuperTiled2Unity.SuperCustomProperties properties = detectedCollisionObject.GetComponent<SuperTiled2Unity.SuperCustomProperties>();
+                        if (properties != null)
+                        {
+                            CustomProperty p;
+                            if (properties.TryGetCustomProperty("Surfable", out p) == true)
+                            {
+                                if (p.m_Value == "true")
+                                {
+                                    canMove = false;
+                                }
+                            }
+                        }
                     }
                 }
             }
-
-            if (animate == true)
+            if (canMove)
             {
+                //If no object detected!
                 oldPosition = this.gameObject.transform.position;
                 newPosition = this.gameObject.transform.position + (Vector3)checkPosition;
             }
 
-            return animate;
+            return canMove;
         }
 
 

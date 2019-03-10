@@ -123,10 +123,8 @@ namespace Assets.Scripts.GameInformation
 
                     if (LastSentence)
                     {
-                        Debug.Log("Last");
                         if (beforeDialogueFinished != null)
                         {
-                            Debug.Log("NANI???? BEFORE???");
                             beforeDialogueFinished.Invoke();
                         }
                         else
