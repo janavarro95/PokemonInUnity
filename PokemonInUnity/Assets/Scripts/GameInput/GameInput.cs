@@ -557,7 +557,6 @@ namespace Assets.Scripts.GameInput
                 }
                 else
                 {
-                    Debug.Log("KEYBOARD???");
                     return ControllerType.Keyboard;
                 }
             }

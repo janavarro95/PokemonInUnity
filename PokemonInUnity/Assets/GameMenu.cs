@@ -103,6 +103,7 @@ public class GameMenu : Menu
         {
             trainerText.text = TrainerName;
         }
+        checkForInput();
         //this.selectedComponent.snapToThisComponent();
     }
 

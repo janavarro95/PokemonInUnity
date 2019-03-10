@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Characters.Player;
+using Assets.Scripts.Content;
 using Assets.Scripts.Menus;
 using Assets.Scripts.Utilities.Serialization;
 using System.Collections;
@@ -51,6 +52,13 @@ namespace Assets.Scripts.GameInformation
                 return Manager.player;
             }
         }
+        public static ContentManager ContentManager
+        {
+            get
+            {
+                return ContentManager.Instance;
+            }
+        }
 
 
         public Serializer serializer;
@@ -60,6 +68,13 @@ namespace Assets.Scripts.GameInformation
         public Interactables.Interactable currentInteractable;
         public MapManager currentMap;
         public SoundEffects soundEffects;
+        public static ContentManager contentManager
+        {
+            get
+            {
+                return ContentManager.Instance;
+            }
+        }
 
 
         public PlayerInfo player;
@@ -82,6 +97,7 @@ namespace Assets.Scripts.GameInformation
             this.gameObject.AddComponent<GameSoundManager>();
             this.dialogueManager=this.gameObject.AddComponent<DialogueManager>();
             this.soundEffects = this.gameObject.transform.Find("SoundEffects").GetComponent<SoundEffects>();
+            this.gameObject.AddComponent<ContentManager>();
 
             player = new PlayerInfo();
         }

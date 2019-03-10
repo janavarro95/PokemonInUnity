@@ -54,6 +54,7 @@ namespace Assets.Scripts.Content.PokeDatabase
 
         public void loadNextScene(bool ok)
         {
+            Debug.Log("HELP ME!!!");
             Pokemon bulba = new Pokemon(Assets.Scripts.Content.PokeDatabase.PokemonDatabase.PokemonInfoByIndex[1],5);
             if (bulba == null)
             {

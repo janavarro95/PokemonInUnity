@@ -69,7 +69,17 @@ namespace Assets.Scripts.Characters
             {
                 checkForCollisionInteractionRaycast();
             }
-            
+
+            if (Menus.Menu.IsMenuUp == false && CanMove && GameInput.InputControls.StartPressed)
+            {
+                Menus.Menu.Instantiate<GameMenu>();
+                return;
+            }
+            else if(Menus.Menu.IsMenuUp==true && GameInput.InputControls.StartPressed)
+            {
+                Menus.Menu.ActiveMenu.exitMenu();
+            }
+
             //resetMovementAnimation();
         }
 

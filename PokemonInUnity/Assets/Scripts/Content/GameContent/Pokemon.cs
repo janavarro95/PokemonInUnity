@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -106,6 +107,9 @@ namespace Assets.Scripts.Content.GameContent
         [JsonIgnore]
         public Texture2D frontSprite;
         [JsonIgnore]
+        public Texture2D menuSprite;
+
+        [JsonIgnore]
         public AudioClip cry;
 
 
@@ -138,7 +142,7 @@ namespace Assets.Scripts.Content.GameContent
             learnInitialMoves();
             generateIVS();
             heal();
-            
+            loadSprites();
         }
 
         
@@ -185,6 +189,9 @@ namespace Assets.Scripts.Content.GameContent
             this.IV_Speed=UnityEngine.Random.Range(0, 32);
         }
 
+        /// <summary>
+        /// Heals a pokemon fully.
+        /// </summary>
         private void heal()
         {
             this.currentHP = this.MaxHP;
@@ -202,6 +209,9 @@ namespace Assets.Scripts.Content.GameContent
             levelUp();
         }
 
+        /// <summary>
+        /// Levels up a pokemon if they meet the exp requirement.
+        /// </summary>
         public void levelUp()
         {
             if (canLevelUp())
@@ -229,5 +239,19 @@ namespace Assets.Scripts.Content.GameContent
             }
         }
 
+
+        private void loadSprites()
+        {
+            try
+            {
+                frontSprite = ContentManager.Instance.loadTextureFrom2DAtlas(Path.Combine("Graphics", "PokemonGen1"), "PokemonGen1_" + ((this.info.pokedexNumber - 1) * 2).ToString()).texture;
+                backSprite = ContentManager.Instance.loadTextureFrom2DAtlas(Path.Combine("Graphics", "PokemonBacks"), "PokemonBacks_" + ((this.info.pokedexNumber - 1)).ToString()).texture;
+                menuSprite = frontSprite = ContentManager.Instance.loadTextureFrom2DAtlas(Path.Combine("Graphics", "PokemonMenuSprites"), "PokemonMenuSprites_" + ((this.info.pokedexNumber - 1)).ToString()).texture;
+            }
+            catch(Exception err)
+            {
+                Debug.Log(err.ToString());
+            }
+        }
     }
 }
