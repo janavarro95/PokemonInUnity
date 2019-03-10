@@ -10,8 +10,13 @@ namespace Assets.Scripts.Interactables
 {
     public class YesNoDialogue : ChoiceDialogueInteractable
     {
+        public DialogueInteractable completedPrompt;
+
         public YesNoMenu yesNoMenu;
         public bool startedPrompt;
+
+        public bool canRepeatYesPrompt = true;
+        public bool completedYesPrompt;
 
         public override void Awake()
         {
@@ -32,6 +37,15 @@ namespace Assets.Scripts.Interactables
                     goodPrompt.interact();
                     this.yesNoMenu.exitMenu();
                     startedPrompt = false;
+
+                    if (canRepeatYesPrompt == false)
+                    {
+                        completedYesPrompt = true;
+                    }
+                    else
+                    {
+                        completedYesPrompt = false;
+                    }
                 }
                 else if (yesNoMenu.currentSelection == YesNoMenu.YesNoSelect.No)
                 {
@@ -44,6 +58,11 @@ namespace Assets.Scripts.Interactables
 
         public override void interact()
         {
+            if (completedYesPrompt)
+            {
+                completedPrompt.interact();
+                return;
+            }
             if (startedPrompt==false)
             {
                 if (prompt.beforeFinished == null)
