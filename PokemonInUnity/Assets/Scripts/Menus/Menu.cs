@@ -72,6 +72,10 @@ namespace Assets.Scripts.Menus
             {
                 Instantiate("GameMenu", OverrideMenu);
             }
+            else if (typeof(T) == typeof(PokemonPartyMenu))
+            {
+                Instantiate("PokemonPartyMenu", OverrideMenu);
+            }
             else
             {
                 throw new Exception("Hmm trying to call on a type of menu that doesn't exist.");

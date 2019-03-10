@@ -115,7 +115,8 @@ public class GameMenu : Menu
         }
         else if (GameCursor.SimulateMousePress(pokemonSnap))
         {
-            Debug.Log("Add in pokemon!");
+            Menu.Instantiate<PokemonPartyMenu>(true);
+            //Debug.Log("Add in pokemon!");
         }
         else if (GameCursor.SimulateMousePress(itemsSnap))
         {

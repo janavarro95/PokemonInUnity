@@ -15,6 +15,18 @@ namespace Assets.Scripts.Content.GameContent
         /// The capacity of pokemon.
         /// </summary>
         public int capacity;
+
+        /// <summary>
+        /// Gets the number of pokemon in the inventory.
+        /// </summary>
+        public int Count
+        {
+            get
+            {
+                return pokemon.Count;
+            }
+        }
+
         /// <summary>
         /// Checks if the storage is full.
         /// </summary>

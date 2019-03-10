@@ -55,6 +55,14 @@ namespace Assets.Scripts.Content
             return s;
         }
 
+        public Sprite loadSprite(Texture2D texture, Rect RectInfo, Vector2 Pivots, float PixelsPerUnit)
+        {
+            Sprite s = Sprite.Create(texture, RectInfo, Pivots, PixelsPerUnit);
+            if (s == null) throw new Exception("WTF???");
+            s.texture.filterMode = FilterMode.Point; https://docs.unity3d.com/ScriptReference/FilterMode.html
+            return s;
+        }
+
 
         /// <summary>
         /// Loads a resource from a given path.

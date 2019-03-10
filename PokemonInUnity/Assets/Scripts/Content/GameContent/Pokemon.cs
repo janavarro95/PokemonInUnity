@@ -103,11 +103,11 @@ namespace Assets.Scripts.Content.GameContent
         public PokemonInfo info;
 
         [JsonIgnore]
-        public Texture2D backSprite;
+        public Sprite backSprite;
         [JsonIgnore]
-        public Texture2D frontSprite;
+        public Sprite frontSprite;
         [JsonIgnore]
-        public Texture2D menuSprite;
+        public Sprite menuSprite;
 
         [JsonIgnore]
         public AudioClip cry;
@@ -244,9 +244,10 @@ namespace Assets.Scripts.Content.GameContent
         {
             try
             {
-                frontSprite = ContentManager.Instance.loadTextureFrom2DAtlas(Path.Combine("Graphics", "PokemonGen1"), "PokemonGen1_" + ((this.info.pokedexNumber - 1) * 2).ToString()).texture;
-                backSprite = ContentManager.Instance.loadTextureFrom2DAtlas(Path.Combine("Graphics", "PokemonBacks"), "PokemonBacks_" + ((this.info.pokedexNumber - 1)).ToString()).texture;
-                menuSprite = frontSprite = ContentManager.Instance.loadTextureFrom2DAtlas(Path.Combine("Graphics", "PokemonMenuSprites"), "PokemonMenuSprites_" + ((this.info.pokedexNumber - 1)).ToString()).texture;
+                Debug.Log("NUMBER: "+this.info.pokedexNumber);
+                frontSprite = ContentManager.Instance.loadTextureFrom2DAtlas(Path.Combine("Graphics", "PokemonGen1"), "PokemonGen1_" + ((this.info.pokedexNumber - 1) * 2).ToString());
+                backSprite = ContentManager.Instance.loadTextureFrom2DAtlas(Path.Combine("Graphics", "PokemonBacks"), "PokemonBacks_" + ((this.info.pokedexNumber - 1)).ToString());
+                menuSprite = ContentManager.Instance.loadTextureFrom2DAtlas(Path.Combine("Graphics", "PokemonMenuSprites"), "PokemonMenuSprites_" + ((this.info.pokedexNumber - 1)).ToString());
             }
             catch(Exception err)
             {
