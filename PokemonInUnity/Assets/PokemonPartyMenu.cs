@@ -116,6 +116,7 @@ public class PokemonPartyMenu : Menu
         {
             poke1Info = GameManager.Manager.player.pokemon.getPokemonAtIndex(0);
             pokemon1.transform.Find("PokemonName").GetComponent<Text>().text = poke1Info.Name;
+            pokemon1.transform.Find("LVL").GetComponent<Text>().text = "LV:" + poke1Info.currentLevel;
             pokemon1.transform.Find("HP").GetComponent<Text>().text ="HP:"+poke1Info.currentHP + "/" + poke1Info.MaxHP;
             pokemon1.transform.Find("Image").GetComponent<Image>().sprite = poke1Info.menuSprite;
             snap1 = new MenuComponent(pokemon1.transform.Find("SnapComponent").GetComponent<Image>());
@@ -129,6 +130,7 @@ public class PokemonPartyMenu : Menu
         {
             poke2Info = GameManager.Manager.player.pokemon.getPokemonAtIndex(1);
             pokemon2.transform.Find("PokemonName").GetComponent<Text>().text = poke2Info.Name;
+            pokemon2.transform.Find("LVL").GetComponent<Text>().text = "LV:" + poke2Info.currentLevel;
             pokemon2.transform.Find("HP").GetComponent<Text>().text = "HP:" + poke2Info.currentHP + "/" + poke2Info.MaxHP;
             pokemon2.transform.Find("Image").GetComponent<Image>().sprite = poke2Info.menuSprite;
             snap2 = new MenuComponent(pokemon2.transform.Find("SnapComponent").GetComponent<Image>());
@@ -142,6 +144,7 @@ public class PokemonPartyMenu : Menu
         {
             poke3Info = GameManager.Manager.player.pokemon.getPokemonAtIndex(2);
             pokemon3.transform.Find("PokemonName").GetComponent<Text>().text = poke3Info.Name;
+            pokemon3.transform.Find("LVL").GetComponent<Text>().text = "LV:" + poke3Info.currentLevel;
             pokemon3.transform.Find("HP").GetComponent<Text>().text = "HP:" + poke3Info.currentHP + "/" + poke3Info.MaxHP;
             pokemon3.transform.Find("Image").GetComponent<Image>().sprite = poke3Info.menuSprite;
             snap3 = new MenuComponent(pokemon3.transform.Find("SnapComponent").GetComponent<Image>());
@@ -155,6 +158,7 @@ public class PokemonPartyMenu : Menu
         {
             poke4Info = GameManager.Manager.player.pokemon.getPokemonAtIndex(3);
             pokemon4.transform.Find("PokemonName").GetComponent<Text>().text = poke4Info.Name;
+            pokemon4.transform.Find("LVL").GetComponent<Text>().text = "LV:" + poke4Info.currentLevel;
             pokemon4.transform.Find("HP").GetComponent<Text>().text = "HP:" + poke4Info.currentHP + "/" + poke4Info.MaxHP;
             pokemon4.transform.Find("Image").GetComponent<Image>().sprite = poke4Info.menuSprite;
             snap4 = new MenuComponent(pokemon4.transform.Find("SnapComponent").GetComponent<Image>());
@@ -168,6 +172,7 @@ public class PokemonPartyMenu : Menu
         {
             poke5Info = GameManager.Manager.player.pokemon.getPokemonAtIndex(4);
             pokemon5.transform.Find("PokemonName").GetComponent<Text>().text = poke5Info.Name;
+            pokemon5.transform.Find("LVL").GetComponent<Text>().text = "LV:" + poke5Info.currentLevel;
             pokemon5.transform.Find("HP").GetComponent<Text>().text = "HP:" + poke5Info.currentHP + "/" + poke5Info.MaxHP;
             pokemon5.transform.Find("Image").GetComponent<Image>().sprite = poke5Info.menuSprite;
             snap5 = new MenuComponent(pokemon5.transform.Find("SnapComponent").GetComponent<Image>());
@@ -181,6 +186,7 @@ public class PokemonPartyMenu : Menu
         {
             poke6Info = GameManager.Manager.player.pokemon.getPokemonAtIndex(5);
             pokemon6.transform.Find("PokemonName").GetComponent<Text>().text = poke6Info.Name;
+            pokemon6.transform.Find("LVL").GetComponent<Text>().text = "LV:" + poke6Info.currentLevel;
             pokemon6.transform.Find("HP").GetComponent<Text>().text = "HP:" + poke6Info.currentHP + "/" + poke6Info.MaxHP;
             pokemon6.transform.Find("Image").GetComponent<Image>().sprite = poke6Info.menuSprite;
             snap6 = new MenuComponent(pokemon6.transform.Find("SnapComponent").GetComponent<Image>());
