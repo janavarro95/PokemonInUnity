@@ -80,6 +80,14 @@ namespace Assets.Scripts.Menus
             }
         }
 
+        public static void exitMenusUntilThisOne(Menu m)
+        {
+            while (ActiveMenu != m)
+            {
+                ActiveMenu.exitMenu();
+            }
+        }
+
 
         public GameCursor menuCursor;
         public MenuComponent selectedComponent;

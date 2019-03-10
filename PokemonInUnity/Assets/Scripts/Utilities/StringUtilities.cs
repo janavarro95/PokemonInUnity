@@ -50,6 +50,11 @@ namespace Assets.Scripts.Utilities
             return str;
         }
 
+        public static string ParseAndSanitizeDialogueString(string old,params object[] objects)
+        {
+            string str = String.Format(old,objects);
+            return str;
+        }
 
         public static List<string> FormatStringList(List<string> strings, params object[] objs)
         {

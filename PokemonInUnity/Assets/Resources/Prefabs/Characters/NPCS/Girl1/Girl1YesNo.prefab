@@ -190,7 +190,7 @@ MonoBehaviour:
   completedPrompt: {fileID: 1740909348}
   yesNoMenu: {fileID: 0}
   startedPrompt: 0
-  canRepeatYesPrompt: 1
+  canRepeatYesPrompt: 0
   completedYesPrompt: 0
 --- !u!1 &1163662061
 GameObject:
@@ -238,6 +238,7 @@ MonoBehaviour:
   dialogueStrings:
   - Aww that's too bad.
   speakerName: 
+  extraSentences: []
   onFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -248,6 +249,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  events: []
 --- !u!1 &1581701377
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,8 +294,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueStrings:
-  - Awesome me too!
+  - Awesome me too! Now let me see one.
   speakerName: 
+  extraSentences:
+  - Ok, let me see your {0}.
+  - Yep, they are super awesome!
   onFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -304,6 +309,25 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  events:
+  - index: 0
+    function:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1104893579}
+          m_MethodName: sayPokemonNameInitialize
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    hasTriggered: 0
 --- !u!1 &1612406191
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,6 +374,7 @@ MonoBehaviour:
   dialogueStrings:
   - Hey do you like Pokemon?
   speakerName: 
+  extraSentences: []
   onFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -371,6 +396,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  events: []
 --- !u!1 &1740909346
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,6 +443,7 @@ MonoBehaviour:
   dialogueStrings:
   - I'm glad you like pokemon.
   speakerName: 
+  extraSentences: []
   onFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -427,3 +454,4 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  events: []

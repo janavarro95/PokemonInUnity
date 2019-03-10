@@ -8,9 +8,7 @@ namespace Assets.Scripts.Interactables
 {
     public class ChoiceDialogueInteractable:Interactable
     {
-        public DialogueInteractable prompt;
-        public DialogueInteractable goodPrompt;
-        public DialogueInteractable badPrompt;
+
 
         public override void Awake()
         {

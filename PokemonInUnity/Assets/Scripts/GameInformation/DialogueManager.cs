@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Menus;
+﻿using Assets.Scripts.Interactables;
+using Assets.Scripts.Menus;
 using Assets.Scripts.Utilities.Timers;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,8 @@ namespace Assets.Scripts.GameInformation
         public UnityEvent onDialogueFinished;
         public UnityEvent beforeDialogueFinished;
 
+        public List<DialogueEvent> events;
+
 
         public string currentSentence;
 
@@ -32,6 +35,8 @@ namespace Assets.Scripts.GameInformation
         public double delayForNextCharacter=0.01f;
 
         bool eatFirstInput;
+
+        bool hasTriggeredBeforeFinishedAlready = false;
 
         public string targetSentence
         {
@@ -67,7 +72,7 @@ namespace Assets.Scripts.GameInformation
             typingDelayTimer.start();
         }
 
-        public void initializeDialogues(string speakerName, List<string> dialogues, UnityEvent onFinished = null, UnityEvent beforeFinished = null)
+        public DialogueManager initializeDialogues(string speakerName, List<string> dialogues, UnityEvent onFinished = null, UnityEvent beforeFinished = null,List<DialogueEvent> Events=null)
         {
             Menu.ActiveMenu = this;
             this.speakerName = speakerName;
@@ -75,11 +80,13 @@ namespace Assets.Scripts.GameInformation
             this.currentDialogueIndex = 0;
             this.onDialogueFinished = onFinished;
             this.beforeDialogueFinished = beforeFinished;
+            this.events = Events!=null ? Events: new List<DialogueEvent>();
             this.isDialogueUp = true;
             this.currentSentence = "";
             getNextChar();
             typingDelayTimer = new DeltaTimer(delayForNextCharacter, Enums.TimerType.CountDown, false, getNextChar);
             typingDelayTimer.start();
+            return this;
         }
 
         public override void Update()
@@ -120,16 +127,20 @@ namespace Assets.Scripts.GameInformation
                 else if (currentSentence == targetSentence)
                 {
 
+                    foreach (DialogueEvent e in this.events)
+                    {
+                        if (e.index == this.currentDialogueIndex && e.hasTriggered == false)
+                        {
+                            e.invoke();
+                            return;
+                        }
+                    }
 
                     if (LastSentence)
                     {
                         if (beforeDialogueFinished != null)
                         {
                             beforeDialogueFinished.Invoke();
-                        }
-                        else
-                        {
-                            Debug.Log("WHY???");
                         }
                         currentDialogueIndex++;
                         return;
@@ -159,6 +170,22 @@ namespace Assets.Scripts.GameInformation
                 return;
             }
 
+        }
+
+
+        public void forceNextSentence()
+        {
+            currentSentence = "";
+            currentDialogueIndex++;
+            getNextChar();
+            typingDelayTimer = new DeltaTimer(delayForNextCharacter, Enums.TimerType.CountDown, false, getNextChar);
+            typingDelayTimer.start();
+
+            if (IsFinished == false)
+            {
+                GameManager.Manager.soundManager.playSound(GameManager.Manager.soundEffects.selectSound);
+            }
+            return;
         }
 
         private void getNextChar()

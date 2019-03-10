@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Utilities;
+﻿using Assets.Scripts.GameInformation;
+using Assets.Scripts.Utilities;
 using Assets.Scripts.Utilities.Delegates;
 using System;
 using System.Collections.Generic;
@@ -16,8 +17,14 @@ namespace Assets.Scripts.Interactables
         public List<string> dialogueStrings;
         public string speakerName;
 
+        public List<string> extraSentences;
+
         public UnityEvent onFinished;
         public UnityEvent beforeFinished;
+
+        public List<DialogueEvent> events;
+
+        public DialogueManager dialogueMenu;
 
         public override void Start()
         {
@@ -28,8 +35,11 @@ namespace Assets.Scripts.Interactables
         public override void interact()
         {
             GameInformation.GameManager.Manager.currentInteractable = this;
-            GameInformation.GameManager.Manager.dialogueManager.initializeDialogues(this.speakerName, this.dialogueStrings, onFinished,beforeFinished);          
+            dialogueMenu=GameInformation.GameManager.Manager.dialogueManager.initializeDialogues(this.speakerName, this.dialogueStrings, onFinished,beforeFinished,this.events);          
         }
+
+
+
 
     }
 }

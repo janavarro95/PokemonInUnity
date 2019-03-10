@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Menus;
+﻿using Assets.Scripts.GameInformation;
+using Assets.Scripts.Menus;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,11 @@ namespace Assets.Scripts.Interactables
 {
     public class YesNoDialogue : ChoiceDialogueInteractable
     {
+
+        public DialogueInteractable prompt;
+        public DialogueInteractable goodPrompt;
+        public DialogueInteractable badPrompt;
+
         public DialogueInteractable completedPrompt;
 
         public YesNoMenu yesNoMenu;
@@ -34,8 +40,8 @@ namespace Assets.Scripts.Interactables
             {
                 if (yesNoMenu.currentSelection == YesNoMenu.YesNoSelect.Yes)
                 {
-                    goodPrompt.interact();
                     this.yesNoMenu.exitMenu();
+                    goodPrompt.interact();
                     startedPrompt = false;
 
                     if (canRepeatYesPrompt == false)
@@ -49,8 +55,8 @@ namespace Assets.Scripts.Interactables
                 }
                 else if (yesNoMenu.currentSelection == YesNoMenu.YesNoSelect.No)
                 {
-                    badPrompt.interact();
                     this.yesNoMenu.exitMenu();
+                    badPrompt.interact();
                     startedPrompt = false;
                 }
             }
@@ -82,6 +88,21 @@ namespace Assets.Scripts.Interactables
             yesNoMenu = (YesNoMenu)Menu.ActiveMenu;
         }
 
+        public void sayPokemonNameInitialize()
+        {
+            Menus.Menu.Instantiate<Menus.PokemonPartyMenu>();
+            (Menus.Menu.ActiveMenu as Menus.PokemonPartyMenu).onPokemonSelected.AddListener(sayPokemonNameCleanUp);
+        }
+
+        public void sayPokemonNameCleanUp()
+        {
+            foreach (string extra in this.goodPrompt.extraSentences)
+            {
+                GameManager.Manager.dialogueManager.currentDialogues.Add(Utilities.StringUtilities.ParseAndSanitizeDialogueString(extra, new object[] { (Menus.Menu.ParentMenu() as Menus.PokemonPartyMenu).selectedPokemon.Name }));
+            }
+            Menus.Menu.exitMenusUntilThisOne(goodPrompt.dialogueMenu);
+            GameManager.Manager.dialogueManager.forceNextSentence();
+        }
 
     }
 }

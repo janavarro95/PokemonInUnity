@@ -289,7 +289,7 @@ namespace Assets.Scripts.Menus
                         selectedPokemon = poke6Info;
                     }
                 }
-                if (GameCursor.SimulateMousePress(selectMenu.closeSnap))
+                if (this.menuCursor.simulateMousePress(selectMenu.closeSnap))
                 {
                     selectMenu.exitMenu();
                 }
