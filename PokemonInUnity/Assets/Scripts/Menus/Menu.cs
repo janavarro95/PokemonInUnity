@@ -14,7 +14,38 @@ namespace Assets.Scripts.Menus
 {
     public class Menu : MonoBehaviour
     {
-        public static Menu ActiveMenu;
+
+        public static List<Menu> MenuStack;
+
+
+        public static Menu ActiveMenu
+        {
+            get
+            {
+                if (MenuStack == null) MenuStack = new List<Menu>();
+
+                if (MenuStack.Count == 0) return null;
+                return MenuStack[MenuStack.Count - 1];
+            }
+            set
+            {
+                if (MenuStack == null)
+                {
+                    MenuStack = new List<Menu>();
+                }
+
+                if (value != null)
+                {
+                    if (MenuStack.Contains(value)) return;
+                    MenuStack.Add(value);
+                }
+                else
+                {
+                    MenuStack.RemoveAt(MenuStack.Count - 1);
+                }
+            }
+        }
+
         public static bool IsMenuUp
         {
             get
@@ -23,9 +54,29 @@ namespace Assets.Scripts.Menus
             }
         }
 
+        public static GameCursor GetCursorFromParentMenu()
+        {
+            if (MenuStack.Count < 2) throw new Exception("No parent menu to get cursor from!");
+            else
+            {
+                return MenuStack[MenuStack.Count - 2].menuCursor;
+            }
+        }
+
+        public static Menu ParentMenu()
+        {
+            if (MenuStack.Count < 2) throw new Exception("No parent menu to get cursor from!");
+            else
+            {
+                return MenuStack[MenuStack.Count - 2];
+            }
+        }
+
 
         public GameCursor menuCursor;
         public MenuComponent selectedComponent;
+        
+        public GameObject canvas;
 
         public virtual void Start()
         {
@@ -58,23 +109,27 @@ namespace Assets.Scripts.Menus
             Instantiate<Menu>();
         }
 
-        public static void Instantiate<T>(bool OverrideMenu=false)
+        public static void Instantiate<T>()
         {
             if(typeof(T) == typeof(Menu))
             {
-                Instantiate("Menu",OverrideMenu);
+                Instantiate("Menu");
             }
             else if (typeof(T) == typeof(MainMenu))
             {
-                Instantiate("MainMenu",OverrideMenu);
+                Instantiate("MainMenu");
             }
             else if (typeof(T) == typeof(GameMenu))
             {
-                Instantiate("GameMenu", OverrideMenu);
+                Instantiate("GameMenu");
             }
             else if (typeof(T) == typeof(PokemonPartyMenu))
             {
-                Instantiate("PokemonPartyMenu", OverrideMenu);
+                Instantiate("PokemonPartyMenu");
+            }
+            else if (typeof(T) == typeof(PartyMemberSelectMenu))
+            {
+                Instantiate("PartyMemberSelectMenu");
             }
             else
             {
@@ -82,19 +137,9 @@ namespace Assets.Scripts.Menus
             }
         }
 
-        public static void Instantiate(string Name,bool OverrideCurrentMenu=false)
+        public static void Instantiate(string Name)
         {
-            if (OverrideCurrentMenu == false)
-            {
-                if (Menu.IsMenuUp) return;
-                Menu.ActiveMenu = LoadMenuFromPrefab(Name).GetComponent<Menu>();
-            }
-            else
-            {
-                Menu.ActiveMenu.exitMenu();
-                Menu.ActiveMenu = LoadMenuFromPrefab(Name).GetComponent<Menu>();
-            }
-            
+            Menu.ActiveMenu = LoadMenuFromPrefab(Name).GetComponent<Menu>();
         }
 
         protected static GameObject LoadMenuFromPrefab(string ItemName)

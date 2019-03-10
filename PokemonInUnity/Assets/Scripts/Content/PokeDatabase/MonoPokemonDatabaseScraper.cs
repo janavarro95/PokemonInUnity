@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Content.GameContent;
+using Assets.Scripts.Menus;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ using UnityEngine.UI;
 
 namespace Assets.Scripts.Content.PokeDatabase
 {
-    public class MonoPokemonDatabaseScraper:MonoBehaviour
+    public class MonoPokemonDatabaseScraper:Menu
     {
         [SerializeField]
         Text loadingText;
@@ -28,7 +29,7 @@ namespace Assets.Scripts.Content.PokeDatabase
 
 
             }
-            
+
 
             //PokemonDatabase.ScrapePokemonSpecies();
             /*
@@ -42,9 +43,10 @@ namespace Assets.Scripts.Content.PokeDatabase
 
             }
             */
+            Menu.ActiveMenu = this;
         }
 
-        public void Start()
+        public override void Start()
         {
             if (loadPokemon == false)
             {
@@ -54,7 +56,6 @@ namespace Assets.Scripts.Content.PokeDatabase
 
         public void loadNextScene(bool ok)
         {
-            Debug.Log("HELP ME!!!");
             Pokemon bulba = new Pokemon(Assets.Scripts.Content.PokeDatabase.PokemonDatabase.PokemonInfoByIndex[1],5);
             if (bulba == null)
             {
@@ -75,11 +76,11 @@ namespace Assets.Scripts.Content.PokeDatabase
             {
                Debug.Log(GameInformation.GameManager.Manager.player.pokemon.getPokemonAtIndex(0).Name);
             }
-
+            this.exitMenu();
             SceneManager.LoadScene(nextScene);
         }
 
-        public void Update()
+        public override void Update()
         {
             this.loadingText.text = "Pokemon Species Loaded: " + Mathf.Max(PokemonDatabaseScraper.PokemonSpeciesByDex.Count, PokemonDatabase.PokemonInfoByIndex.Count) + "/" + PokemonDatabaseScraper.NumberOfPokemon +
             Environment.NewLine + "Pokemon Loaded: " + Mathf.Max(PokemonDatabaseScraper.PokemonByDex.Count, PokemonDatabase.PokemonInfoByIndex.Count) + "/" + PokemonDatabaseScraper.NumberOfPokemon +
@@ -87,6 +88,12 @@ namespace Assets.Scripts.Content.PokeDatabase
             Environment.NewLine + "Evolution Chains Loaded: " + (PokemonDatabase.EvolutionByIndex.Count) + "/" + (PokemonDatabaseScraper.NumberOfEvolutionChains-8)+
             Environment.NewLine + "Pokemon Info Loaded: " + (PokemonDatabase.PokemonInfoByIndex.Count) + "/" + PokemonDatabaseScraper.NumberOfPokemon;
             
+        }
+
+        public override void exitMenu()
+        {
+            base.exitMenu();
+            Menu.ActiveMenu = null;
         }
 
     }

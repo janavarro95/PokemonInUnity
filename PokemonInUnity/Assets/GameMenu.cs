@@ -109,13 +109,17 @@ public class GameMenu : Menu
 
     private void checkForInput()
     {
+        if (Menu.ActiveMenu != this)
+        {
+            return;
+        }
         if (GameCursor.SimulateMousePress(pokeDexSnap))
         {
             Debug.Log("Add in pokedex!");
         }
         else if (GameCursor.SimulateMousePress(pokemonSnap))
         {
-            Menu.Instantiate<PokemonPartyMenu>(true);
+            Menu.Instantiate<PokemonPartyMenu>();
             //Debug.Log("Add in pokemon!");
         }
         else if (GameCursor.SimulateMousePress(itemsSnap))

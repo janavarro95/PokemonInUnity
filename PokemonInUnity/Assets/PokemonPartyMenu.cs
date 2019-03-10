@@ -40,11 +40,14 @@ public class PokemonPartyMenu : Menu
     MenuComponent snap6;
 
     MenuComponent closeSnap;
+
+    PartyMemberSelectMenu selectMenu;
+
+
     // Start is called before the first frame update
     public override void Start()
     {
-        GameManager.ActiveMenu = this;
-        GameObject canvas = this.transform.Find("Canvas").gameObject;
+        this.canvas = this.transform.Find("Canvas").gameObject;
         background = this.transform.Find("Canvas").Find("Background").gameObject.GetComponent<Image>();
         background.rectTransform.sizeDelta = new Vector2(Camera.main.pixelWidth, Camera.main.pixelHeight);
 
@@ -66,9 +69,167 @@ public class PokemonPartyMenu : Menu
 
     public override void Update()
     {
-        if (GameCursor.SimulateMousePress(closeSnap))
+        checkForInput();
+    }
+
+    private void checkForInput()
+    {
+        if (selectMenu == null)
         {
-            this.exitMenu();
+            if (snap1 != null)
+            {
+                if (this.menuCursor.simulateMousePress(snap1))
+                {
+                    Menu.Instantiate<PartyMemberSelectMenu>();
+                    this.selectMenu = (PartyMemberSelectMenu)Menu.ActiveMenu;
+                }
+            }
+            if (snap2 != null)
+            {
+                if (this.menuCursor.simulateMousePress(snap2))
+                {
+                    Menu.Instantiate<PartyMemberSelectMenu>();
+                    this.selectMenu = (PartyMemberSelectMenu)Menu.ActiveMenu;
+                }
+            }
+            if (snap3 != null)
+            {
+                if (this.menuCursor.simulateMousePress(snap3))
+                {
+                    Menu.Instantiate<PartyMemberSelectMenu>();
+                    this.selectMenu = (PartyMemberSelectMenu)Menu.ActiveMenu;
+                }
+            }
+            if (snap4 != null)
+            {
+                if (this.menuCursor.simulateMousePress(snap4))
+                {
+                    Menu.Instantiate<PartyMemberSelectMenu>();
+                    this.selectMenu = (PartyMemberSelectMenu)Menu.ActiveMenu;
+                }
+            }
+            if (snap5 != null)
+            {
+                if (this.menuCursor.simulateMousePress(snap5))
+                {
+                    Menu.Instantiate<PartyMemberSelectMenu>();
+                    this.selectMenu = (PartyMemberSelectMenu)Menu.ActiveMenu;
+                }
+            }
+            if (snap6 != null)
+            {
+                if (this.menuCursor.simulateMousePress(snap6))
+                {
+                    Menu.Instantiate<PartyMemberSelectMenu>();
+                    this.selectMenu = (PartyMemberSelectMenu)Menu.ActiveMenu;
+                }
+            }
+            if (this.menuCursor.simulateMousePress(closeSnap))
+            {
+                this.exitMenu();
+            }
+        }
+        else
+        {
+            if (snap1 != null)
+            {
+                if (selectMenu.menuCursor == null) Debug.Log("WTF???");
+                if (selectMenu.menuCursor.simulateMousePress(selectMenu.selectSnap) && this.selectedComponent == snap1)
+                {
+                    Debug.Log("Select Pokemon 1");
+                }
+                if (selectMenu.menuCursor.simulateMousePress(selectMenu.statsSnap) && this.selectedComponent == snap1)
+                {
+                    Debug.Log("Stats Pokemon 1");
+                }
+                if (selectMenu.menuCursor.simulateMousePress(selectMenu.switchSnap) && this.selectedComponent == snap1)
+                {
+                    Debug.Log("Switch Pokemon 1");
+                }
+            }
+            if (snap2 != null)
+            {
+                if (selectMenu.menuCursor.simulateMousePress(selectMenu.selectSnap) && this.selectedComponent == snap2)
+                {
+                    Debug.Log("Select Pokemon 2");
+                }
+                if (selectMenu.menuCursor.simulateMousePress(selectMenu.statsSnap) && this.selectedComponent == snap2)
+                {
+                    Debug.Log("Stats Pokemon 2");
+                }
+                if (selectMenu.menuCursor.simulateMousePress(selectMenu.switchSnap) && this.selectedComponent == snap2)
+                {
+                    Debug.Log("Switch Pokemon 2");
+                }
+            }
+            if (snap3 != null)
+            {
+                if (selectMenu.menuCursor.simulateMousePress(selectMenu.selectSnap) && this.selectedComponent == snap3)
+                {
+                    Debug.Log("Select Pokemon 3");
+                }
+                if (selectMenu.menuCursor.simulateMousePress(selectMenu.statsSnap) && this.selectedComponent == snap3)
+                {
+                    Debug.Log("Stats Pokemon 3");
+                }
+                if (selectMenu.menuCursor.simulateMousePress(selectMenu.switchSnap) && this.selectedComponent == snap3)
+                {
+                    Debug.Log("Switch Pokemon 3");
+                }
+            }
+
+            if (snap4 != null)
+            {
+                if (selectMenu.menuCursor.simulateMousePress(selectMenu.selectSnap) && this.selectedComponent == snap4)
+                {
+                    Debug.Log("Select Pokemon 4");
+                }
+                if (selectMenu.menuCursor.simulateMousePress(selectMenu.statsSnap) && this.selectedComponent == snap4)
+                {
+                    Debug.Log("Stats Pokemon 4");
+                }
+                if (selectMenu.menuCursor.simulateMousePress(selectMenu.switchSnap) && this.selectedComponent == snap4)
+                {
+                    Debug.Log("Switch Pokemon 4");
+                }
+            }
+
+            if (snap5 != null)
+            {
+
+                if (selectMenu.menuCursor.simulateMousePress(selectMenu.selectSnap) && this.selectedComponent == snap5)
+                {
+                    Debug.Log("Select Pokemon 5");
+                }
+                if (selectMenu.menuCursor.simulateMousePress(selectMenu.statsSnap) && this.selectedComponent == snap5)
+                {
+                    Debug.Log("Stats Pokemon 5");
+                }
+                if (selectMenu.menuCursor.simulateMousePress(selectMenu.switchSnap) && this.selectedComponent == snap5)
+                {
+                    Debug.Log("Switch Pokemon 5");
+                }
+            }
+
+            if (snap6 != null)
+            {
+                if (selectMenu.menuCursor.simulateMousePress(selectMenu.selectSnap) && this.selectedComponent == snap6)
+                {
+                    Debug.Log("Select Pokemon 6");
+                }
+                if (selectMenu.menuCursor.simulateMousePress(selectMenu.statsSnap) && this.selectedComponent == snap6)
+                {
+                    Debug.Log("Stats Pokemon 6");
+                }
+                if (selectMenu.menuCursor.simulateMousePress(selectMenu.switchSnap) && this.selectedComponent == snap6)
+                {
+                    Debug.Log("Switch Pokemon 6");
+                }
+            }
+            if (GameCursor.SimulateMousePress(selectMenu.closeSnap))
+            {
+                selectMenu.exitMenu();
+            }
         }
     }
 
@@ -76,7 +237,6 @@ public class PokemonPartyMenu : Menu
     {
         GameManager.ActiveMenu = null;
         base.exitMenu();
-        Menu.Instantiate<GameMenu>(true);
     }
 
     public override void setUpForSnapping()

@@ -94,6 +94,8 @@ namespace Assets.Scripts.GameInput
 
         void Update()
         {
+            if (Menu.ActiveMenu == null) return;
+            if (this != Menu.ActiveMenu.menuCursor) return;
             //timer.tick();
             snapTimer.tick();
             //setVisibility();
@@ -313,6 +315,163 @@ namespace Assets.Scripts.GameInput
         {
             Vector3 worldPos = WorldPosition;
             return new Vector3((int)worldPos.x, (int)worldPos.y, (int)worldPos.z);
+        }
+
+        public bool cursorIntersectsRect(MonoBehaviour behavior)
+        {
+            if (GetWorldSapceRect(behavior.GetComponent<RectTransform>()).Overlaps(GetWorldSapceRect(this.rect)))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Checks of the game cursor intersects a given transform.
+        /// </summary>
+        /// <param name="behavior">The transform to check against.</param>
+        /// <returns></returns>
+        public bool cursorIntersectsRect(GameObject behavior)
+        {
+            if (GetWorldSapceRect(behavior.GetComponent<RectTransform>()).Overlaps(GetWorldSapceRect(this.rect)))
+            {
+                return true;
+            }
+            return false;
+        }
+
+
+
+        /// <summary>
+        /// Simulates a mouse press for the cursor if the A button is pressed and the cursor intersects the mono behavior.
+        /// </summary>
+        /// <param name="behavior"></param>
+        /// <param name="useHardwareMouse"></param>
+        /// <returns></returns>
+        public bool simulateMousePress(MonoBehaviour behavior)
+        {
+            if (behavior == null)
+            {
+                Debug.Log("BEHAVIOR IS NULL");
+            }
+            if (this.cursorIntersectsRect(behavior) && GameInput.InputControls.APressed)
+            {
+                return true;
+            }
+
+            /*
+            else if (this.mouseIntersectsRect(behavior) && Input.GetMouseButtonDown(0))
+            {
+                return true;
+            }
+            */
+            else
+            {
+                return false;
+            }
+
+        }
+        /// <summary>
+        /// Simulates a mouse press on the controller using the game cursor.
+        /// </summary>
+        /// <param name="behavior"></param>
+        /// <param name="useHardwareMouse"></param>
+        /// <returns></returns>
+        public bool simulateMousePress(MenuComponent behavior)
+        {
+
+            return this.simulateMousePress(behavior.unityObject);
+        }
+
+        /// <summary>
+        /// Simulates a mouse press on the controller using the game cursor.
+        /// </summary>
+        /// <param name="behavior"></param>
+        /// <param name="useHardwareMouse"></param>
+        /// <returns></returns>
+        public bool simulateMousePress(GameObject behavior)
+        {
+            if (behavior == null)
+            {
+                Debug.Log("BEHAVIOR IS NULL");
+            }
+            if (this.cursorIntersectsRect(behavior) && GameInput.InputControls.APressed)
+            {
+                return true;
+            }
+
+            /*
+            else if (GameCursor.MouseIntersectsRect(behavior) && Input.GetMouseButtonDown(0))
+            {
+                return true;
+            }
+            */
+            else
+            {
+                return false;
+            }
+
+        }
+
+
+        /// <summary>
+        /// Simulates a mouse hover action on a controller using the game cursor.
+        /// </summary>
+        /// <param name="behavior"></param>
+        /// <param name="useHardwareMouse"></param>
+        /// <returns></returns>
+        public bool simulateMouseHover(MonoBehaviour behavior)
+        {
+            if (this.cursorIntersectsRect(behavior))
+            {
+                return true;
+            }
+            /*
+            else if (GameCursor.MouseIntersectsRect(behavior))
+            {
+                return true;
+            }
+            */
+            else
+            {
+                return false;
+            }
+        }
+
+
+        /// <summary>
+        /// Simulates a mouse hover action on a controller using the game cursor.
+        /// </summary>
+        /// <param name="behavior"></param>
+        /// <param name="useHardwareMouse"></param>
+        /// <returns></returns>
+        public bool simulateMouseHover(MenuComponent behavior)
+        {
+            return this.simulateMouseHover(behavior.unityObject);
+        }
+
+        /// <summary>
+        /// Simulates a mouse hover action on a controller using the game cursor.
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <param name="useHardwareMouse"></param>
+        /// <returns></returns>
+        public bool simulateMouseHover(GameObject obj)
+        {
+            if (this.cursorIntersectsRect(obj))
+            {
+                return true;
+            }
+            /*
+            else if (GameCursor.MouseIntersectsRect(obj))
+            {
+                return true;
+            }
+            */
+            else
+            {
+                return false;
+            }
         }
 
         #region
