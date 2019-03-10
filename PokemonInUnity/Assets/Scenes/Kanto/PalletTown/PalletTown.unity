@@ -176,6 +176,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  beforeFinished:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!61 &272937449
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2289,6 +2294,63 @@ PolygonCollider2D:
     type: 3}
   m_PrefabInstance: {fileID: 514400396}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1104893576
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1104893577, guid: 787099f87a29689448a94108c3abd0de, type: 3}
+      propertyPath: m_Name
+      value: Girl1YesNo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104893578, guid: 787099f87a29689448a94108c3abd0de, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104893578, guid: 787099f87a29689448a94108c3abd0de, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104893578, guid: 787099f87a29689448a94108c3abd0de, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104893578, guid: 787099f87a29689448a94108c3abd0de, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104893578, guid: 787099f87a29689448a94108c3abd0de, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104893578, guid: 787099f87a29689448a94108c3abd0de, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104893578, guid: 787099f87a29689448a94108c3abd0de, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104893578, guid: 787099f87a29689448a94108c3abd0de, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104893578, guid: 787099f87a29689448a94108c3abd0de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104893578, guid: 787099f87a29689448a94108c3abd0de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104893578, guid: 787099f87a29689448a94108c3abd0de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 787099f87a29689448a94108c3abd0de, type: 3}
 --- !u!60 &1110054759 stripped
 PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 6000018, guid: 600154411e08dc64195b65386044d421,
@@ -2347,6 +2409,11 @@ MonoBehaviour:
   - Do you like pokemon?
   speakerName: Josh
   onFinished:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  beforeFinished:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -2753,6 +2820,11 @@ MonoBehaviour:
   - Welcome to Pallet Town!
   speakerName: 
   onFinished:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  beforeFinished:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,

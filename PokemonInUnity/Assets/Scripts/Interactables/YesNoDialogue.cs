@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace Assets.Scripts.Interactables
 {
@@ -14,7 +15,7 @@ namespace Assets.Scripts.Interactables
 
         public override void Awake()
         {
-
+            
         }
 
         public override void Start()
@@ -24,15 +25,20 @@ namespace Assets.Scripts.Interactables
 
         public override void Update()
         {
-            if(yesNoMenu.currentSelection== YesNoMenu.YesNoSelect.Yes)
+            if (yesNoMenu != null)
             {
-                goodPrompt.interact();
-                this.yesNoMenu.exitMenu();
-            }
-            else if(yesNoMenu.currentSelection == YesNoMenu.YesNoSelect.Yes)
-            {
-                badPrompt.interact();
-                this.yesNoMenu.exitMenu();
+                if (yesNoMenu.currentSelection == YesNoMenu.YesNoSelect.Yes)
+                {
+                    goodPrompt.interact();
+                    this.yesNoMenu.exitMenu();
+                    startedPrompt = false;
+                }
+                else if (yesNoMenu.currentSelection == YesNoMenu.YesNoSelect.No)
+                {
+                    badPrompt.interact();
+                    this.yesNoMenu.exitMenu();
+                    startedPrompt = false;
+                }
             }
         }
 
@@ -40,15 +46,23 @@ namespace Assets.Scripts.Interactables
         {
             if (startedPrompt==false)
             {
+                if (prompt.beforeFinished == null)
+                {
+                    prompt.beforeFinished = new UnityEngine.Events.UnityEvent();
+                }
+                //prompt.beforeFinished.AddListener(new UnityEngine.Events.UnityAction(beforeFinishedOpenYesNoMenu));
                 prompt.interact();
                 startedPrompt = true;
 
-                Menu.Instantiate<YesNoMenu>();
-                yesNoMenu = (YesNoMenu)Menu.ActiveMenu;
-
             }
-
-
         }
+
+        public void beforeFinishedOpenYesNoMenu()
+        {
+            Menu.Instantiate<YesNoMenu>();
+            yesNoMenu = (YesNoMenu)Menu.ActiveMenu;
+        }
+
+
     }
 }

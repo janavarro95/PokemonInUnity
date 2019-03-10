@@ -131,6 +131,10 @@ namespace Assets.Scripts.Menus
             {
                 Instantiate("PartyMemberSelectMenu");
             }
+            else if (typeof(T) == typeof(YesNoMenu))
+            {
+                Instantiate("YesNoMenu");
+            }
             else
             {
                 throw new Exception("Hmm trying to call on a type of menu that doesn't exist.");

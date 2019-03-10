@@ -17,6 +17,7 @@ namespace Assets.Scripts.GameInformation
         public List<string> currentDialogues;
         public int currentDialogueIndex;
         public UnityEvent onDialogueFinished;
+        public UnityEvent beforeDialogueFinished;
 
 
         public string currentSentence;
@@ -48,6 +49,14 @@ namespace Assets.Scripts.GameInformation
             }
         }
 
+        public bool LastSentence
+        {
+            get
+            {
+                return currentDialogueIndex == currentDialogues.Count-1;
+            }
+        }
+
         public override void Start()
         {
             this.dialogueBox=this.transform.Find("DialogueBox").gameObject;
@@ -58,13 +67,14 @@ namespace Assets.Scripts.GameInformation
             typingDelayTimer.start();
         }
 
-        public void initializeDialogues(string speakerName, List<string> dialogues, UnityEvent onFinished = null)
+        public void initializeDialogues(string speakerName, List<string> dialogues, UnityEvent onFinished = null, UnityEvent beforeFinished = null)
         {
             Menu.ActiveMenu = this;
             this.speakerName = speakerName;
             this.currentDialogues = dialogues;
             this.currentDialogueIndex = 0;
             this.onDialogueFinished = onFinished;
+            this.beforeDialogueFinished = beforeFinished;
             this.isDialogueUp = true;
             this.currentSentence = "";
             getNextChar();
@@ -109,6 +119,23 @@ namespace Assets.Scripts.GameInformation
                 }
                 else if (currentSentence == targetSentence)
                 {
+
+
+                    if (LastSentence)
+                    {
+                        Debug.Log("Last");
+                        if (beforeDialogueFinished != null)
+                        {
+                            Debug.Log("NANI???? BEFORE???");
+                            beforeDialogueFinished.Invoke();
+                        }
+                        else
+                        {
+                            Debug.Log("WHY???");
+                        }
+                        currentDialogueIndex++;
+                        return;
+                    }
                     currentSentence = "";
                     currentDialogueIndex++;
                     getNextChar();

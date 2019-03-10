@@ -17,6 +17,7 @@ namespace Assets.Scripts.Interactables
         public string speakerName;
 
         public UnityEvent onFinished;
+        public UnityEvent beforeFinished;
 
         public override void Start()
         {
@@ -27,11 +28,7 @@ namespace Assets.Scripts.Interactables
         public override void interact()
         {
             GameInformation.GameManager.Manager.currentInteractable = this;
-            GameInformation.GameManager.Manager.dialogueManager.initializeDialogues(this.speakerName, this.dialogueStrings, null);          
-            if (onFinished != null)
-            {
-                onFinished.Invoke();
-            }
+            GameInformation.GameManager.Manager.dialogueManager.initializeDialogues(this.speakerName, this.dialogueStrings, onFinished,beforeFinished);          
         }
 
     }
