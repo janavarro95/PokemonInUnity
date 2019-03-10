@@ -107,6 +107,12 @@ namespace Assets.Scripts.Interactables
 
         public void sayPokemonNameNoPokemonSelected()
         {
+            if (this.completedYesPrompt) this.completedYesPrompt = false;
+            foreach(DialogueEvent e in goodPrompt.events)
+            {
+                e.hasTriggered = false;
+            }
+
             Menus.Menu.exitMenusUntilThisOne(goodPrompt.dialogueMenu);
             badPrompt.interact();
         }
