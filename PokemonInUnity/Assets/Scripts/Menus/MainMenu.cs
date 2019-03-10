@@ -25,9 +25,10 @@ namespace Assets.Scripts.Menus
         /// </summary>
         public override void Start()
         {
-            GameObject canvas=this.transform.Find("Canvas").gameObject;
+            this.canvas=this.transform.Find("Canvas").gameObject;
             background = canvas.transform.Find("Background").gameObject.GetComponent<Image>();
             background.rectTransform.sizeDelta = new Vector2(Camera.main.pixelWidth, Camera.main.pixelHeight);
+            scaleMenuToSceen();
         }
 
         public override void setUpForSnapping()

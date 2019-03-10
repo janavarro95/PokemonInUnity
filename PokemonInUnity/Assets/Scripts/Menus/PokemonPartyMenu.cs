@@ -7,6 +7,7 @@ using Assets.Scripts.Menus.Components;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace Assets.Scripts.Menus
@@ -46,6 +47,9 @@ namespace Assets.Scripts.Menus
 
         PartyMemberSelectMenu selectMenu;
 
+        public UnityEvent onPokemonSelected;
+        public Pokemon selectedPokemon;
+
 
         // Start is called before the first frame update
         public override void Start()
@@ -66,8 +70,14 @@ namespace Assets.Scripts.Menus
             this.menuCursor = canvas.transform.Find("GameCursor").gameObject.GetComponent<Assets.Scripts.GameInput.GameCursor>();
 
             setPokemon();
+
+            scaleMenuToSceen();
             setUpForSnapping();
 
+            if (this.onPokemonSelected == null)
+            {
+                this.onPokemonSelected = new UnityEvent();
+            }
         }
 
         public override void Update()
@@ -79,6 +89,11 @@ namespace Assets.Scripts.Menus
         {
             if (selectMenu == null)
             {
+                if (this.onPokemonSelected.GetPersistentEventCount() == 0 && GameInput.InputControls.APressed==true)
+                {
+                    this.onPokemonSelected.AddListener(openStatsMenu);
+                }
+
                 if (snap1 != null)
                 {
                     if (this.menuCursor.simulateMousePress(snap1))
@@ -140,14 +155,24 @@ namespace Assets.Scripts.Menus
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.selectSnap) && this.selectedComponent == snap1)
                     {
                         Debug.Log("Select Pokemon 1");
+                        selectedPokemon = poke1Info;
+                        Debug.Log("Select: " + selectedPokemon.Name);
+                        if (onPokemonSelected != null)
+                        {
+                            onPokemonSelected.Invoke();
+                        }
                     }
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.statsSnap) && this.selectedComponent == snap1)
                     {
                         Debug.Log("Stats Pokemon 1");
+                        selectedPokemon = poke1Info;
+                        Debug.Log("Stats: " + selectedPokemon.Name);
                     }
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.switchSnap) && this.selectedComponent == snap1)
                     {
                         Debug.Log("Switch Pokemon 1");
+                        selectedPokemon = poke1Info;
+                        Debug.Log("Switch: " + selectedPokemon.Name);
                     }
                 }
                 if (snap2 != null)
@@ -155,14 +180,21 @@ namespace Assets.Scripts.Menus
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.selectSnap) && this.selectedComponent == snap2)
                     {
                         Debug.Log("Select Pokemon 2");
+                        selectedPokemon = poke2Info;
+                        if (onPokemonSelected != null)
+                        {
+                            onPokemonSelected.Invoke();
+                        }
                     }
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.statsSnap) && this.selectedComponent == snap2)
                     {
                         Debug.Log("Stats Pokemon 2");
+                        selectedPokemon = poke2Info;
                     }
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.switchSnap) && this.selectedComponent == snap2)
                     {
                         Debug.Log("Switch Pokemon 2");
+                        selectedPokemon = poke2Info;
                     }
                 }
                 if (snap3 != null)
@@ -170,14 +202,21 @@ namespace Assets.Scripts.Menus
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.selectSnap) && this.selectedComponent == snap3)
                     {
                         Debug.Log("Select Pokemon 3");
+                        selectedPokemon = poke3Info;
+                        if (onPokemonSelected != null)
+                        {
+                            onPokemonSelected.Invoke();
+                        }
                     }
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.statsSnap) && this.selectedComponent == snap3)
                     {
                         Debug.Log("Stats Pokemon 3");
+                        selectedPokemon = poke3Info;
                     }
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.switchSnap) && this.selectedComponent == snap3)
                     {
                         Debug.Log("Switch Pokemon 3");
+                        selectedPokemon = poke3Info;
                     }
                 }
 
@@ -186,14 +225,21 @@ namespace Assets.Scripts.Menus
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.selectSnap) && this.selectedComponent == snap4)
                     {
                         Debug.Log("Select Pokemon 4");
+                        selectedPokemon = poke4Info;
+                        if (onPokemonSelected != null)
+                        {
+                            onPokemonSelected.Invoke();
+                        }
                     }
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.statsSnap) && this.selectedComponent == snap4)
                     {
                         Debug.Log("Stats Pokemon 4");
+                        selectedPokemon = poke4Info;
                     }
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.switchSnap) && this.selectedComponent == snap4)
                     {
                         Debug.Log("Switch Pokemon 4");
+                        selectedPokemon = poke4Info;
                     }
                 }
 
@@ -203,14 +249,21 @@ namespace Assets.Scripts.Menus
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.selectSnap) && this.selectedComponent == snap5)
                     {
                         Debug.Log("Select Pokemon 5");
+                        selectedPokemon = poke5Info;
+                        if (onPokemonSelected != null)
+                        {
+                            onPokemonSelected.Invoke();
+                        }
                     }
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.statsSnap) && this.selectedComponent == snap5)
                     {
                         Debug.Log("Stats Pokemon 5");
+                        selectedPokemon = poke5Info;
                     }
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.switchSnap) && this.selectedComponent == snap5)
                     {
                         Debug.Log("Switch Pokemon 5");
+                        selectedPokemon = poke5Info;
                     }
                 }
 
@@ -219,14 +272,21 @@ namespace Assets.Scripts.Menus
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.selectSnap) && this.selectedComponent == snap6)
                     {
                         Debug.Log("Select Pokemon 6");
+                        selectedPokemon = poke6Info;
+                        if (onPokemonSelected != null)
+                        {
+                            onPokemonSelected.Invoke();
+                        }
                     }
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.statsSnap) && this.selectedComponent == snap6)
                     {
                         Debug.Log("Stats Pokemon 6");
+                        selectedPokemon = poke6Info;
                     }
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.switchSnap) && this.selectedComponent == snap6)
                     {
                         Debug.Log("Switch Pokemon 6");
+                        selectedPokemon = poke6Info;
                     }
                 }
                 if (GameCursor.SimulateMousePress(selectMenu.closeSnap))
@@ -358,6 +418,11 @@ namespace Assets.Scripts.Menus
             {
                 pokemon6.SetActive(false);
             }
+        }
+
+        private void openStatsMenu()
+        {
+            Debug.Log("Open stats for: " + this.selectedPokemon.Name);
         }
     }
 }

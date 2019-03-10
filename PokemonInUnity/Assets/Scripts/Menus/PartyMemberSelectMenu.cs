@@ -30,6 +30,8 @@ namespace Assets.Scripts.Menus
 
             this.menuCursor = Menu.GetCursorFromParentMenu();
             this.menuCursor.gameObject.transform.parent = canvas.transform;
+
+            scaleMenuToSceen();
             //this.menuCursor = canvas.transform.Find("GameCursor").gameObject.GetComponent<Assets.Scripts.GameInput.GameCursor>();
             setUpForSnapping();
         }

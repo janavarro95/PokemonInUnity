@@ -20,14 +20,14 @@ namespace Assets.Scripts.Menus
 
         public override void Start()
         {
-            GameObject canvas = this.gameObject.transform.Find("Canvas").gameObject;
+            this.canvas = this.gameObject.transform.Find("Canvas").gameObject;
             Image background = canvas.transform.Find("Image").gameObject.GetComponent<Image>();
             background.rectTransform.sizeDelta = new Vector2(Camera.main.pixelRect.width, Camera.main.pixelRect.height);
 
             //background.sprite = ContentManager.Instance.loadSprite(Path.Combine("ContentPacks", "BaseGame", "Graphics", "Menus", "SplashScreen", "ACoolFlowerThing.png"));
 
             Menu.ActiveMenu = this;
-
+            scaleMenuToSceen();
             ScreenTransitions.StartSceneTransition(1, "", Color.white, ScreenTransitions.TransitionState.FadeIn,new VoidDelegate(fadeInFinished));
             timerToShow = new DeltaTimer(1, Enums.TimerType.CountDown, false, new VoidDelegate(fadeToMainMenu));
 

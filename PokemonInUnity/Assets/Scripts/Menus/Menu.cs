@@ -56,7 +56,11 @@ namespace Assets.Scripts.Menus
 
         public static GameCursor GetCursorFromParentMenu()
         {
-            if (MenuStack.Count < 2) throw new Exception("No parent menu to get cursor from!");
+            if (MenuStack.Count < 2)
+            {
+                Debug.Log("No parent menu to get cursor from!");
+                return null;
+            }
             else
             {
                 return MenuStack[MenuStack.Count - 2].menuCursor;
@@ -65,7 +69,11 @@ namespace Assets.Scripts.Menus
 
         public static Menu ParentMenu()
         {
-            if (MenuStack.Count < 2) throw new Exception("No parent menu to get cursor from!");
+            if (MenuStack.Count < 2)
+            {
+                Debug.Log("No parent menu!");
+                return null;
+            }
             else
             {
                 return MenuStack[MenuStack.Count - 2];
@@ -87,6 +95,11 @@ namespace Assets.Scripts.Menus
         public virtual void Update()
         {
 
+        }
+
+        public void scaleMenuToSceen()
+        {
+            this.canvas.GetComponent<CanvasScaler>().referenceResolution = new Vector2(Camera.main.pixelWidth, Camera.main.pixelHeight);
         }
 
         public virtual void exitMenu()

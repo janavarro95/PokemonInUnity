@@ -34,6 +34,7 @@ namespace Assets.Scripts.Menus
                 this.menuCursor = Menu.GetCursorFromParentMenu();
                 canvas.transform.Find("GameCursor").gameObject.SetActive(false);
             }
+            //scaleMenuToSceen();
             setUpForSnapping();
         }
 
