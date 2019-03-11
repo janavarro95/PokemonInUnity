@@ -160,12 +160,14 @@ namespace Assets.Scripts.GameInformation
             }
             if (IsFinished)
             {
+                Debug.Log("Dialogue should be finished...");
                 //Close dialogue box;
                 clearDialogue();
                 if (onDialogueFinished != null)
                 {
                     onDialogueFinished.Invoke();
                 }
+                clearEvents();
                 GameInformation.GameManager.Manager.currentInteractable = null;
                 return;
             }
@@ -205,11 +207,17 @@ namespace Assets.Scripts.GameInformation
             this.currentDialogueIndex = 0;
             this.currentSentence = "";
             this.speakerName = "";
-            this.onDialogueFinished = null;
             this.dialogueBox.SetActive(false);
             isDialogueUp = false;
             eatFirstInput = false;
             Menu.ActiveMenu = null;
+        }
+
+        public void clearEvents()
+        {
+            this.onDialogueFinished = null;
+            this.beforeDialogueFinished = null;
+            this.events = new List<DialogueEvent>();
         }
 
         public override void exitMenu()

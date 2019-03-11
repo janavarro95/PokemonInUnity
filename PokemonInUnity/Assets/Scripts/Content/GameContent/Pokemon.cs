@@ -10,6 +10,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Content.GameContent
 {
+    [Serializable]
     public class Pokemon
     {
         public string Name
@@ -140,12 +141,30 @@ namespace Assets.Scripts.Content.GameContent
             this.currentLevel = StartingLevel;
 
             learnInitialMoves();
-            generateIVS();
+            generateIVS(new EV_IVInfo());
             heal();
             loadSprites();
         }
 
-        
+
+        public Pokemon(PokemonInfo info, int StartingLevel,List<Move> GuarenteedMovesToHave,EV_IVInfo IVS=null)
+        {
+            this.info = info;
+            this.moves = new Move[4];
+            this.currentLevel = StartingLevel;
+
+            for(int i=0; i < GuarenteedMovesToHave.Count; i++)
+            {
+                learnMoveIntoEmptySlot(GuarenteedMovesToHave[i]);
+            }
+
+            learnInitialMoves();
+            generateIVS(IVS != null ? IVS : new EV_IVInfo());
+            heal();
+            loadSprites();
+        }
+
+
 
         private void learnInitialMoves()
         {
@@ -187,6 +206,16 @@ namespace Assets.Scripts.Content.GameContent
             this.IV_SpecialAttack=UnityEngine.Random.Range(0, 32);
             this.IV_SpecialDefense=UnityEngine.Random.Range(0, 32);
             this.IV_Speed=UnityEngine.Random.Range(0, 32);
+        }
+
+        private void generateIVS(EV_IVInfo IVS)
+        {
+            this.IV_HP = IVS.hp!=-1? IVS.hp : UnityEngine.Random.Range(0, 32);
+            this.IV_Attack = IVS.attack!=-1? IVS.attack : UnityEngine.Random.Range(0, 32);
+            this.IV_Defense = IVS.defense!=-1? IVS.defense : UnityEngine.Random.Range(0, 32);
+            this.IV_SpecialAttack = IVS.specialAttack!=-1? IVS.specialAttack : UnityEngine.Random.Range(0, 32);
+            this.IV_SpecialDefense = IVS.specialDefense!=-1? IVS.specialDefense : UnityEngine.Random.Range(0, 32);
+            this.IV_Speed = IVS.speed!=-1? IVS.speed : UnityEngine.Random.Range(0, 32);
         }
 
         /// <summary>
@@ -248,6 +277,10 @@ namespace Assets.Scripts.Content.GameContent
                 frontSprite = ContentManager.Instance.loadTextureFrom2DAtlas(Path.Combine("Graphics", "PokemonGen1"), "PokemonGen1_" + ((this.info.pokedexNumber - 1) * 2).ToString());
                 backSprite = ContentManager.Instance.loadTextureFrom2DAtlas(Path.Combine("Graphics", "PokemonBacks"), "PokemonBacks_" + ((this.info.pokedexNumber - 1)).ToString());
                 menuSprite = ContentManager.Instance.loadTextureFrom2DAtlas(Path.Combine("Graphics", "PokemonMenuSprites"), "PokemonMenuSprites_" + ((this.info.pokedexNumber - 1)).ToString());
+
+                frontSprite.texture.filterMode = FilterMode.Point;
+                backSprite.texture.filterMode = FilterMode.Point;
+                menuSprite.texture.filterMode = FilterMode.Point;
             }
             catch(Exception err)
             {

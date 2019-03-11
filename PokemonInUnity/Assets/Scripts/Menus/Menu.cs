@@ -164,6 +164,10 @@ namespace Assets.Scripts.Menus
             {
                 Instantiate("PokemonStatusMovesMenu");
             }
+            else if (typeof(T) == typeof(PokemonBattleMenu))
+            {
+                Instantiate("PokemonBattleMenu");
+            }
             else
             {
                 throw new Exception("Hmm trying to call on a type of menu that doesn't exist.");

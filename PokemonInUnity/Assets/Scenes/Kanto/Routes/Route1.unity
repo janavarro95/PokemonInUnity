@@ -228,7 +228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 00492bd1707f83b47ad542aad2898048, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 00492bd1707f83b47ad542aad2898048, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1536,8 +1536,367 @@ Transform:
   - {fileID: 293640160}
   - {fileID: 1612964572}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1293237064
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8801766539434737086, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_Name
+      value: Girl1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737076, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: dialogueStrings.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737076, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: onFinished.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737076, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: dialogueStrings.Array.data[0]
+      value: Do you like to battle?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737076, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: dialogueStrings.Array.data[1]
+      value: I know I do!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737076, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: onFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737076, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: onFinished.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737076, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: onFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1293237066}
+    - target: {fileID: 8801766539434737076, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: onFinished.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: startPokemonTrainerBattle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737076, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: onFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737073, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: movementType
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434, type: 3}
+--- !u!1 &1293237065 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8801766539434737086, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+    type: 3}
+  m_PrefabInstance: {fileID: 1293237064}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1293237066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293237065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f17b2407d2e06c14f9679be84ab79e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pokemon1Info:
+    PokemonName: Charmander
+    PokeDexNo: 4
+    LVL: 5
+    IVS:
+      hp: -1
+      attack: -1
+      defense: -1
+      specialAttack: -1
+      specialDefense: -1
+      speed: -1
+    move1Name: 
+    move2Name: 
+    move3Name: 
+    move4Name: 
+  pokemon2Info:
+    PokemonName: 
+    PokeDexNo: 0
+    LVL: 0
+    IVS:
+      hp: -1
+      attack: -1
+      defense: -1
+      specialAttack: -1
+      specialDefense: -1
+      speed: -1
+    move1Name: 
+    move2Name: 
+    move3Name: 
+    move4Name: 
+  pokemon3Info:
+    PokemonName: 
+    PokeDexNo: 0
+    LVL: 0
+    IVS:
+      hp: -1
+      attack: -1
+      defense: -1
+      specialAttack: -1
+      specialDefense: -1
+      speed: -1
+    move1Name: 
+    move2Name: 
+    move3Name: 
+    move4Name: 
+  pokemon4Info:
+    PokemonName: 
+    PokeDexNo: 0
+    LVL: 0
+    IVS:
+      hp: -1
+      attack: -1
+      defense: -1
+      specialAttack: -1
+      specialDefense: -1
+      speed: -1
+    move1Name: 
+    move2Name: 
+    move3Name: 
+    move4Name: 
+  pokemon5Info:
+    PokemonName: 
+    PokeDexNo: 0
+    LVL: 0
+    IVS:
+      hp: -1
+      attack: -1
+      defense: -1
+      specialAttack: -1
+      specialDefense: -1
+      speed: -1
+    move1Name: 
+    move2Name: 
+    move3Name: 
+    move4Name: 
+  pokemon6Info:
+    PokemonName: 
+    PokeDexNo: 0
+    LVL: 0
+    IVS:
+      hp: -1
+      attack: -1
+      defense: -1
+      specialAttack: -1
+      specialDefense: -1
+      speed: -1
+    move1Name: 
+    move2Name: 
+    move3Name: 
+    move4Name: 
+  pokemon1:
+    nickName: 
+    moves: []
+    currentLevel: 0
+    currentHP: 0
+    EV_HP: 0
+    EV_Attack: 0
+    EV_Defense: 0
+    EV_SpecialAttack: 0
+    EV_SpecialDefense: 0
+    EV_Speed: 0
+    IV_HP: 0
+    IV_Attack: 0
+    IV_Defense: 0
+    IV_SpecialAttack: 0
+    IV_SpecialDefense: 0
+    IV_Speed: 0
+    currentEXP: 0
+    backSprite: {fileID: 0}
+    frontSprite: {fileID: 0}
+    menuSprite: {fileID: 0}
+    cry: {fileID: 0}
+  pokemon2:
+    nickName: 
+    moves: []
+    currentLevel: 0
+    currentHP: 0
+    EV_HP: 0
+    EV_Attack: 0
+    EV_Defense: 0
+    EV_SpecialAttack: 0
+    EV_SpecialDefense: 0
+    EV_Speed: 0
+    IV_HP: 0
+    IV_Attack: 0
+    IV_Defense: 0
+    IV_SpecialAttack: 0
+    IV_SpecialDefense: 0
+    IV_Speed: 0
+    currentEXP: 0
+    backSprite: {fileID: 0}
+    frontSprite: {fileID: 0}
+    menuSprite: {fileID: 0}
+    cry: {fileID: 0}
+  pokemon3:
+    nickName: 
+    moves: []
+    currentLevel: 0
+    currentHP: 0
+    EV_HP: 0
+    EV_Attack: 0
+    EV_Defense: 0
+    EV_SpecialAttack: 0
+    EV_SpecialDefense: 0
+    EV_Speed: 0
+    IV_HP: 0
+    IV_Attack: 0
+    IV_Defense: 0
+    IV_SpecialAttack: 0
+    IV_SpecialDefense: 0
+    IV_Speed: 0
+    currentEXP: 0
+    backSprite: {fileID: 0}
+    frontSprite: {fileID: 0}
+    menuSprite: {fileID: 0}
+    cry: {fileID: 0}
+  pokemon4:
+    nickName: 
+    moves: []
+    currentLevel: 0
+    currentHP: 0
+    EV_HP: 0
+    EV_Attack: 0
+    EV_Defense: 0
+    EV_SpecialAttack: 0
+    EV_SpecialDefense: 0
+    EV_Speed: 0
+    IV_HP: 0
+    IV_Attack: 0
+    IV_Defense: 0
+    IV_SpecialAttack: 0
+    IV_SpecialDefense: 0
+    IV_Speed: 0
+    currentEXP: 0
+    backSprite: {fileID: 0}
+    frontSprite: {fileID: 0}
+    menuSprite: {fileID: 0}
+    cry: {fileID: 0}
+  pokemon5:
+    nickName: 
+    moves: []
+    currentLevel: 0
+    currentHP: 0
+    EV_HP: 0
+    EV_Attack: 0
+    EV_Defense: 0
+    EV_SpecialAttack: 0
+    EV_SpecialDefense: 0
+    EV_Speed: 0
+    IV_HP: 0
+    IV_Attack: 0
+    IV_Defense: 0
+    IV_SpecialAttack: 0
+    IV_SpecialDefense: 0
+    IV_Speed: 0
+    currentEXP: 0
+    backSprite: {fileID: 0}
+    frontSprite: {fileID: 0}
+    menuSprite: {fileID: 0}
+    cry: {fileID: 0}
+  pokemon6:
+    nickName: 
+    moves: []
+    currentLevel: 0
+    currentHP: 0
+    EV_HP: 0
+    EV_Attack: 0
+    EV_Defense: 0
+    EV_SpecialAttack: 0
+    EV_SpecialDefense: 0
+    EV_Speed: 0
+    IV_HP: 0
+    IV_Attack: 0
+    IV_Defense: 0
+    IV_SpecialAttack: 0
+    IV_SpecialDefense: 0
+    IV_Speed: 0
+    currentEXP: 0
+    backSprite: {fileID: 0}
+    frontSprite: {fileID: 0}
+    menuSprite: {fileID: 0}
+    cry: {fileID: 0}
 --- !u!1 &1612964571
 GameObject:
   m_ObjectHideFlags: 0

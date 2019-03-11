@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assets.Scripts.Content.GameContent
 {
+    [Serializable]
     public class Move
     {
         public int currentPP;

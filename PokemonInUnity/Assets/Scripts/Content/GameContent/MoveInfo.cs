@@ -7,6 +7,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Content.GameContent
 {
+    [Serializable]
     /// <summary>
     /// Deals with all of the necessary info for a move. Unfortunately contests are not supported at this moment. =(
     /// 
