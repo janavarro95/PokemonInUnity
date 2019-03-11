@@ -291,6 +291,11 @@ namespace Assets.Scripts
             return Direction.Down;
         }
 
+        public static string GetEnumName<T>(T value)
+        {
+            return Enum.GetName(typeof(T), value);
+        }
+
         public static T ParseEnum<T>(string EnumValue)
         {
             return (T)Enum.Parse(typeof(T), EnumValue, true);

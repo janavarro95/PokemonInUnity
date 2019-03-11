@@ -83,6 +83,16 @@ namespace Assets.Scripts.Menus
 
         public override void Update()
         {
+            if (Menu.ActiveMenu != this)
+            {
+                if (selectMenu == null)
+                {
+                    return;
+                }
+                else if (ActiveMenu!=selectMenu){
+                    return;
+                }
+            }
             checkForInput();
         }
 
@@ -174,6 +184,10 @@ namespace Assets.Scripts.Menus
                         Debug.Log("Stats Pokemon 1");
                         selectedPokemon = poke1Info;
                         Debug.Log("Stats: " + selectedPokemon.Name);
+
+                        Menu.Instantiate<PokemonStatusMenu>();
+                        (Menu.ActiveMenu as PokemonStatusMenu).pokemon = selectedPokemon;
+
                     }
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.switchSnap) && this.selectedComponent == snap1)
                     {
@@ -197,6 +211,9 @@ namespace Assets.Scripts.Menus
                     {
                         Debug.Log("Stats Pokemon 2");
                         selectedPokemon = poke2Info;
+
+                        Menu.Instantiate<PokemonStatusMenu>();
+                        (Menu.ActiveMenu as PokemonStatusMenu).pokemon = selectedPokemon;
                     }
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.switchSnap) && this.selectedComponent == snap2)
                     {
@@ -219,6 +236,9 @@ namespace Assets.Scripts.Menus
                     {
                         Debug.Log("Stats Pokemon 3");
                         selectedPokemon = poke3Info;
+
+                        Menu.Instantiate<PokemonStatusMenu>();
+                        (Menu.ActiveMenu as PokemonStatusMenu).pokemon = selectedPokemon;
                     }
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.switchSnap) && this.selectedComponent == snap3)
                     {
@@ -242,6 +262,9 @@ namespace Assets.Scripts.Menus
                     {
                         Debug.Log("Stats Pokemon 4");
                         selectedPokemon = poke4Info;
+
+                        Menu.Instantiate<PokemonStatusMenu>();
+                        (Menu.ActiveMenu as PokemonStatusMenu).pokemon = selectedPokemon;
                     }
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.switchSnap) && this.selectedComponent == snap4)
                     {
@@ -266,6 +289,9 @@ namespace Assets.Scripts.Menus
                     {
                         Debug.Log("Stats Pokemon 5");
                         selectedPokemon = poke5Info;
+
+                        Menu.Instantiate<PokemonStatusMenu>();
+                        (Menu.ActiveMenu as PokemonStatusMenu).pokemon = selectedPokemon;
                     }
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.switchSnap) && this.selectedComponent == snap5)
                     {
@@ -289,6 +315,9 @@ namespace Assets.Scripts.Menus
                     {
                         Debug.Log("Stats Pokemon 6");
                         selectedPokemon = poke6Info;
+
+                        Menu.Instantiate<PokemonStatusMenu>();
+                        (Menu.ActiveMenu as PokemonStatusMenu).pokemon = selectedPokemon;
                     }
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.switchSnap) && this.selectedComponent == snap6)
                     {

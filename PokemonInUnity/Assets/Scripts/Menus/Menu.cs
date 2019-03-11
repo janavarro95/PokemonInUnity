@@ -156,6 +156,14 @@ namespace Assets.Scripts.Menus
             {
                 Instantiate("YesNoMenu");
             }
+            else if (typeof(T) == typeof(PokemonStatusMenu))
+            {
+                Instantiate("PokemonStatusMenu");
+            }
+            else if (typeof(T) == typeof(PokemonStatusMovesMenu))
+            {
+                Instantiate("PokemonStatusMovesMenu");
+            }
             else
             {
                 throw new Exception("Hmm trying to call on a type of menu that doesn't exist.");
@@ -170,7 +178,7 @@ namespace Assets.Scripts.Menus
         protected static GameObject LoadMenuFromPrefab(string ItemName)
         {
             string path = Path.Combine(Path.Combine("Prefabs", "Menus"), ItemName);
-            GameObject menuObj=Instantiate((GameObject)Resources.Load(path, typeof(GameObject)));
+            GameObject menuObj=Instantiate((GameObject)Resources.Load(path, typeof(GameObject))); 
             return menuObj;
         }
     }
