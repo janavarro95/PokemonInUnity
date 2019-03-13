@@ -8,6 +8,7 @@ namespace Assets.Scripts.GameInformation {
 
         public AudioClip songToPlay;
         public Color mapColor = Color.white;
+        public bool useColorForBackground = true;
 
         private void Awake()
         {

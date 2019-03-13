@@ -1372,7 +1372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuCursor: {fileID: 0}
   canvas: {fileID: 0}
-  titleMusic: {fileID: 0}
+  titleMusic: {fileID: 8300000, guid: c518c423db2901547b2589b675658d22, type: 3}
 --- !u!1 &7675837801090209630
 GameObject:
   m_ObjectHideFlags: 0

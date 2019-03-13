@@ -1,6 +1,7 @@
 ﻿using Assets.Scripts.GameInformation;
 using Assets.Scripts.GameInput;
 using Assets.Scripts.Menus.Components;
+using Assets.Scripts.Utilities.Timers;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -22,6 +23,10 @@ namespace Assets.Scripts.Menus
         public AudioClip titleMusic;
         Image background;
 
+        RandomPokemonImageScript rando;
+
+        DeltaTimer cryTimer;
+
         /// <summary>
         /// Instantiate all menu logic here.
         /// </summary>
@@ -35,6 +40,8 @@ namespace Assets.Scripts.Menus
             if (titleMusic!=null){
                 GameManager.SoundManager.playSong(titleMusic);
             }
+
+            rando = canvas.transform.Find("PokemonImage").GetComponent<RandomPokemonImageScript>();
         }
 
         public override void setUpForSnapping()
@@ -54,10 +61,19 @@ namespace Assets.Scripts.Menus
         {
             if (GameInput.InputControls.APressed)
             {
-                GameManager.SoundManager.stopSong();
-                SceneManager.LoadScene("LoadingScene");
+                GameManager.SoundManager.playSound(rando.cry);
+                cryTimer = new DeltaTimer(3d, Enums.TimerType.CountDown,false,swapScenes);
+                cryTimer.start();
             }
+            if (cryTimer != null) cryTimer.Update();
         }
+
+        private void swapScenes()
+        {
+            GameManager.SoundManager.stopSong();
+            SceneManager.LoadScene("LoadingScene");
+        }
+
         /// <summary>
         /// Close the active menu.
         /// </summary>

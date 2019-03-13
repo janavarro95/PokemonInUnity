@@ -116,6 +116,7 @@ namespace Assets.Scripts.Menus
                     {
                         Menu.Instantiate<PartyMemberSelectMenu>();
                         this.selectMenu = (PartyMemberSelectMenu)Menu.ActiveMenu;
+                        GameManager.Manager.soundEffects.playSelectSound();
                     }
                 }
                 if (snap2 != null)
@@ -124,6 +125,7 @@ namespace Assets.Scripts.Menus
                     {
                         Menu.Instantiate<PartyMemberSelectMenu>();
                         this.selectMenu = (PartyMemberSelectMenu)Menu.ActiveMenu;
+                        GameManager.Manager.soundEffects.playSelectSound();
                     }
                 }
                 if (snap3 != null)
@@ -132,6 +134,7 @@ namespace Assets.Scripts.Menus
                     {
                         Menu.Instantiate<PartyMemberSelectMenu>();
                         this.selectMenu = (PartyMemberSelectMenu)Menu.ActiveMenu;
+                        GameManager.Manager.soundEffects.playSelectSound();
                     }
                 }
                 if (snap4 != null)
@@ -140,6 +143,7 @@ namespace Assets.Scripts.Menus
                     {
                         Menu.Instantiate<PartyMemberSelectMenu>();
                         this.selectMenu = (PartyMemberSelectMenu)Menu.ActiveMenu;
+                        GameManager.Manager.soundEffects.playSelectSound();
                     }
                 }
                 if (snap5 != null)
@@ -148,6 +152,7 @@ namespace Assets.Scripts.Menus
                     {
                         Menu.Instantiate<PartyMemberSelectMenu>();
                         this.selectMenu = (PartyMemberSelectMenu)Menu.ActiveMenu;
+                        GameManager.Manager.soundEffects.playSelectSound();
                     }
                 }
                 if (snap6 != null)
@@ -156,10 +161,12 @@ namespace Assets.Scripts.Menus
                     {
                         Menu.Instantiate<PartyMemberSelectMenu>();
                         this.selectMenu = (PartyMemberSelectMenu)Menu.ActiveMenu;
+                        GameManager.Manager.soundEffects.playSelectSound();
                     }
                 }
                 if (this.menuCursor.simulateMousePress(closeSnap))
                 {
+                    GameManager.Manager.soundEffects.playSelectSound();
                     this.exitMenu();
                     if (onMenuClose != null) onMenuClose.Invoke();
                 }
@@ -186,6 +193,7 @@ namespace Assets.Scripts.Menus
                         Debug.Log("Stats: " + selectedPokemon.Name);
 
                         Menu.Instantiate<PokemonStatusMenu>();
+                        GameManager.Manager.soundEffects.playSelectSound();
                         (Menu.ActiveMenu as PokemonStatusMenu).pokemon = selectedPokemon;
 
                     }
@@ -194,6 +202,7 @@ namespace Assets.Scripts.Menus
                         Debug.Log("Switch Pokemon 1");
                         selectedPokemon = poke1Info;
                         Debug.Log("Switch: " + selectedPokemon.Name);
+                        GameManager.Manager.soundEffects.playSelectSound();
                     }
                 }
                 if (snap2 != null)
@@ -211,12 +220,13 @@ namespace Assets.Scripts.Menus
                     {
                         Debug.Log("Stats Pokemon 2");
                         selectedPokemon = poke2Info;
-
+                        GameManager.Manager.soundEffects.playSelectSound();
                         Menu.Instantiate<PokemonStatusMenu>();
                         (Menu.ActiveMenu as PokemonStatusMenu).pokemon = selectedPokemon;
                     }
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.switchSnap) && this.selectedComponent == snap2)
                     {
+                        GameManager.Manager.soundEffects.playSelectSound();
                         Debug.Log("Switch Pokemon 2");
                         selectedPokemon = poke2Info;
                     }
@@ -236,12 +246,13 @@ namespace Assets.Scripts.Menus
                     {
                         Debug.Log("Stats Pokemon 3");
                         selectedPokemon = poke3Info;
-
+                        GameManager.Manager.soundEffects.playSelectSound();
                         Menu.Instantiate<PokemonStatusMenu>();
                         (Menu.ActiveMenu as PokemonStatusMenu).pokemon = selectedPokemon;
                     }
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.switchSnap) && this.selectedComponent == snap3)
                     {
+                        GameManager.Manager.soundEffects.playSelectSound();
                         Debug.Log("Switch Pokemon 3");
                         selectedPokemon = poke3Info;
                     }
@@ -262,12 +273,13 @@ namespace Assets.Scripts.Menus
                     {
                         Debug.Log("Stats Pokemon 4");
                         selectedPokemon = poke4Info;
-
+                        GameManager.Manager.soundEffects.playSelectSound();
                         Menu.Instantiate<PokemonStatusMenu>();
                         (Menu.ActiveMenu as PokemonStatusMenu).pokemon = selectedPokemon;
                     }
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.switchSnap) && this.selectedComponent == snap4)
                     {
+                        GameManager.Manager.soundEffects.playSelectSound();
                         Debug.Log("Switch Pokemon 4");
                         selectedPokemon = poke4Info;
                     }
@@ -289,12 +301,13 @@ namespace Assets.Scripts.Menus
                     {
                         Debug.Log("Stats Pokemon 5");
                         selectedPokemon = poke5Info;
-
+                        GameManager.Manager.soundEffects.playSelectSound();
                         Menu.Instantiate<PokemonStatusMenu>();
                         (Menu.ActiveMenu as PokemonStatusMenu).pokemon = selectedPokemon;
                     }
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.switchSnap) && this.selectedComponent == snap5)
                     {
+                        GameManager.Manager.soundEffects.playSelectSound();
                         Debug.Log("Switch Pokemon 5");
                         selectedPokemon = poke5Info;
                     }
@@ -306,6 +319,7 @@ namespace Assets.Scripts.Menus
                     {
                         Debug.Log("Select Pokemon 6");
                         selectedPokemon = poke6Info;
+
                         if (onPokemonSelected != null)
                         {
                             onPokemonSelected.Invoke();
@@ -315,18 +329,20 @@ namespace Assets.Scripts.Menus
                     {
                         Debug.Log("Stats Pokemon 6");
                         selectedPokemon = poke6Info;
-
+                        GameManager.Manager.soundEffects.playSelectSound();
                         Menu.Instantiate<PokemonStatusMenu>();
                         (Menu.ActiveMenu as PokemonStatusMenu).pokemon = selectedPokemon;
                     }
                     if (selectMenu.menuCursor.simulateMousePress(selectMenu.switchSnap) && this.selectedComponent == snap6)
                     {
+                        GameManager.Manager.soundEffects.playSelectSound();
                         Debug.Log("Switch Pokemon 6");
                         selectedPokemon = poke6Info;
                     }
                 }
                 if (this.menuCursor.simulateMousePress(selectMenu.closeSnap))
                 {
+                    GameManager.Manager.soundEffects.playSelectSound();
                     selectMenu.exitMenu();
                 }
             }

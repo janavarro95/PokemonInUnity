@@ -71,7 +71,7 @@ namespace Assets.Scripts.Menus
             this.menuCursor = canvas.transform.Find("GameCursor").gameObject.GetComponent<Assets.Scripts.GameInput.GameCursor>();
             setUpForSnapping();
 
-
+            GameManager.Manager.soundEffects.playMenuSound();
 
         }
 
@@ -119,31 +119,38 @@ namespace Assets.Scripts.Menus
             if (GameCursor.SimulateMousePress(pokeDexSnap))
             {
                 Debug.Log("Add in pokedex!");
+                GameManager.Manager.soundEffects.playSelectSound();
             }
             else if (GameCursor.SimulateMousePress(pokemonSnap))
             {
                 Menu.Instantiate<PokemonPartyMenu>();
+                GameManager.Manager.soundEffects.playSelectSound();
                 //Debug.Log("Add in pokemon!");
             }
             else if (GameCursor.SimulateMousePress(itemsSnap))
             {
                 Debug.Log("Add in items!");
+                GameManager.Manager.soundEffects.playSelectSound();
             }
             else if (GameCursor.SimulateMousePress(trainerSnap))
             {
                 Debug.Log("Add in trainer!");
+                GameManager.Manager.soundEffects.playSelectSound();
             }
             else if (GameCursor.SimulateMousePress(saveSnap))
             {
                 Debug.Log("Add in saving!");
+                GameManager.Manager.soundEffects.playSelectSound();
             }
             else if (GameCursor.SimulateMousePress(optionsSnap))
             {
                 Debug.Log("Add in options!");
+                GameManager.Manager.soundEffects.playSelectSound();
             }
             else if (GameCursor.SimulateMousePress(closeSnap))
             {
                 exitMenu();
+                GameManager.Manager.soundEffects.playSelectSound();
             }
         }
     }

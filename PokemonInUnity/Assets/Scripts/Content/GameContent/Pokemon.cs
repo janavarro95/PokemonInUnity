@@ -144,6 +144,7 @@ namespace Assets.Scripts.Content.GameContent
             generateIVS(new EV_IVInfo());
             heal();
             loadSprites();
+            loadCry();
         }
 
 
@@ -162,6 +163,7 @@ namespace Assets.Scripts.Content.GameContent
             generateIVS(IVS != null ? IVS : new EV_IVInfo());
             heal();
             loadSprites();
+            loadCry();
         }
 
 
@@ -286,6 +288,26 @@ namespace Assets.Scripts.Content.GameContent
             {
                 Debug.Log(err.ToString());
             }
+        }
+
+        private void loadCry()
+        {
+            string name = "";
+            if (info.pokedexNumber < 10)
+            {
+                name = "00" + info.pokedexNumber.ToString() + "Cry";
+            }
+            else if (info.pokedexNumber < 100)
+            {
+                name="0" + info.pokedexNumber.ToString() + "Cry";
+            }
+            else
+            {
+                name= info.pokedexNumber.ToString() + "Cry";
+            }
+
+            AudioClip cry = Resources.Load<AudioClip>(Path.Combine("Audio", "PokemonCries", name));
+            this.cry = cry;
         }
     }
 }

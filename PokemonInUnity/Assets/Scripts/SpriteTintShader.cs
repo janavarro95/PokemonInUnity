@@ -75,12 +75,28 @@ public class SpriteTintShader : MonoBehaviour
         {
             if (GameManager.Manager.currentMap != null)
             {
-                Camera.main.backgroundColor = GameManager.Manager.currentMap.mapColor;
+                if (GameManager.Manager.currentMap.useColorForBackground)
+                {
+                    Camera.main.backgroundColor = GameManager.Manager.currentMap.mapColor;
+                }
+                else
+                {
+                    Camera.main.backgroundColor = Color.black;
+                }
                 return;
             }
             if (map != null)
             {
-                Camera.main.backgroundColor = map.mapColor;
+                if (map.useColorForBackground)
+                {
+                    Camera.main.backgroundColor = map.mapColor;
+                }
+                else
+                {
+                    Camera.main.backgroundColor = Color.black;
+                }
+
+                
                 return;
             }
         }

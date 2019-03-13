@@ -270,7 +270,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.6992856, g: 0.9339623, b: 0.66522783, a: 1}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -3103,5 +3103,10 @@ PrefabInstance:
       propertyPath: mapColor.b
       value: 0.66522783
       objectReference: {fileID: 0}
+    - target: {fileID: 5861124808163321761, guid: e3f245b1b6ac6f84f94181a97296ab28,
+        type: 3}
+      propertyPath: songToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: 50f8eb9bf13f5ab4eba9bc4281976949, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3f245b1b6ac6f84f94181a97296ab28, type: 3}
