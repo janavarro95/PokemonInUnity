@@ -1,0 +1,42 @@
+fileFormatVersion: 2
+guid: 7fe78b5d9eb39cf4793cbbba96d4f294
+ScriptedImporter:
+  fileIDToRecycleName:
+    100000: _MapPrfab/PokemonCenter
+    100002: _MapPrfab/PokemonCenter/Tile Layer 1
+    100004: _MapPrfab/PokemonCenter/Tile Layer 2
+    400000: _MapPrfab/PokemonCenter/Transform
+    400002: _MapPrfab/PokemonCenter/Tile Layer 1/Transform
+    400004: _MapPrfab/PokemonCenter/Tile Layer 2/Transform
+    11400000: _MapPrfab/PokemonCenter/MonoBehaviour-SuperTiled2Unity.SuperMap
+    11400002: _MapPrfab/PokemonCenter/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
+    11400004: _MapPrfab/PokemonCenter/Tile Layer 1/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
+    11400006: _MapPrfab/PokemonCenter/Tile Layer 1/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
+    11400008: _MapPrfab/PokemonCenter/Tile Layer 1/MonoBehaviour-SuperTiled2Unity.TilemapData
+    11400010: _MapPrfab/PokemonCenter/Tile Layer 2/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
+    11400012: _MapPrfab/PokemonCenter/Tile Layer 2/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
+    11400014: _MapPrfab/PokemonCenter/Tile Layer 2/MonoBehaviour-SuperTiled2Unity.TilemapData
+    11400016: _superAsset
+    100100000: _MapPrfab
+    2569400265252428796: _MapPrfab/PokemonCenter/Grid
+    3664157343022684176: _MapPrfab/PokemonCenter/Tile Layer 1/TilemapRenderer
+    3664157343022684178: _MapPrfab/PokemonCenter/Tile Layer 2/TilemapRenderer
+    8195094279510102542: _MapPrfab/PokemonCenter/Tile Layer 1/Tilemap
+    8195094279510102544: _MapPrfab/PokemonCenter/Tile Layer 2/Tilemap
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 1fa25d03934ea624a82bf2fcee6f0873, type: 3}
+  errors: []
+  warnings: []
+  missingSortingLayers: []
+  missingLayers: []
+  pixelsPerUnit: 16
+  edgesPerEllipse: 32
+  numberOfObjectsImported: 2
+  tilesAsObjects: 0
+  importSorting: 0
+  isIsometric: 0
+  customImporterClassName: 
+  internalTilesets: []

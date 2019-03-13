@@ -162,7 +162,7 @@ PrefabInstance:
     - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
         type: 3}
@@ -229,8 +229,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1957401779}
   - {fileID: 177565231}
   - {fileID: 1336594149}
+  - {fileID: 1628703459}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -366,7 +368,7 @@ PrefabInstance:
     - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
         type: 3}
@@ -3021,6 +3023,106 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 196565ed075db554ea89142aa24a974c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1628703458
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 667784982}
+    m_Modifications:
+    - target: {fileID: 1053707398115392430, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: m_Name
+      value: ToPokemart
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 31.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7556481722185351593, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: sceneToWarpTo
+      value: ViridianCity_PokeMart
+      objectReference: {fileID: 0}
+    - target: {fileID: 7556481722185351593, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: warpLocation.x
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7556481722185351593, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: warpLocation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7556481722185351593, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: pressAToWarp
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7556481722185351593, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: soundType
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4a25a48307dee724c93fc8f3a24301fc, type: 3}
+--- !u!4 &1628703459 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1628703458}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1804061436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3110,3 +3212,98 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 50f8eb9bf13f5ab4eba9bc4281976949, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3f245b1b6ac6f84f94181a97296ab28, type: 3}
+--- !u!1001 &1957401778
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 667784982}
+    m_Modifications:
+    - target: {fileID: 1053707398115392430, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: m_Name
+      value: ToPokemonCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 25.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7556481722185351593, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: sceneToWarpTo
+      value: ViridianCity_PokemonCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 7556481722185351593, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: warpLocation.x
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7556481722185351593, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: warpLocation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7556481722185351593, guid: 4a25a48307dee724c93fc8f3a24301fc,
+        type: 3}
+      propertyPath: soundType
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4a25a48307dee724c93fc8f3a24301fc, type: 3}
+--- !u!4 &1957401779 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7630508775490289618, guid: 4a25a48307dee724c93fc8f3a24301fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1957401778}
+  m_PrefabAsset: {fileID: 0}

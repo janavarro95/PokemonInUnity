@@ -697,6 +697,33 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  onMenuClose:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  selectedPokemon:
+    nickName: 
+    moves: []
+    currentLevel: 0
+    currentHP: 0
+    EV_HP: 0
+    EV_Attack: 0
+    EV_Defense: 0
+    EV_SpecialAttack: 0
+    EV_SpecialDefense: 0
+    EV_Speed: 0
+    IV_HP: 0
+    IV_Attack: 0
+    IV_Defense: 0
+    IV_SpecialAttack: 0
+    IV_SpecialDefense: 0
+    IV_Speed: 0
+    currentEXP: 0
+    backSprite: {fileID: 0}
+    frontSprite: {fileID: 0}
+    menuSprite: {fileID: 0}
+    cry: {fileID: 0}
 --- !u!1 &8552528837342867039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2871,7 +2898,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1280, y: 1024}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3

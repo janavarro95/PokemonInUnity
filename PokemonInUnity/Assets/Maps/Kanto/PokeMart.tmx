@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.2" orientation="orthogonal" renderorder="right-down" width="8" height="8" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" source="MapTilesheet.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="8" height="8">
+  <data encoding="csv">
+637,637,746,746,746,746,637,637,
+675,675,784,784,784,784,675,675,
+668,668,668,668,668,668,668,668,
+749,750,668,668,747,748,747,748,
+630,674,668,668,785,786,785,786,
+783,713,668,668,668,668,668,668,
+787,788,668,668,668,668,668,668,
+668,668,668,706,706,668,668,668
+</data>
+ </layer>
+</map>

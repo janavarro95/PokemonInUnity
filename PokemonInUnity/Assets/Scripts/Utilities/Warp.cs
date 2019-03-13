@@ -15,9 +15,9 @@ namespace Assets.Scripts.Utilities
         [SerializeField]
         private bool pressAToWarp;
         [SerializeField]
-        private string sceneToWarpTo;
+        public string sceneToWarpTo;
         [SerializeField]
-        private Vector2 warpLocation;
+        public Vector2 warpLocation;
 
         [SerializeField]
         private float transitionTime = .5f;

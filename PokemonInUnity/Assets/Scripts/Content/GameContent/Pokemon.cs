@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Content.GameContent
 {
-    [Serializable]
+    
     public class Pokemon
     {
         public string Name

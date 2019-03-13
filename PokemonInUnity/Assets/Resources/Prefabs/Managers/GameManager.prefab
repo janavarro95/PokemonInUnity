@@ -48,6 +48,7 @@ MonoBehaviour:
   enterDoor: {fileID: 8300000, guid: e51ca826e553a0648acce688863c7d3d, type: 3}
   exitDoor: {fileID: 8300000, guid: 4558d2c70696cad48a9600cb56617a84, type: 3}
   menuOpen: {fileID: 8300000, guid: eb1b482ae24a8194d935e88e112b82c7, type: 3}
+  itemGet: {fileID: 8300000, guid: c26542543fbadf5448fca723da970186, type: 3}
 --- !u!1 &997344617537884471
 GameObject:
   m_ObjectHideFlags: 0

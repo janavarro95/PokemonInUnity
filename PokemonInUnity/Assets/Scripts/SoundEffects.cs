@@ -12,6 +12,7 @@ public class SoundEffects : MonoBehaviour
     public AudioClip enterDoor;
     public AudioClip exitDoor;
     public AudioClip menuOpen;
+    public AudioClip itemGet;
 
     // Start is called before the first frame update
     void Start()
@@ -39,5 +40,10 @@ public class SoundEffects : MonoBehaviour
     public void playMenuSound()
     {
         GameManager.SoundManager.playSound(menuOpen);
+    }
+
+    public void playItemGetSound()
+    {
+        GameManager.SoundManager.playSound(itemGet);
     }
 }

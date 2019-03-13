@@ -34,7 +34,9 @@ namespace Assets.Scripts.Content.GameContent
         {
             get
             {
-                return pokemon.Count == capacity;
+                Debug.Log("Count:"+this.pokemon.Count);
+                Debug.Log("Capacity"+this.capacity);
+                return pokemon.Count >= capacity;
             }
         }
 
@@ -49,6 +51,7 @@ namespace Assets.Scripts.Content.GameContent
         /// <param name="Capacity"></param>
         public PokemonInventory(int Capacity)
         {
+            this.capacity = Capacity;
             pokemon = new List<Pokemon>();
         }
 
@@ -58,7 +61,8 @@ namespace Assets.Scripts.Content.GameContent
         /// <returns></returns>
         public virtual bool canAddPokemon()
         {
-            return IsFull;
+            if (IsFull == false) return true;
+            else return false;
         }
 
         /// <summary>
