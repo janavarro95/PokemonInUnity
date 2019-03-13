@@ -361,6 +361,11 @@ PrefabInstance:
       propertyPath: songToPlay
       value: 
       objectReference: {fileID: 8300000, guid: 5d7ead8c8c13d5244a8487e588d209dc, type: 3}
+    - target: {fileID: 5861124808163321761, guid: e3f245b1b6ac6f84f94181a97296ab28,
+        type: 3}
+      propertyPath: useColorForBackground
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3f245b1b6ac6f84f94181a97296ab28, type: 3}
 --- !u!1 &824514697

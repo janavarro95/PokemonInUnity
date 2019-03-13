@@ -79,12 +79,12 @@
   "EV_SpecialAttack": 0,
   "EV_SpecialDefense": 0,
   "EV_Speed": 0,
-  "IV_HP": 20,
-  "IV_Attack": 29,
-  "IV_Defense": 11,
-  "IV_SpecialAttack": 14,
-  "IV_SpecialDefense": 7,
-  "IV_Speed": 4,
+  "IV_HP": 24,
+  "IV_Attack": 2,
+  "IV_Defense": 17,
+  "IV_SpecialAttack": 17,
+  "IV_SpecialDefense": 0,
+  "IV_Speed": 20,
   "currentEXP": 0,
   "info": {
     "pokemonName": "Bulbasaur",
@@ -250,7 +250,7 @@
   "Defense": 6,
   "SpecialAttack": 6,
   "SpecialDefense": 6,
-  "Speed": 5,
+  "Speed": 6,
   "EXPToLVLUp": 179,
   "KnowsFourMoves": false
 }
