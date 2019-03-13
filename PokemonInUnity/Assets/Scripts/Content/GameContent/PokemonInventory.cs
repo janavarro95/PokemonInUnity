@@ -138,5 +138,20 @@ namespace Assets.Scripts.Content.GameContent
             return false;
         }
 
+
+        /// <summary>
+        /// Gets the first non-fainted pokemon from the pokemon inventory.
+        /// </summary>
+        /// <returns></returns>
+        public virtual Pokemon getFirstNonFaintedPokemon()
+        {
+            foreach(Pokemon p in this.pokemon)
+            {
+                if (p.isFainted) continue;
+                else return p;
+            }
+            return null;
+        }
+
     }
 }

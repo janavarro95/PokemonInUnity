@@ -17,7 +17,9 @@ namespace Assets.Scripts.Menus
 
         public static List<Menu> MenuStack;
 
-
+        /// <summary>
+        /// Gets the top most "Active" Menu from the menu stack.
+        /// </summary>
         public static Menu ActiveMenu
         {
             get
@@ -45,7 +47,10 @@ namespace Assets.Scripts.Menus
                 }
             }
         }
-
+        
+        /// <summary>
+        /// Checks if there is atleast one menu on the menu stack.
+        /// </summary>
         public static bool IsMenuUp
         {
             get
@@ -54,6 +59,10 @@ namespace Assets.Scripts.Menus
             }
         }
 
+        /// <summary>
+        /// Gets the game cursor from whatever menu came before this one.
+        /// </summary>
+        /// <returns></returns>
         public static GameCursor GetCursorFromParentMenu()
         {
             if (MenuStack.Count < 2)
@@ -67,6 +76,10 @@ namespace Assets.Scripts.Menus
             }
         }
 
+        /// <summary>
+        /// Gets the menu that came before this one on the menu stack.
+        /// </summary>
+        /// <returns></returns>
         public static Menu ParentMenu()
         {
             if (MenuStack.Count < 2)
@@ -80,11 +93,26 @@ namespace Assets.Scripts.Menus
             }
         }
 
+        /// <summary>
+        /// Exits all menus until the passed in menu is reached.
+        /// </summary>
+        /// <param name="m"></param>
         public static void exitMenusUntilThisOne(Menu m)
         {
             while (ActiveMenu != m)
             {
                 ActiveMenu.exitMenu();
+            }
+        }
+
+        /// <summary>
+        /// Closes all menus.
+        /// </summary>
+        public static void ExitAllMenus()
+        {
+            foreach(Menu m in MenuStack)
+            {
+                m.exitMenu();
             }
         }
 
@@ -167,6 +195,10 @@ namespace Assets.Scripts.Menus
             else if (typeof(T) == typeof(PokemonBattleMenu))
             {
                 Instantiate("PokemonBattleMenu");
+            }
+            else if (typeof(T) == typeof(Battle.V1.BattleManagerV1))
+            {
+                Instantiate("BattleManagerV1");
             }
             else
             {

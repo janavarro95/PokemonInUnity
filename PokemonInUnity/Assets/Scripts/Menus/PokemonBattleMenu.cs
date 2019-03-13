@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Content.GameContent;
+using Assets.Scripts.GameInformation;
 using Assets.Scripts.Menus;
 using System.Collections;
 using System.Collections.Generic;
@@ -26,6 +27,8 @@ namespace Assets.Scripts.Menus {
         public GameObject yourPokemon;
         public GameObject enemyPokemon;
 
+        public Image enemyTrainerImage;
+
         /// <summary>
         /// Your pokemon you are using
         /// </summary>
@@ -47,12 +50,19 @@ namespace Assets.Scripts.Menus {
             allyHPBar = yourPokemon.transform.Find("HealthUnderlay").gameObject.GetComponent<Image>();
             allyHP = allyHPBar.transform.Find("Health").gameObject.GetComponent<Text>();
 
+            yourPokemon.SetActive(false);
+
+
             enemyPokemon = background.gameObject.transform.Find("EnemyPokemon").gameObject;
             enemyPokemonSprite = enemyPokemon.GetComponent<Image>();
             enemyName = enemyPokemon.transform.Find("Name").gameObject.GetComponent<Text>();
             enemyLvl = enemyPokemon.transform.Find("Lvl").gameObject.GetComponent<Text>();
             enemyHPBar = enemyPokemon.transform.Find("HealthUnderlay").gameObject.GetComponent<Image>();
             enemyHP = enemyHPBar.transform.Find("Health").gameObject.GetComponent<Text>();
+
+            enemyPokemon.SetActive(false);
+
+            enemyTrainerImage= background.gameObject.transform.Find("EnemyTrainer").gameObject.GetComponent<Image>();
         }
 
         public override void Start()
@@ -80,20 +90,45 @@ namespace Assets.Scripts.Menus {
 
         }
 
+        public void setUpEnemyTrainer(PokemonTrainer Trainer)
+        {
+            enemyTrainerImage.enabled = true;
+            enemyTrainerImage.sprite = Trainer.trainerSprite;
+        }
+
+
+
+
         public void setUpBattlers()
         {
             setUpSelf();
             setUpOther();
         }
 
+
+        /// <summary>
+        /// Sets up all the battlers.
+        /// </summary>
+        /// <param name="Self"></param>
+        /// <param name="Other"></param>
         public void setUpBattlers(Pokemon Self = null, Pokemon Other = null)
         {
-            self = Self;
-            other = Other;
+            if (Self != null)
+            {
+                self = Self;
+            }
+            if (Other != null)
+            {
+                other = Other;
+            }
             setUpSelf();
             setUpOther();
         }
 
+
+        /// <summary>
+        /// Sets up your pokemon.
+        /// </summary>
         private void setUpSelf()
         {
             if (self == null) return;
@@ -105,23 +140,39 @@ namespace Assets.Scripts.Menus {
             {
                 Debug.Log("SELF BACK SPRITE NULL");
             }
+            yourPokemon.SetActive(true);
             allyPokemonSprite.sprite = self.backSprite;
             allyName.text = self.Name;
             allyLvl.text = "Lvl:" + self.currentLevel;
             allyHPBar.rectTransform.localScale = new Vector3(calculatePokemonHPRemaining(self), 1, 1);
             allyHP.text = self.currentHP + " / " + self.MaxHP;
+            
+
+            GameManager.Manager.soundManager.playSound(self.cry);
         }
 
+
+        /// <summary>
+        /// Sets up the enemy pokemon.
+        /// </summary>
         private void setUpOther()
         {
             if (other == null) return;
+            enemyPokemon.SetActive(true);
+            enemyTrainerImage.enabled = false;
+
             enemyPokemonSprite.sprite = other.frontSprite;
             enemyName.text = other.Name;
             enemyLvl.text = "Lvl:" + other.currentLevel;
             enemyHPBar.rectTransform.localScale = new Vector3(calculatePokemonHPRemaining(other), 1, 1);
             enemyHP.text = other.currentHP + " / " + other.MaxHP;
+            GameManager.Manager.soundManager.playSound(other.cry);
         }
 
+
+        /// <summary>
+        /// Used to update pokemon I guess??? Not sure why I wrote this.
+        /// </summary>
         private void updatePokemon()
         {
 

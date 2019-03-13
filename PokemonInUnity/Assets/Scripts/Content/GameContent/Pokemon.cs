@@ -39,6 +39,18 @@ namespace Assets.Scripts.Content.GameContent
                 return (((((info.baseHP + IV_HP) * 2) + (int)(Math.Sqrt(EV_HP) / 4) * this.currentLevel) / 100) + currentLevel + 10);
             }
         }
+
+        /// <summary>
+        /// Checks if the pokemon has fainted or not.
+        /// </summary>
+        public bool isFainted
+        {
+            get
+            {
+                return currentHP <= 0;
+            }
+        }
+
         public int Attack
         {
             get

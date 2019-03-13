@@ -14,11 +14,25 @@ namespace Assets.Scripts.Interactables
         public UnityEvent function;
         public bool hasTriggered;
 
+        public DialogueEvent()
+        {
+
+        }
+
+        public DialogueEvent(int index)
+        {
+            this.index = index;
+            function = new UnityEvent();
+            hasTriggered = false;
+        }
+
         public void invoke()
         {
             hasTriggered = true;
             function.Invoke();
         }
+
+        
 
     }
 }
