@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Content.GameContent;
+using Assets.Scripts.GameInformation;
 using Assets.Scripts.Menus;
 using System;
 using System.Collections;
@@ -19,6 +20,8 @@ namespace Assets.Scripts.Content.PokeDatabase
 
         public string nextScene = "PalletTown";
         public bool loadPokemon = true;
+
+        public Vector2 newPosition;
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Await.Warning", "CS4014:Await.Warning")]
         public void Awake()
@@ -77,6 +80,10 @@ namespace Assets.Scripts.Content.PokeDatabase
                Debug.Log(GameInformation.GameManager.Manager.player.pokemon.getPokemonAtIndex(0).Name);
             }
             this.exitMenu();
+
+
+            GameManager.Player.position = newPosition;
+
             SceneManager.LoadScene(nextScene);
         }
 

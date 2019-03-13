@@ -51,6 +51,39 @@ public class SpriteTintShader : MonoBehaviour
     void Update()
     {
         UpdateTint(true);
+
+        if (GameManager.Manager == null)
+        {
+            if (map != null)
+            {
+                Camera.main.backgroundColor = map.mapColor;
+                return;
+            }
+            else
+            {
+                Camera.main.backgroundColor = Color.black;
+                return;
+            }
+        }
+
+        if(GameManager.Manager.currentMap == null && map == null)
+        {
+            Camera.main.backgroundColor = Color.black;
+            return;
+        }
+        else
+        {
+            if (GameManager.Manager.currentMap != null)
+            {
+                Camera.main.backgroundColor = GameManager.Manager.currentMap.mapColor;
+                return;
+            }
+            if (map != null)
+            {
+                Camera.main.backgroundColor = map.mapColor;
+                return;
+            }
+        }
     }
 
     /// <summary>
@@ -90,19 +123,33 @@ public class SpriteTintShader : MonoBehaviour
             }
             else
             {
+                if (GameObject.Find("MapManager") != null)
+                {
+                    if (map == null)
+                    {
+                        this.map = GameObject.Find("MapManager").GetComponent<MapManager>();
+                    }
+                    if (spriteRenderer != null)
+                    {
+                        spriteRenderer.sharedMaterial.color = map.mapColor;
 
-                if (map == null)
-                {
-                    this.map = GameObject.Find("MapManager").GetComponent<MapManager>();
+                    }
+                    else if (mapRenderer != null)
+                    {
+                        mapRenderer.sharedMaterial.color = map.mapColor;
+                    }
                 }
-                if (spriteRenderer != null)
+                else
                 {
-                    spriteRenderer.sharedMaterial.color = map.mapColor;
+                    if (spriteRenderer != null)
+                    {
+                        spriteRenderer.sharedMaterial.color = Color.white;
 
-                }
-                else if (mapRenderer != null)
-                {
-                    mapRenderer.sharedMaterial.color = map.mapColor;
+                    }
+                    else if (mapRenderer != null)
+                    {
+                        mapRenderer.sharedMaterial.color = Color.white;
+                    }
                 }
 
             }

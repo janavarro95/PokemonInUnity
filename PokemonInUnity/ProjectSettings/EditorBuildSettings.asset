@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Kanto/Routes/Route1.unity
     guid: b895fba7f3cd25247974abe698b8ddd0
+  - enabled: 1
+    path: Assets/Scenes/Kanto/ViridianCity/ViridianCity.unity
+    guid: 27c70fa3a58e5e740b90f0432bb85e9b
   m_configObjects: {}

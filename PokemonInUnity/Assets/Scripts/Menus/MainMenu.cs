@@ -18,6 +18,8 @@ namespace Assets.Scripts.Menus
     /// </summary>
     public class MainMenu:Menu
     {
+
+        public AudioClip titleMusic;
         Image background;
 
         /// <summary>
@@ -29,6 +31,10 @@ namespace Assets.Scripts.Menus
             background = canvas.transform.Find("Background").gameObject.GetComponent<Image>();
             background.rectTransform.sizeDelta = new Vector2(Camera.main.pixelWidth, Camera.main.pixelHeight);
             scaleMenuToSceen();
+
+            if (titleMusic!=null){
+                GameManager.SoundManager.playSong(titleMusic);
+            }
         }
 
         public override void setUpForSnapping()
@@ -48,6 +54,7 @@ namespace Assets.Scripts.Menus
         {
             if (GameInput.InputControls.APressed)
             {
+                GameManager.SoundManager.stopSong();
                 SceneManager.LoadScene("LoadingScene");
             }
         }

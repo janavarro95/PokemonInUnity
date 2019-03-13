@@ -183,6 +183,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   events: []
+  dialogueMenu: {fileID: 0}
 --- !u!61 &272937449
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2133,7 +2134,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -2422,6 +2423,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   events: []
+  dialogueMenu: {fileID: 0}
 --- !u!4 &1196918701
 Transform:
   m_ObjectHideFlags: 0
@@ -2835,6 +2837,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   events: []
+  dialogueMenu: {fileID: 0}
 --- !u!61 &2122741877
 BoxCollider2D:
   m_ObjectHideFlags: 0

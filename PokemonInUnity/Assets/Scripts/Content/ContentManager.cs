@@ -105,6 +105,23 @@ namespace Assets.Scripts.Content
             return sprite;
         }
 
+        public static Sprite LoadTextureFrom2DAtlas(string RelativePath, string spriteName)
+        {
+            Sprite[] atlas = Resources.LoadAll<Sprite>(RelativePath);
+            // Get specific sprite
+            Sprite sprite = null;
+            foreach (Sprite s in atlas)
+            {
+                if (s.name == spriteName)
+                {
+                    sprite = s;
+                    return sprite;
+                }
+                //else Debug.Log(s.name);
+            }
+            return sprite;
+        }
+
 
     }
 }
