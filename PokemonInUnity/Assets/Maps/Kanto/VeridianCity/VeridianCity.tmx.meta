@@ -54,6 +54,7 @@ ScriptedImporter:
     100098: _MapPrfab/VeridianCity/Tile Layer 1/Collision_Default/Polygon (46)
     100100: _MapPrfab/VeridianCity/Tile Layer 1/Collision_Default/Polygon (47)
     100102: _MapPrfab/VeridianCity/Tile Layer 2
+    100104: _MapPrfab/VeridianCity/Tile Layer 1/Collision_Default/Polygon (48)
     400000: _MapPrfab/VeridianCity/Transform
     400002: _MapPrfab/VeridianCity/Tile Layer 1/Transform
     400004: _MapPrfab/VeridianCity/Tile Layer 1/Collision_Default/Transform
@@ -106,6 +107,7 @@ ScriptedImporter:
     400098: _MapPrfab/VeridianCity/Tile Layer 1/Collision_Default/Polygon (46)/Transform
     400100: _MapPrfab/VeridianCity/Tile Layer 1/Collision_Default/Polygon (47)/Transform
     400102: _MapPrfab/VeridianCity/Tile Layer 2/Transform
+    400104: _MapPrfab/VeridianCity/Tile Layer 1/Collision_Default/Polygon (48)/Transform
     5000000: _MapPrfab/VeridianCity/Tile Layer 1/Collision_Default/Rigidbody2D
     6000000: _MapPrfab/VeridianCity/Tile Layer 1/Collision_Default/Polygon/PolygonCollider2D
     6000002: _MapPrfab/VeridianCity/Tile Layer 1/Collision_Default/Polygon (1)/PolygonCollider2D
@@ -155,6 +157,7 @@ ScriptedImporter:
     6000090: _MapPrfab/VeridianCity/Tile Layer 1/Collision_Default/Polygon (45)/PolygonCollider2D
     6000092: _MapPrfab/VeridianCity/Tile Layer 1/Collision_Default/Polygon (46)/PolygonCollider2D
     6000094: _MapPrfab/VeridianCity/Tile Layer 1/Collision_Default/Polygon (47)/PolygonCollider2D
+    6000096: _MapPrfab/VeridianCity/Tile Layer 1/Collision_Default/Polygon (48)/PolygonCollider2D
     6600000: _MapPrfab/VeridianCity/Tile Layer 1/Collision_Default/CompositeCollider2D
     11400000: _MapPrfab/VeridianCity/MonoBehaviour-SuperTiled2Unity.SuperMap
     11400002: _MapPrfab/VeridianCity/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
@@ -213,6 +216,7 @@ ScriptedImporter:
     11400108: _MapPrfab/VeridianCity/Tile Layer 2/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
     11400110: _MapPrfab/VeridianCity/Tile Layer 2/MonoBehaviour-SuperTiled2Unity.TilemapData
     11400112: _superAsset
+    11400114: _MapPrfab/VeridianCity/Tile Layer 1/Collision_Default/Polygon (48)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
     100100000: _MapPrfab
     2569400265252428796: _MapPrfab/VeridianCity/Grid
     3664157343022684176: _MapPrfab/VeridianCity/Tile Layer 1/TilemapRenderer

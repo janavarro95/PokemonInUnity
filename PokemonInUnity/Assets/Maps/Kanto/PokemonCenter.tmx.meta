@@ -5,9 +5,16 @@ ScriptedImporter:
     100000: _MapPrfab/PokemonCenter
     100002: _MapPrfab/PokemonCenter/Tile Layer 1
     100004: _MapPrfab/PokemonCenter/Tile Layer 2
+    100006: _MapPrfab/PokemonCenter/Tile Layer 2/Collision_Default
+    100008: _MapPrfab/PokemonCenter/Tile Layer 2/Collision_Default/Polygon
     400000: _MapPrfab/PokemonCenter/Transform
     400002: _MapPrfab/PokemonCenter/Tile Layer 1/Transform
     400004: _MapPrfab/PokemonCenter/Tile Layer 2/Transform
+    400006: _MapPrfab/PokemonCenter/Tile Layer 2/Collision_Default/Transform
+    400008: _MapPrfab/PokemonCenter/Tile Layer 2/Collision_Default/Polygon/Transform
+    5000000: _MapPrfab/PokemonCenter/Tile Layer 2/Collision_Default/Rigidbody2D
+    6000000: _MapPrfab/PokemonCenter/Tile Layer 2/Collision_Default/Polygon/PolygonCollider2D
+    6600000: _MapPrfab/PokemonCenter/Tile Layer 2/Collision_Default/CompositeCollider2D
     11400000: _MapPrfab/PokemonCenter/MonoBehaviour-SuperTiled2Unity.SuperMap
     11400002: _MapPrfab/PokemonCenter/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
     11400004: _MapPrfab/PokemonCenter/Tile Layer 1/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
@@ -17,6 +24,7 @@ ScriptedImporter:
     11400012: _MapPrfab/PokemonCenter/Tile Layer 2/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
     11400014: _MapPrfab/PokemonCenter/Tile Layer 2/MonoBehaviour-SuperTiled2Unity.TilemapData
     11400016: _superAsset
+    11400018: _MapPrfab/PokemonCenter/Tile Layer 2/Collision_Default/Polygon/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
     100100000: _MapPrfab
     2569400265252428796: _MapPrfab/PokemonCenter/Grid
     3664157343022684176: _MapPrfab/PokemonCenter/Tile Layer 1/TilemapRenderer

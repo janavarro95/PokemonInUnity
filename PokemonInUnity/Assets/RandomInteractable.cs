@@ -1,6 +1,7 @@
 ﻿using Assets.Scripts.Content.GameContent;
 using Assets.Scripts.GameInformation;
 using Assets.Scripts.Interactables;
+using Assets.Scripts.Utilities.Timers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,13 @@ public class RandomInteractable : Interactable
 {
 
     public UnityEvent onInteract;
+
+    DeltaTimer randomTimer;
+
+    public override void Update()
+    {
+        if (randomTimer != null) randomTimer.Update();
+    }
 
     public override void interact()
     {
@@ -40,5 +48,17 @@ public class RandomInteractable : Interactable
         });
         }
         Destroy(this.gameObject);
+    }
+
+    public void flickerMapLights()
+    {
+        GameManager.Manager.currentMap.mapColor = Color.cyan;
+        randomTimer = new DeltaTimer(1f, Assets.Scripts.Enums.TimerType.CountDown, false, resetMapColor);
+        randomTimer.start();
+    }
+
+    public void resetMapColor()
+    {
+        GameManager.Manager.currentMap.mapColor = Color.white;
     }
 }

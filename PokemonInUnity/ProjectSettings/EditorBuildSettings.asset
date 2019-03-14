@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Kanto/ViridianCity/ViridianCity_PokemonCenter.unity
     guid: 0d56662590aee01419e1fd8d39ceccf4
+  - enabled: 1
+    path: Assets/Scenes/Kanto/ViridianCity/ViridianCity_SpecialHouse.unity
+    guid: e94317d8506ee2540b12fbbd95b38640
   m_configObjects: {}

@@ -27,6 +27,8 @@ namespace Assets.Scripts.Menus
 
         DeltaTimer cryTimer;
 
+        bool hasPressedA;
+
         /// <summary>
         /// Instantiate all menu logic here.
         /// </summary>
@@ -59,11 +61,12 @@ namespace Assets.Scripts.Menus
         /// </summary>
         public override void Update()
         {
-            if (GameInput.InputControls.APressed)
+            if (GameInput.InputControls.APressed && hasPressedA==false)
             {
                 GameManager.SoundManager.playSound(rando.cry);
                 cryTimer = new DeltaTimer(3d, Enums.TimerType.CountDown,false,swapScenes);
                 cryTimer.start();
+                hasPressedA = true;
             }
             if (cryTimer != null) cryTimer.Update();
         }

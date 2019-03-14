@@ -23,7 +23,7 @@
 7,7,39,39,0,0,0,0,7,7,7,7,7,7,7,7,7,7,7,7
 </data>
  </layer>
- <layer id="7" name="Grass" width="20" height="18">
+ <layer id="7" name="Grass" width="20" height="18" visible="0">
   <properties>
    <property name="WildPokemon" type="bool" value="true"/>
   </properties>
