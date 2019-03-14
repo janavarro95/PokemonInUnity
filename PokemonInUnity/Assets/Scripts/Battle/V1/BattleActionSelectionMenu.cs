@@ -116,7 +116,7 @@ namespace Assets.Scripts.Battle.V1
                         after.AddListener(battle.petPokemonAndCaptureIt);
                         battle.battleDialogue.initializeDialogues("", new List<string>()
                     {
-                        "You pet the wild "+ battle.currentOther+".",
+                        "You pet the wild "+ battle.currentOther.Name+".",
                         "It decided to join your party!"
                     }, after);
                         return;

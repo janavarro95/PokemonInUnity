@@ -232,6 +232,7 @@ namespace Assets.Scripts.Characters
             {
                 if (hit.collider != null)
                 {
+                    if (hit.collider.gameObject == this.gameObject) continue;
                     GameObject detectedGameObject = hit.collider.gameObject;
 
                     if (hit.collider.isTrigger == false) canMove = false;

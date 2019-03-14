@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Interactables;
+﻿using Assets.Scripts.GameInformation;
+using Assets.Scripts.Interactables;
 using Assets.Scripts.Menus;
 using Assets.Scripts.Utilities;
 using Assets.Scripts.Utilities.Timers;
@@ -146,9 +147,14 @@ namespace Assets.Scripts.Characters
             {
                 if (hit.collider != null)
                 {
+                    if (hit.collider.gameObject == this.gameObject) continue;
                     GameObject detectedGameObject = hit.collider.gameObject;
 
-                    if (hit.collider.isTrigger == false) canMove = false;
+                    if (hit.collider.isTrigger == false)
+                    {
+                        canMove = false;
+                        Debug.Log("HIT SOMETHING???");
+                    }
                     else
                     {
                         GameObject detectedCollisionObject = hit.collider.gameObject.transform.parent.gameObject;
@@ -162,6 +168,16 @@ namespace Assets.Scripts.Characters
                                 {
                                     Debug.Log("Could surf here.");
                                     canMove = false;
+                                }
+                            }
+                            if (properties.TryGetCustomProperty("WildPokemon", out p) == true)
+                            {
+                                if (p.m_Value == "true")
+                                {
+                                    Debug.Log("Wild Pokemon Here!");
+                                    GameManager.Player.decrementStep();
+                                    canMove = true;
+                                    break;
                                 }
                             }
                         }
@@ -223,7 +239,7 @@ namespace Assets.Scripts.Characters
                 {
 
                     //Do logic!
-
+                    if (hit.collider.gameObject == this.gameObject) continue;
 
                     Interactable i = hit.collider.gameObject.GetComponent<Interactables.Interactable>();
                     if (i != null)

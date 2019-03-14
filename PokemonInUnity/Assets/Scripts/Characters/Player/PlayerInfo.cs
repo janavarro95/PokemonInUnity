@@ -1,4 +1,6 @@
-﻿using Assets.Scripts.Content.GameContent;
+﻿using Assets.Scripts.Battle.V1;
+using Assets.Scripts.Content.GameContent;
+using Assets.Scripts.Menus;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -99,12 +101,18 @@ namespace Assets.Scripts.Characters.Player
             }
         }
 
+        public int stepsUntilWildPokemon;
+
         public PokemonInventory pokemon;
+
+        System.Random r;
 
         public PlayerInfo()
         {
             this.playerName = "Red";
             pokemon = new PokemonInventory(6);
+            generateRandomStepsTillBattle();
+
         }
 
         public void setSpriteVisibility(Enums.Visibility visibility)
@@ -116,6 +124,28 @@ namespace Assets.Scripts.Characters.Player
             else
             {
                 Renderer.enabled = true;
+            }
+        }
+
+
+        public void generateRandomStepsTillBattle()
+        {
+            if (r == null)
+            {
+                r = new System.Random();
+            }
+            stepsUntilWildPokemon = r.Next(5, 11);
+        }
+
+        public void decrementStep()
+        {
+            stepsUntilWildPokemon--;
+            if (stepsUntilWildPokemon <= 0)
+            {
+                Debug.Log("HELLO BATTLE!");
+                Menu.Instantiate<BattleManagerV1>();
+                (Menu.ActiveMenu as BattleManagerV1).setUpWildBattle(new Pokemon(Assets.Scripts.Content.PokeDatabase.PokemonDatabase.PokemonInfoByIndex[UnityEngine.Random.Range(1, 152)], 5));
+                generateRandomStepsTillBattle();
             }
         }
 

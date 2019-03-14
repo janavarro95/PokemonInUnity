@@ -200,7 +200,7 @@ namespace Assets.Scripts.Battle.V1
             UnityEvent selectPokeEvent = new UnityEvent();
             selectPokeEvent.AddListener(setUpSelfPokemonWildBattle);
 
-            this.battleDialogue.initializeDialogues(enemyTrainer.trainerName, new List<string>() {
+            this.battleDialogue.initializeDialogues("", new List<string>() {
                 "A wild "+currentOther.Name+" has appeared!"
             }, selectPokeEvent);
 
@@ -261,17 +261,14 @@ namespace Assets.Scripts.Battle.V1
             else
             {
 
-                GameManager.Manager.soundEffects.playWildBattleSong();
+                GameManager.Manager.soundEffects.playWildVictorySong();
 
                 UnityEvent callBack = new UnityEvent();
                 callBack.AddListener(endBattle);
                 GameManager.Player.pokemon.addPokemon(currentOther);
-                this.battleDialogue.initializeDialogues(enemyTrainer.trainerName, new List<string>() {
+                this.battleDialogue.initializeDialogues("", new List<string>() {
                 "You walked away happy with your new friend "+currentOther.Name+"."
             }, callBack, null, null);
-
-
-                //endBattle();
             }
         }
 

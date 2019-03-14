@@ -49,6 +49,10 @@ MonoBehaviour:
   exitDoor: {fileID: 8300000, guid: 4558d2c70696cad48a9600cb56617a84, type: 3}
   menuOpen: {fileID: 8300000, guid: eb1b482ae24a8194d935e88e112b82c7, type: 3}
   itemGet: {fileID: 8300000, guid: c26542543fbadf5448fca723da970186, type: 3}
+  wildBattleMusic: {fileID: 8300000, guid: b3f5d7d1de662ec47bc4a89a87ea4045, type: 3}
+  trainerBattleMusic: {fileID: 0}
+  wildVictoryMusic: {fileID: 8300000, guid: d6ac0940a2c4fb549ba367238139e6d7, type: 3}
+  trainerVictoryMusic: {fileID: 8300000, guid: 74c69468f0e4ee74db40890e50a31f27, type: 3}
 --- !u!1 &997344617537884471
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,6 +279,7 @@ MonoBehaviour:
   soundEffects: {fileID: 0}
   player:
     playerName: 
+    stepsUntilWildPokemon: 6
 --- !u!1 &4653007131556626976
 GameObject:
   m_ObjectHideFlags: 0

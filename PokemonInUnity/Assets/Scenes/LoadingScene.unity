@@ -179,11 +179,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9092734890103740942, guid: 26d60a0e449c2f544aff41548916f938,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: c4c64e83807011a4f937c1f464c81407, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26d60a0e449c2f544aff41548916f938, type: 3}
 --- !u!1 &173078760
@@ -455,6 +450,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1914433229, guid: 569bb594222224945b2b4c4dba478cdd, type: 3}
+      propertyPath: wildBattleMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: b3f5d7d1de662ec47bc4a89a87ea4045, type: 3}
+    - target: {fileID: 1914433229, guid: 569bb594222224945b2b4c4dba478cdd, type: 3}
+      propertyPath: wildVictoryMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: d6ac0940a2c4fb549ba367238139e6d7, type: 3}
+    - target: {fileID: 1914433229, guid: 569bb594222224945b2b4c4dba478cdd, type: 3}
+      propertyPath: trainerVictoryMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 74c69468f0e4ee74db40890e50a31f27, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 569bb594222224945b2b4c4dba478cdd, type: 3}
 --- !u!1001 &845709011263782186
