@@ -702,28 +702,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  selectedPokemon:
-    nickName: 
-    moves: []
-    currentLevel: 0
-    currentHP: 0
-    EV_HP: 0
-    EV_Attack: 0
-    EV_Defense: 0
-    EV_SpecialAttack: 0
-    EV_SpecialDefense: 0
-    EV_Speed: 0
-    IV_HP: 0
-    IV_Attack: 0
-    IV_Defense: 0
-    IV_SpecialAttack: 0
-    IV_SpecialDefense: 0
-    IV_Speed: 0
-    currentEXP: 0
-    backSprite: {fileID: 0}
-    frontSprite: {fileID: 0}
-    menuSprite: {fileID: 0}
-    cry: {fileID: 0}
 --- !u!1 &8552528837342867039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2881,7 +2859,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &8552528839098869089
 MonoBehaviour:
