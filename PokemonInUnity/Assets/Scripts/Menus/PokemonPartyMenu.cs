@@ -55,6 +55,7 @@ namespace Assets.Scripts.Menus
         // Start is called before the first frame update
         public override void Start()
         {
+            ActiveMenu = this;
             this.canvas = this.transform.Find("Canvas").gameObject;
             background = this.transform.Find("Canvas").Find("Background").gameObject.GetComponent<Image>();
             background.rectTransform.sizeDelta = new Vector2(Camera.main.pixelWidth, Camera.main.pixelHeight);
@@ -85,6 +86,7 @@ namespace Assets.Scripts.Menus
         {
             if (Menu.ActiveMenu != this)
             {
+                Debug.Log(Menu.ActiveMenu.GetType());
                 if (selectMenu == null)
                 {
                     return;

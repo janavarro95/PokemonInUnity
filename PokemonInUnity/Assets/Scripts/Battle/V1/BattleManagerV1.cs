@@ -38,6 +38,14 @@ namespace Assets.Scripts.Battle.V1
             }
         }
 
+        public bool isTrainerBattle
+        {
+            get
+            {
+                return enemyTrainer != null;
+            }
+        }
+
         public void Awake()
         {
             battleDialogue = this.gameObject.transform.Find("BattleDialogueManager").gameObject.GetComponent<BattleDialogueManager>();
@@ -144,13 +152,13 @@ namespace Assets.Scripts.Battle.V1
 
         public virtual void setUpSelfPokemonTrainerBattle()
         {
-            pokemonBattleScreen.setUpBattlers(currentSelf, null);
-            delayTimer.start();
+            pokemonBattleScreen.setUpSelf(currentSelf);
+
         }
 
         public virtual void setUpOtherPokemonTrainerBattle()
         {
-            pokemonBattleScreen.setUpBattlers(null, currentOther);
+            pokemonBattleScreen.setUpOther(currentOther);
         }
 
         #endregion
@@ -178,7 +186,7 @@ namespace Assets.Scripts.Battle.V1
         /// </summary>
         public virtual void setUpSelfPokemonWildBattle()
         {
-            pokemonBattleScreen.setUpBattlers(currentSelf, null);
+            pokemonBattleScreen.setUpSelf(this.currentSelf);
             beginBattle();
         }
 
@@ -187,12 +195,10 @@ namespace Assets.Scripts.Battle.V1
         /// </summary>
         public virtual void setUpOtherPokemonWildBattle()
         {
-            pokemonBattleScreen.setUpBattlers(null, currentOther);
+            pokemonBattleScreen.setUpOther(currentOther);
 
             UnityEvent selectPokeEvent = new UnityEvent();
             selectPokeEvent.AddListener(setUpSelfPokemonWildBattle);
-
-            pokemonBattleScreen.setUpEnemyTrainer(enemyTrainer);
 
             this.battleDialogue.initializeDialogues(enemyTrainer.trainerName, new List<string>() {
                 "A wild "+currentOther.Name+" has appeared!"
@@ -207,17 +213,58 @@ namespace Assets.Scripts.Battle.V1
         public virtual void beginBattle()
         {
             Debug.Log("Battle has begun!");
+            beginSelfTurn();
         }
+
+        /// <summary>
+        /// Marks the beginning of the player's turn.
+        /// </summary>
+        public virtual void beginSelfTurn()
+        {
+            Debug.Log("Your turn!");
+            initializeBattleSelectionMenu();
+        }
+
+        public virtual void initializeBattleSelectionMenu() {
+            Menu.Instantiate<BattleActionSelectionMenu>();
+            (Menu.ActiveMenu as BattleActionSelectionMenu).initialize(currentSelf, isTrainerBattle);
+        }
+
+        public virtual void runFromBattle()
+        {
+            Menu.ExitAllMenus();
+        }
+
+        public virtual void swapPokemonCallback()
+        {
+            UnityEvent callBack = new UnityEvent();
+            callBack.AddListener(setUpSelfPokemonWildBattle);
+
+            Menu.exitMenusUntilThisOne(MenuStack.Find(menu=>menu.GetType()==typeof(PokemonPartyMenu)));
+
+            Pokemon selected = (Menu.ActiveMenu as PokemonPartyMenu).selectedPokemon;
+            Menu.exitMenusUntilThisOne(this);
+
+            this.battleDialogue.initializeDialogues(enemyTrainer.trainerName, new List<string>() {
+                "Come back " +currentSelf.Name,
+                "Go "+selected.Name+"! I choose you!"
+            }, callBack,null,null);
+            this.currentSelf = selected;
+        }
+
+
 
         public override void Update()
         {
             if (Menu.ActiveMenu == this)
             {
                 //IDK
+                /*
                 if (GameInput.InputControls.StartPressed)
                 {
                     exitMenu();
                 }
+                */
             }
 
             if (delayTimer != null) delayTimer.Update();

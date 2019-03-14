@@ -200,6 +200,10 @@ namespace Assets.Scripts.Menus
             {
                 Instantiate("BattleManagerV1");
             }
+            else if(typeof(T)== typeof(Battle.V1.BattleActionSelectionMenu))
+            {
+                Instantiate("BattleActionSelectionMenu");
+            }
             else
             {
                 throw new Exception("Hmm trying to call on a type of menu that doesn't exist.");

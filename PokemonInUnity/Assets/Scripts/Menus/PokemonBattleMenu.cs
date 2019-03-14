@@ -125,6 +125,24 @@ namespace Assets.Scripts.Menus {
             setUpOther();
         }
 
+        public void setUpSelf(Pokemon Self = null)
+        {
+            if (Self != null)
+            {
+                self = Self;
+                setUpSelf();
+            }
+        }
+
+        public void setUpOther(Pokemon Other = null)
+        {
+            if (Other != null)
+            {
+                other = Other;
+                setUpOther();
+            }
+        }
+
 
         /// <summary>
         /// Sets up your pokemon.
