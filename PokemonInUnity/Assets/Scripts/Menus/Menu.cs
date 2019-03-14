@@ -133,6 +133,11 @@ namespace Assets.Scripts.Menus
 
         }
 
+        public virtual void layerMenuOnTop()
+        {
+            if (this.canvas != null) this.canvas.GetComponent<Canvas>().sortingOrder = Menu.MenuStack.Count;
+        }
+
         public void scaleMenuToSceen()
         {
             this.canvas.GetComponent<CanvasScaler>().referenceResolution = new Vector2(Camera.main.pixelWidth, Camera.main.pixelHeight);

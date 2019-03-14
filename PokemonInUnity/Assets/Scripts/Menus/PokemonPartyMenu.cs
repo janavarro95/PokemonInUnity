@@ -57,6 +57,7 @@ namespace Assets.Scripts.Menus
         {
             ActiveMenu = this;
             this.canvas = this.transform.Find("Canvas").gameObject;
+            layerMenuOnTop();
             background = this.transform.Find("Canvas").Find("Background").gameObject.GetComponent<Image>();
             background.rectTransform.sizeDelta = new Vector2(Camera.main.pixelWidth, Camera.main.pixelHeight);
 

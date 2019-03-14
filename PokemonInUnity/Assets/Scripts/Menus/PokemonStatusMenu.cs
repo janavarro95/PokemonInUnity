@@ -41,7 +41,7 @@ namespace Assets.Scripts.Menus
         public override void Start()
         {
             this.canvas = this.gameObject.transform.Find("Canvas").gameObject;
-
+            layerMenuOnTop();
             GameObject background = canvas.transform.Find("Background").gameObject;
 
             pokemonSprite = background.transform.Find("Sprite").gameObject.GetComponent<Image>();

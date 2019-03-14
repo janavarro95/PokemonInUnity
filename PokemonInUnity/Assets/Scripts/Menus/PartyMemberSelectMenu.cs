@@ -22,7 +22,7 @@ namespace Assets.Scripts.Menus
         {
             this.canvas = this.transform.Find("Canvas").gameObject;
             background = this.transform.Find("Canvas").Find("Image").gameObject;
-
+            layerMenuOnTop();
             selectSnap = new MenuComponent(background.transform.Find("Select").Find("SnapComponent").gameObject.GetComponent<Image>());
             statsSnap = new MenuComponent(background.transform.Find("Stats").Find("SnapComponent").gameObject.GetComponent<Image>());
             switchSnap = new MenuComponent(background.transform.Find("Switch").Find("SnapComponent").gameObject.GetComponent<Image>());
