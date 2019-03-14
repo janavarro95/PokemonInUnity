@@ -14,6 +14,13 @@ public class SoundEffects : MonoBehaviour
     public AudioClip menuOpen;
     public AudioClip itemGet;
 
+
+    public AudioClip wildBattleMusic;
+    public AudioClip trainerBattleMusic;
+    public AudioClip wildVictoryMusic;
+    public AudioClip trainerVictoryMusic;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,5 +52,26 @@ public class SoundEffects : MonoBehaviour
     public void playItemGetSound()
     {
         GameManager.SoundManager.playSound(itemGet);
+    }
+
+
+    public void playWildBattleSong()
+    {
+        GameManager.SoundManager.playSong(wildBattleMusic);
+    }
+
+    public void playTrainerBattleSong()
+    {
+        GameManager.SoundManager.playSong(trainerBattleMusic);
+    }
+
+    public void playWildVictorySong()
+    {
+        GameManager.SoundManager.playSong(wildVictoryMusic);
+    }
+
+    public void playTrainerVictorySong()
+    {
+        GameManager.SoundManager.playSong(trainerVictoryMusic);
     }
 }

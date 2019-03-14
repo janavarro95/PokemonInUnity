@@ -30,6 +30,14 @@ public class PokemonTrainer : MonoBehaviour
     public string trainerName;
     public string trainerTitle;
 
+    public string FullName
+    {
+        get
+        {
+            return trainerTitle + " " + trainerName;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {

@@ -110,9 +110,9 @@ namespace Assets.Scripts.Menus
         /// </summary>
         public static void ExitAllMenus()
         {
-            foreach(Menu m in MenuStack)
+            while(MenuStack.Count>0)
             {
-                m.exitMenu();
+                MenuStack[0].exitMenu();
             }
         }
 

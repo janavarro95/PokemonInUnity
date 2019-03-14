@@ -49,12 +49,14 @@ namespace Assets.Scripts.Menus
         }
         private void fadeToMainMenu()
         {
+            exitMenu();
             Scripts.Utilities.ScreenTransitions.StartSceneTransition(3, "MainMenu", Color.white, Utilities.ScreenTransitions.TransitionState.FadeOut);
         }
 
         public override void exitMenu()
         {
             base.exitMenu();
+            ActiveMenu = null;
         }
 
         public override bool snapCompatible()

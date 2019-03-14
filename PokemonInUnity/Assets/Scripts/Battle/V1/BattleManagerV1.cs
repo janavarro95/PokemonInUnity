@@ -235,6 +235,8 @@ namespace Assets.Scripts.Battle.V1
             Menu.ExitAllMenus();
         }
 
+
+
         public virtual void swapPokemonCallback()
         {
             UnityEvent callBack = new UnityEvent();
@@ -252,6 +254,51 @@ namespace Assets.Scripts.Battle.V1
             this.currentSelf = selected;
         }
 
+        public virtual void petPokemonAndCaptureIt()
+        {
+
+            if (this.isTrainerBattle) return;
+            else
+            {
+
+                GameManager.Manager.soundEffects.playWildBattleSong();
+
+                UnityEvent callBack = new UnityEvent();
+                callBack.AddListener(endBattle);
+                GameManager.Player.pokemon.addPokemon(currentOther);
+                this.battleDialogue.initializeDialogues(enemyTrainer.trainerName, new List<string>() {
+                "You walked away happy with your new friend "+currentOther.Name+"."
+            }, callBack, null, null);
+
+
+                //endBattle();
+            }
+        }
+
+        public void endBattle()
+        {
+            if (isTrainerBattle)
+            {
+                foreach(Pokemon p in GameManager.Player.pokemon.pokemon)
+                {
+                    p.currentEXP += p.EXPToLVLUp;
+                    p.levelUp();
+                }
+                pokemonBattleScreen.setUpSelf(currentSelf);
+                Menu.ExitAllMenus();
+                GameManager.SoundManager.playSong(GameManager.Manager.currentMap.songToPlay);
+            }
+            else
+            {
+                foreach (Pokemon p in GameManager.Player.pokemon.pokemon)
+                {
+                    p.currentEXP += p.EXPToLVLUp;
+                    p.levelUp();
+                }
+                Menu.ExitAllMenus();
+                GameManager.SoundManager.playSong(GameManager.Manager.currentMap.songToPlay);
+            }
+        }
 
 
         public override void Update()
