@@ -235,8 +235,88 @@ Transform:
   - {fileID: 1628703459}
   - {fileID: 1465297972}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &821138076
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8801766539434737086, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_Name
+      value: Girl1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 34.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737076, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: dialogueStrings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737076, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: dialogueStrings.Array.data[0]
+      value: Sorry but there has been a fire in Viridian Forest so you can't go any
+        further.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434, type: 3}
 --- !u!1 &1019981527
 GameObject:
   m_ObjectHideFlags: 0
@@ -3114,6 +3194,87 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1465297971}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1539115269
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8801766539434737086, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_Name
+      value: Girl1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21.524937
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 34.48072
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737075, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737076, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: dialogueStrings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801766539434737076, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434,
+        type: 3}
+      propertyPath: dialogueStrings.Array.data[0]
+      value: I wish the fire in Viridian Forest didn't leave the area in a huge mess
+        but I guess it can't be helped. We should really ban fire pokemon in that
+        area.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3b7c2fa76b6b4394fb4df5b8f4d28434, type: 3}
 --- !u!1001 &1628703458
 PrefabInstance:
   m_ObjectHideFlags: 0
