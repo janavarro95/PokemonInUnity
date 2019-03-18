@@ -187,7 +187,7 @@ PrefabInstance:
     - target: {fileID: 7556481722185351593, guid: 4a25a48307dee724c93fc8f3a24301fc,
         type: 3}
       propertyPath: warpLocation.y
-      value: 18.5
+      value: 17.5
       objectReference: {fileID: 0}
     - target: {fileID: 7556481722185351593, guid: 4a25a48307dee724c93fc8f3a24301fc,
         type: 3}
@@ -472,6 +472,16 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3664157343022684176, guid: 724275d5abb19814a823b8878ea81270,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664157343022684178, guid: 724275d5abb19814a823b8878ea81270,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664157343022684178, guid: 724275d5abb19814a823b8878ea81270,
         type: 3}
       propertyPath: m_ChunkCullingBounds.y
       value: 0.5
@@ -1656,16 +1666,6 @@ PrefabInstance:
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.data[7].x
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 3664157343022684178, guid: 724275d5abb19814a823b8878ea81270,
-        type: 3}
-      propertyPath: m_ChunkCullingBounds.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3664157343022684178, guid: 724275d5abb19814a823b8878ea81270,
-        type: 3}
-      propertyPath: m_ChunkCullingBounds.y
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 724275d5abb19814a823b8878ea81270, type: 3}
 --- !u!60 &1240192797 stripped
@@ -1833,7 +1833,7 @@ PrefabInstance:
     - target: {fileID: 7556481722185351593, guid: 4a25a48307dee724c93fc8f3a24301fc,
         type: 3}
       propertyPath: warpLocation.y
-      value: 18.5
+      value: 17.5
       objectReference: {fileID: 0}
     - target: {fileID: 7556481722185351593, guid: 4a25a48307dee724c93fc8f3a24301fc,
         type: 3}
