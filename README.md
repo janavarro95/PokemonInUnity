@@ -1,6 +1,9 @@
 # PokemonInUnity
 An attempt to make a example of a Pokemon game in Unity. This is NOT a finished game but a demo demonstrating simple systems from Pokemon recreated in Unity to use as a showcase and for an understanding of Computer Game Design.
 
+## Showcase Video
+https://www.youtube.com/watch?v=UTMJFzawSVc
+
 ## Credits
 PokeAPI: https://pokeapi.co/ (Used for querrying lots of Pokemon data to recreate simple logic such as base stats and moves)
 
